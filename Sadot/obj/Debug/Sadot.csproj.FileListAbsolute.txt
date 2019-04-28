@@ -1,0 +1,975 @@
+C:\Users\user\source\repos\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\user\source\repos\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\user\source\repos\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\user\source\repos\Sadot\Sadot\bin\Debug\itextsharp.dll
+C:\Users\user\source\repos\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\user\source\repos\Sadot\Sadot\bin\Debug\itextsharp.xml
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\user\source\repos\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.OrderForm.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\bin\Debug\itextsharp.xml
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.AddIngredients.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.AdminFoodPage.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.LogInPage2Test.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.OrderAmount.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.OrderForm.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\06_08\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.MangeIngredients.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.AdminManageWine.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.AdminManageProduct.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.UserHomePageTest.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\user\source\repos\Sadot\Sadot\obj\Debug\Sadot.csprojAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.AdminManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.AdminManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.MangeIngredients.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.OrderForm.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\גירסה 6\Sadot\Sadot\obj\Debug\Sadot.PayOrContinue.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.AdminManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.AdminManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.MangeIngredients.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.OrderForm.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.PayOrContinue.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\21.8.18\24.8.18\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.AdminManageProduct.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.AdminManageWine.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.MangeIngredients.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.OrderForm.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.PayOrContinue.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\bin\Debug\Google.Protobuf.dll
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\user\Desktop\פרויקט שדות שינוי אסף\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\user\source\repos\SadotTest\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\user\source\repos\SadotTest\Sadot\bin\Debug\Sadot.exe
+C:\Users\user\source\repos\SadotTest\Sadot\bin\Debug\Sadot.pdb
+C:\Users\user\source\repos\SadotTest\Sadot\bin\Debug\eCryptography.dll
+C:\Users\user\source\repos\SadotTest\Sadot\bin\Debug\itextsharp.dll
+C:\Users\user\source\repos\SadotTest\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\user\source\repos\SadotTest\Sadot\bin\Debug\itextsharp.xml
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.AdminManageProduct.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.AdminManageWine.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.MangeIngredients.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.exe
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.pdb
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.csprojAssemblyReference.cache
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.AdminManageDishPageTest.resources
+C:\Users\user\source\repos\SadotTest\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\bin\Debug\itextsharp.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminManageDishPageTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.MangeIngredients.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\4.2.19\SadotTest\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\bin\Debug\itextsharp.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminManageDishPageTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.MangeIngredients.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\SadotTest\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\bin\Debug\itextsharp.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.AdminManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.AdminManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.MangeIngredients.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\5.2.19\גרסא 2- תחילת עבודה על תמונת מצב\SadotTest\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\bin\Debug\itextsharp.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.MangeIngredients.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\11.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\bin\Debug\itextsharp.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\bin\Debug\itextsharp.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\bin\Debug\itextsharp.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\13.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\18.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\24.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\26.2.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 1\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא 3\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\27.2.19\גרסא להצגה\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\06.03.19\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.AdminPasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.NewUser.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.ManageUsers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\10.03.19\גרסא 2\Sadot\Sadot\obj\Debug\Sadot.PasswordRecovery.resources
+C:\Users\user\Desktop\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\user\Desktop\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\user\Desktop\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\user\Desktop\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\user\Desktop\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\user\Desktop\Sadot\Sadot\bin\Debug\Google.Protobuf.dll
+C:\Users\user\Desktop\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.PasswordRecovery.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.Events.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.ManageUsers.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\user\Desktop\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.PasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageUsers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.OrderFormTest.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.SwitchTable.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\01.04.19\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.PasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageUsers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\07.04.19\Sadot\Sadot\obj\Debug\Sadot.OrderForm.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.PasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageUsers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.OrderForm.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\14.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\bin\Debug\Sadot.exe.config
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\bin\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\bin\Debug\Sadot.pdb
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\bin\Debug\eCryptography.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\bin\Debug\MySql.Data.dll
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\bin\Debug\MySql.Data.xml
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageProduct.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageWine.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.PasswordRecovery.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.MessageBill.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.LoginPage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.ManageUsers.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.OrderForm.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.StockReports.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.UserHomePage.resources
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.exe
+C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.pdb
