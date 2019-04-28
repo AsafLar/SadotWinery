@@ -147,5 +147,51 @@ namespace Sadot
             }
             return res;
         }
+
+        /// <summary>
+        /// method wich works when the user press on "CloseAllTablesInBill" button
+        /// the method will close all the tables in status "bill" and it orders and send to update stock
+        /// </summary>
+        private void btnCloseTablesInBill_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < tables.Length; i++)
+            {
+                if (tables[i].TableStatus == "בחשבון")
+                {
+                    UpdateStockAndOrderStatus(tables[i].TableID);
+                    if (tables[i].TableID >= 200)
+                        db.DeleteTable(tables[i].TableID);
+                    else
+                        db.UpdateTableStatus(tables[i].TableID, "פנוי");
+                }
+            }
+            FillTableList();
+        }
+
+
+        /// <summary>
+        /// method wich update stock and order status
+        /// the method get spcific table order and lines in order and update the stock and order status
+        /// </summary>
+        /// <param name="tableId">the table to get it order from data base</param>
+        private void UpdateStockAndOrderStatus(int tableId)
+        {
+            Order tableOrder = db.GetOrderByTableId(tableId);
+            LinesInOrder[] linesOfTheTableOrder = db.GetLinesOfOrder(tableOrder.OrderID);
+            Stock tmpStock = new Stock();
+            for (int i = 0; i < linesOfTheTableOrder.Length; i++)
+            {
+                tmpStock.ProductID = linesOfTheTableOrder[i].ProductID;
+                if (linesOfTheTableOrder[i].Notes == "כוס")
+                {
+                    tmpStock.TotalAmount = linesOfTheTableOrder[i].Amount / 4;
+                }
+                tmpStock.TotalAmount = linesOfTheTableOrder[i].Amount;
+                tmpStock.Date = DateTime.Now.Day.ToString();
+                db.UpdateProductInStockByDate(tmpStock.Date, tmpStock.TotalAmount, tmpStock.ProductID);
+            }
+            tableOrder.IsPaid = true;
+            db.UpdateOrder(tableOrder);
+        }
     }
 }
