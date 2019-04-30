@@ -973,3 +973,38 @@ C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\o
 C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.csproj.CopyComplete
 C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.exe
 C:\Users\asaf\Desktop\פרויקט גמר יקב שדות\15.04.19\Sadot\Sadot\obj\Debug\Sadot.pdb
+D:\Projects\SadotWinery\Sadot\bin\Debug\Sadot.exe.config
+D:\Projects\SadotWinery\Sadot\bin\Debug\Sadot.exe
+D:\Projects\SadotWinery\Sadot\bin\Debug\Sadot.pdb
+D:\Projects\SadotWinery\Sadot\bin\Debug\eCryptography.dll
+D:\Projects\SadotWinery\Sadot\bin\Debug\MySql.Data.dll
+D:\Projects\SadotWinery\Sadot\bin\Debug\MySql.Data.xml
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.csprojResolveAssemblyReference.cache
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.AdminHomePage.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.ManageDishPage.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.ManageProduct.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.ManageWine.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.PasswordRecovery.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.ManageEmployees.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.MessageBill.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.CancelProductFromOrder.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.DishingredentsInOrder.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.LoginPage.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.ManageCustomers.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.ManageUsers.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.GlassOrBottle.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.NumberOfGlass.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.OrderForm.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.OrdersTracking.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.BillOrUpdate.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.Properties.Resources.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.RestaurantStatus.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.SelectCustomer.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.SelectWaiter.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.StockReports.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.UserHomePage.resources
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.csproj.GenerateResource.cache
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.csproj.CoreCompileInputs.cache
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.csproj.CopyComplete
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.exe
+D:\Projects\SadotWinery\Sadot\obj\Debug\Sadot.pdb
