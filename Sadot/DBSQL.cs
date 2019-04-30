@@ -2215,16 +2215,16 @@ namespace Sadot
         #endregion
 
         /// <summary>
-        /// method to remove discount from spcific order
+        /// method to remove line from spcific order
         /// </summary>
-        /// <param name="orderId">the order to remove discount from</param>
-        public void RemoveLineOfDiscount(int orderId)
+        /// <param name="orderId">the id of the order to remove the line from</param>
+        /// <param name="lineId">the id of the line to remove </param>
+        public void RemoveLineOfOrder(int orderId, int lineId)
         {
-            int discountId = 66;
-            string query = "DELETE FROM `lines_in_orders` WHERE `orderID` = @orderId AND `productID` = @discountId";
+            string query = "DELETE FROM `lines_in_orders` WHERE `orderID` = @orderId AND `productID` = @lineId";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
             cmd.Parameters.AddWithValue("@orderId", orderId);
-            cmd.Parameters.AddWithValue("@discountId", discountId);
+            cmd.Parameters.AddWithValue("@lineId", lineId);
             try
             {
                 databaseConnection.Open();
