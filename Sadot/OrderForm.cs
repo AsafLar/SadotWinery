@@ -730,30 +730,36 @@ namespace Sadot
         /// </summary>
         private void btnDiscount_Click(object sender, EventArgs e)
         {
-            if(order.Discount == 0)//check if the order didnet get any discount yet
+            if (order.TotalPrice > 0)// check if the total price of the order bigger then 0
             {
-                if (linesInOrders.Count == 0)//check if there is products that is not part of the exist order
+                if (order.Discount == 0)//check if the order didnet get any discount yet
                 {
-                    Product tmpProduct = db.GetProductById(((MyBtn)sender).ID);//get product details with the id (the id is in the "ID" property of the specific MyBtn object )
-                    lineInOrder = new LinesInOrder();
-                    lineInOrder.OrderID = order.OrderID;
-                    lineInOrder.ProductID = tmpProduct.ProductID;
-                    lineInOrder.ProductName = tmpProduct.Name + " " + cbDiscount.SelectedItem.ToString() + " % ";
-                    double discountGiven = (order.TotalPrice * int.Parse(cbDiscount.SelectedItem.ToString()) / 100) + 1;
-                    lineInOrder.TotalPrice = int.Parse(discountGiven.ToString());
-                    lineInOrder.TotalPrice *= -1;
-                    order.Discount = lineInOrder.TotalPrice;
-                    UpdateLablPrice(lineInOrder.TotalPrice);
-                    db.InsertLineInOrder(lineInOrder);
-                    db.UpdateOrder(order);
-                    linesInExistOrders.Add(lineInOrder);
-                    FillOrderList();
+                    if (linesInOrders.Count == 0)//check if there is products that is not part of the exist order
+                    {
+                        Product tmpProduct = db.GetProductById(((MyBtn)sender).ID);//get product details with the id (the id is in the "ID" property of the specific MyBtn object )
+                        lineInOrder = new LinesInOrder();
+                        lineInOrder.OrderID = order.OrderID;
+                        lineInOrder.ProductID = tmpProduct.ProductID;
+                        lineInOrder.ProductName = tmpProduct.Name + " " + cbDiscount.SelectedItem.ToString() + " % ";
+                        double discountGiven = (order.TotalPrice * int.Parse(cbDiscount.SelectedItem.ToString()) / 100) + 1;
+                        lineInOrder.TotalPrice = int.Parse(discountGiven.ToString());
+                        lineInOrder.TotalPrice *= -1;
+                        order.Discount = lineInOrder.TotalPrice;
+                        UpdateLablPrice(lineInOrder.TotalPrice);
+                        db.InsertLineInOrder(lineInOrder);
+                        db.UpdateOrder(order);
+                        linesInExistOrders.Add(lineInOrder);
+                        FillOrderList();
+                    }
+                    else
+                        MessageBox.Show("ישנם מוצרים שטרם הוזמנו, מחק אותם או בצע הזמנה ולאחר מכן לחץ על הנחה");
                 }
                 else
-                    MessageBox.Show("ישנם מוצרים שטרם הוזמנו, מחק אותם או בצע הזמנה ולאחר מכן לחץ על הנחה");
+                    MessageBox.Show("ישנה הנחה להזמנה זו, אם ברצונך להזין הנחה חדשה בטל/י את הישנה");
             }
             else
-                MessageBox.Show("ישנה הנחה להזמנה זו, אם ברצונך להזין הנחה חדשה בטל/י את הישנה");
+                MessageBox.Show("לא ניתן לבצע הנחה על הזמנה שסכומה הוא 0");
+
         }
 
         /// <summary>
@@ -777,7 +783,12 @@ namespace Sadot
                         if(linesInExistOrders[index].ProductID == 66)
                         {
                             CancleDiscount(index);
-                            MessageBox.Show("ההנחה בוטלה בהצלחה");
+                            MessageBox.Show("ההנחה בוטלה בהצלחה והחשבון התעדכן");
+                        }
+                        else if (linesInExistOrders[index].ProductID == 117)
+                        {
+                            CanclePayInAdvenced(index); 
+                            MessageBox.Show("שורת התשלום מראש בוטלה בהצלחה והחשבון התעדכן");
                         }
                         else
                             CancleProduct(index);
@@ -796,10 +807,24 @@ namespace Sadot
         /// <param name="index">the index of the row of the discount to cancle</param>
         private void CancleDiscount(int index)
         {
-            db.RemoveLineOfDiscount(order.OrderID);
+            db.RemoveLineOfOrder(order.OrderID, 66);
             linesInExistOrders = new List<LinesInOrder>(db.GetLinesOfOrder(order.OrderID));
             UpdateLablPrice(order.Discount * -1);
             order.Discount = 0;
+            db.UpdateOrder(order);
+            dgvOrderList.Rows.RemoveAt(index);
+        }
+
+        /// <summary>
+        /// method to cancle pay in advenced line from exsit order
+        /// </summary>
+        /// <param name="index">the index of the row of the pay in advenced to cancle</param>
+        private void CanclePayInAdvenced(int index)
+        {
+            int sumOfPayInAdvenced = int.Parse(dgvOrderList.Rows[index].Cells[2].Value.ToString());
+            db.RemoveLineOfOrder(order.OrderID, 117);
+            linesInExistOrders = new List<LinesInOrder>(db.GetLinesOfOrder(order.OrderID));
+            UpdateLablPrice(sumOfPayInAdvenced * -1);
             db.UpdateOrder(order);
             dgvOrderList.Rows.RemoveAt(index);
         }
@@ -1075,6 +1100,77 @@ namespace Sadot
         void tmr_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToLongTimeString();
+        }
+
+        private void btnPayPartOfBill_Click_1(object sender, EventArgs e)
+        {
+            int sumToPay = int.Parse(nudSumToPay.Value.ToString());
+
+            if (isExistOrder)
+            {
+                if (sumToPay > 0)
+                {
+                    if (order.TotalPrice > 0)
+                    {
+                        if (sumToPay <= order.TotalPrice)
+                        {
+                            if (linesInOrders.Count == 0)//check if there is products that is not part of the exist order
+                            {
+                                Product tmpProduct = db.GetProductById(((MyBtn)sender).ID);//get product details with the id (the id is in the "ID" property of the specific MyBtn object )
+                                sumToPay *= -1;
+                                if (CheckIfPartOfBillAllreadyPaid(tmpProduct.ProductID))
+                                {
+                                    lineInOrder.TotalPrice += sumToPay;
+                                    db.UpdateLineInOrder(lineInOrder);
+                                }
+                                else
+                                {
+                                    lineInOrder = new LinesInOrder();
+                                    lineInOrder.OrderID = order.OrderID;
+                                    lineInOrder.ProductID = tmpProduct.ProductID;
+                                    lineInOrder.ProductName = tmpProduct.Name;
+                                    lineInOrder.TotalPrice = sumToPay;
+                                    db.InsertLineInOrder(lineInOrder);
+                                    linesInExistOrders.Add(lineInOrder);
+                                }
+                                UpdateLablPrice(sumToPay);
+                                db.UpdateOrder(order);
+                                FillOrderList();
+                            }
+                            else
+                                MessageBox.Show("ישנם מוצרים שטרם הוזמנו, מחק אותם או בצע הזמנה");
+                        }
+                        else
+                            MessageBox.Show("הסכום שהוכנס גדול מסכום ההזמנה !");
+                    }
+                    else
+                        MessageBox.Show("לא ניתן לשלם חלק מהזמנה שסכומה הוא 0 !");
+                }
+                else
+                    MessageBox.Show("הכנס סכום לתשלום !");
+            }
+            else
+                MessageBox.Show("לא ניתן לבצע תשלום חלקי לפני ביצוע הזמנה !");
+        }
+
+        /// <summary>
+        /// method wich checks in the lines of exists order
+        /// if there is line of "paid in advenced "  or this is the first time
+        /// that the user press on this button
+        /// </summary>
+        private bool CheckIfPartOfBillAllreadyPaid(int id)
+        {
+            bool flag = false;
+            for(int i = 0; i < linesInExistOrders.Count; i++)
+            {
+                if (linesInExistOrders[i].ProductID == id)
+                {
+                    lineInOrder = linesInExistOrders[i];
+                    flag = true;
+                }
+                    
+            }
+            return flag;
         }
     }
 }

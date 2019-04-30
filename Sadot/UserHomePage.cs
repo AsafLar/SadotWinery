@@ -154,10 +154,12 @@ namespace Sadot
         /// </summary>
         private void btnCloseTablesInBill_Click(object sender, EventArgs e)
         {
+            int tableInBillCounter = 0;
             for (int i = 0; i < tables.Length; i++)
             {
                 if (tables[i].TableStatus == "בחשבון")
                 {
+                    tableInBillCounter++;
                     UpdateStockAndOrderStatus(tables[i].TableID);
                     if (tables[i].TableID >= 200)
                         db.DeleteTable(tables[i].TableID);
@@ -165,6 +167,15 @@ namespace Sadot
                         db.UpdateTableStatus(tables[i].TableID, "פנוי");
                 }
             }
+            if(tableInBillCounter > 0)
+            {
+                if (tableInBillCounter == 1)
+                    MessageBox.Show("השולחן נסגר בהצלחה");
+                else
+                    MessageBox.Show(tableInBillCounter + " שולחנות נסגרו בהצלחה");
+            }
+            else
+                MessageBox.Show("אין שולחנות שהסטטוס שלהם בחשבון!");
             FillTableList();
         }
 
