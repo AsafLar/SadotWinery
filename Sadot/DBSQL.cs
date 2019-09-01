@@ -18,7 +18,8 @@ namespace Sadot
 {
     class DBSQL
     {
-        private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_sadot;UID=u691360607_admin;PASSWORD=admin1234;SslMode=none;";//Yotam PC 
+        /*private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_sadot;UID=u691360607_admin;PASSWORD=admin1234;SslMode=none;";*/ //regular data base
+        private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_test;UID=u691360607_asaf;PASSWORD=sadottest;SslMode=none;"; //test data base for development
         MySqlConnection databaseConnection = new MySqlConnection(connectionString);
 
         #region DataBase Functions **Login** ( CheckLogin )
