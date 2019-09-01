@@ -1,0 +1,7 @@
+Sadot/bin/Debug/MySql.Data.xml
+*.exe
+*.suo
+*.pdb
+*.ide-shm
+*.cache
+Sadot/obj/Debug/Sadot.csproj.FileListAbsolute.txt
