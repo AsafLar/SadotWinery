@@ -21,6 +21,7 @@ namespace Sadot
         private bool isPaid;
         private DateTime orderDate;
         private int employeeID;
+        private string cancels;
 
         /// <summary>
         /// Constractor function
@@ -34,6 +35,7 @@ namespace Sadot
             discount = oDiscount;
             isPaid = paid;
             orderDate = oDate;
+            cancels = "No";
         }
 
         /// <summary>
@@ -46,6 +48,7 @@ namespace Sadot
             discount = 0;
             isPaid = false ;
             orderDate = DateTime.Now.Date;
+            cancels = "No";
         }
 
 
@@ -96,7 +99,6 @@ namespace Sadot
         }
 
         
-
         /// <summary>
         /// IsPaid ( get , set )
         /// </summary>
@@ -122,6 +124,20 @@ namespace Sadot
         {
             get { return employeeID; }
             set { employeeID = value; }
+        }
+
+        /// <summary>
+        /// Cancels ( get , set )
+        /// </summary>
+        public string Cancels
+        {
+            get { return cancels; }
+            set { cancels = value; }
+        }
+
+        public bool isCancels()
+        {
+            return (this.Cancels == "Yes") ? true : false;
         }
 
     }

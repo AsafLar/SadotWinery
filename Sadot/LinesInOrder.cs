@@ -19,7 +19,6 @@ namespace Sadot
         private string productName;
         private int amount;
         private int totalPrice;
-        private string cancelReason;
         private string notes;
 
         /// <summary>
@@ -30,7 +29,6 @@ namespace Sadot
             orderID = -1;
             amount = 1;
             totalPrice = -1;
-            cancelReason = "No";
             notes = "";
         }
 
@@ -77,15 +75,6 @@ namespace Sadot
         {
             get { return totalPrice; }
             set { totalPrice = value; }
-        }
-
-        /// <summary>
-        /// CancelReason ( get , set )
-        /// </summary>
-        public string CancelReason
-        {
-            get { return cancelReason; }
-            set { cancelReason = value; }
         }
 
         /// <summary>

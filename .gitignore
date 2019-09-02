@@ -5,3 +5,5 @@ Sadot/bin/Debug/MySql.Data.xml
 *.ide-shm
 *.cache
 Sadot/obj/Debug/Sadot.csproj.FileListAbsolute.txt
+*.ide
+*.ide-wal

@@ -24,6 +24,8 @@ namespace Sadot
         private LinesInOrder lineInOrder;    //the new line to add to an order
         private List<LinesInOrder> linesInOrders;  //list with all the new lines to insert to the order we work with. could be new order or existent one
         private List<LinesInOrder> linesInExistOrders; // List with all the existent lines of the current existent order
+        private List<CancellationsInOrder> cancelsInOrder; // List with all the canceles of cur order
+
         private Customer selectedCustomer;
         private Employee selectedEmployee;
 
@@ -37,6 +39,7 @@ namespace Sadot
 
         private Table table;
         private Product[] currentProductByType; //array of the products of the same type (wine, dish, hot drink, soft drink...)
+        private CancellationsInOrder cancelLine;
 
         /// <summary>
         /// OrderForm form constuctor
@@ -171,6 +174,7 @@ namespace Sadot
             btnOTH.Enabled = true;
             lblPrice.Text = order.TotalPrice.ToString();
             FillOrderListWithExistsProducts();
+            FillListWithCancels();
             btnOTH.Enabled = true;
         }
 
@@ -180,6 +184,7 @@ namespace Sadot
         private void BillRequest()
         {
             FillOrderListWithExistsProducts();
+            FillListWithCancels();
             btnSelectCustomer.Enabled = true;
             btnSwitchTable.Enabled = false;
             btnBill.Enabled = true;
@@ -271,6 +276,20 @@ namespace Sadot
             }
         }
 
+        private void FillListWithCancels()
+        {
+            int lastRowIndex = linesInExistOrders.Count();
+            if(order.isCancels())
+            {
+                cancelsInOrder = new List<CancellationsInOrder>(db.GetCancelsOfOrder(order.OrderID));
+                for (int i = 0; i < cancelsInOrder.Count; i++)
+                {
+                    dgvOrderList.Rows.Add(cancelsInOrder[i].ProductName, 1, cancelsInOrder[i].PriceToSub * -1);
+                    dgvOrderList.Rows[lastRowIndex + i].DefaultCellStyle.BackColor = Color.Yellow;
+                }  
+            }
+        }
+
         /// <summary>
         /// method to fill order list with the details of products from the arrays
         /// </summary>
@@ -278,7 +297,10 @@ namespace Sadot
         {
             dgvOrderList.Rows.Clear();
             if (isExistOrder)
+            {
                 FillOrderListWithExistsProducts();
+                FillListWithCancels();
+            }
             for (int i = 0; i < linesInOrders.Count; i++)
             {
                 dgvOrderList.Rows.Add(linesInOrders[i].ProductName, linesInOrders[i].Amount, linesInOrders[i].TotalPrice);
@@ -295,10 +317,12 @@ namespace Sadot
             for (int i = 0; i < linesInExistOrders.Count; i++)
             {
                 dgvOrderList.Rows.Add(linesInExistOrders[i].ProductName, linesInExistOrders[i].Amount, linesInExistOrders[i].TotalPrice);
-                if (linesInExistOrders[i].CancelReason != "No")
+                /*
+                if (linesInExistOrders[i].Cancels != "No")
                     dgvOrderList.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                 else
-                    dgvOrderList.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen;
+                */
+                dgvOrderList.Rows[i].DefaultCellStyle.BackColor = Color.LightGreen;
                 dgvOrderList.Rows[i].Selected = false;
             }
             lblPrice.Text = order.TotalPrice.ToString();
@@ -557,23 +581,24 @@ namespace Sadot
         private void btnDeleteLine_Click(object sender, EventArgs e)
         {
             int index;
+            int sumOfCancelsAndExistProducts = linesInExistOrders.Count + cancelsInOrder.Count;
             if (dgvOrderList.SelectedRows.Count > 0)
             {
                 index = dgvOrderList.CurrentCell.RowIndex;
                 if (isExistOrder)
                 {
-                    if (index < linesInExistOrders.Count)
-                        MessageBox.Show("לא ניתן למחוק מוצר שסופק");
+                    if (index < sumOfCancelsAndExistProducts)
+                        MessageBox.Show("לא ניתן למחוק מוצר שסופק או בוטל");
                     else
                     {
-                        if (linesInOrders[index - linesInExistOrders.Count].ProductID == 66)//check if the user choose to delete the discount
+                        if (linesInOrders[index - sumOfCancelsAndExistProducts].ProductID == 66)//check if the user choose to delete the discount
                         {
                             linesInOrders.RemoveAt(index - linesInExistOrders.Count);
                             btnDiscount.Enabled = true;
                         }
                         else
                         {
-                            order.TotalPrice -= linesInOrders[index - linesInExistOrders.Count].TotalPrice;
+                            order.TotalPrice -= linesInOrders[index - sumOfCancelsAndExistProducts].TotalPrice;
                             linesInOrders.RemoveAt(index - linesInExistOrders.Count);
                         }
                     }
@@ -769,32 +794,33 @@ namespace Sadot
         private void btnCancelProductFromOrder_Click(object sender, EventArgs e)
         {
             int index;
+            int sumOfCancelsAndExistProducts = linesInExistOrders.Count + cancelsInOrder.Count;
             if (dgvOrderList.SelectedRows.Count > 0)//check if the user choose product to cancle from the list
             {
                 index = dgvOrderList.CurrentCell.RowIndex;
-                if (index > linesInExistOrders.Count - 1)//check if the row index equal or less then the exist lines so this is a new product
+                if (index > sumOfCancelsAndExistProducts - 1)//check if the row index equal or less then the exist lines so this is a new product
                 {
                     MessageBox.Show("לא ניתן לבטל מוצר שרק נוסף ", "הודעת מערכת ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    if (linesInExistOrders[index].CancelReason == "No")//check if the line allrady canceld
+                    if(index < linesInExistOrders.Count - 1)
                     {
-                        if(linesInExistOrders[index].ProductID == 66)
+                        if (linesInExistOrders[index].ProductID == 66)
                         {
                             CancleDiscount(index);
                             MessageBox.Show("ההנחה בוטלה בהצלחה והחשבון התעדכן");
                         }
                         else if (linesInExistOrders[index].ProductID == 117)
                         {
-                            CanclePayInAdvenced(index); 
+                            CanclePayInAdvenced(index);
                             MessageBox.Show("שורת התשלום מראש בוטלה בהצלחה והחשבון התעדכן");
                         }
                         else
                             CancleProduct(index);
                     }
                     else
-                        MessageBox.Show(" לא ניתן לבטל מוצר שבוטל כבר ");
+                        MessageBox.Show("לא ניתן לבטל מוצר שכבר בוטל ", "הודעת מערכת ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
@@ -829,6 +855,7 @@ namespace Sadot
             dgvOrderList.Rows.RemoveAt(index);
         }
 
+        /*
         /// <summary>
         /// method to cancle product from exist order
         /// </summary>
@@ -847,7 +874,7 @@ namespace Sadot
                     else
                         lineInOrder.TotalPrice = linesInExistOrders[index].TotalPrice * -1;
 
-                    lineInOrder.CancelReason = cancelProduct.CancellationReason;
+                    lineInOrder.Cancels = cancelProduct.CancellationReason;
                     order.TotalPrice += lineInOrder.TotalPrice;
                     db.UpdateOrder(order);
                     linesInExistOrders.Add(lineInOrder);
@@ -858,6 +885,51 @@ namespace Sadot
             else
                 MessageBox.Show("המוצר לא בוטל");
         }
+        */
+
+        /// <summary>
+        /// method to cancle product from exist order
+        /// </summary>
+        /// <param name="index">the index of the row of the product to cancle</param>
+        private void CancleProduct(int index)
+        {
+            if (MessageBox.Show("האם אתה בטוח שברצונך לבטל מוצר זה ", "הודעת מערכת ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                lineInOrder = linesInExistOrders[index];
+                cancelLine = new CancellationsInOrder();
+                cancelLine.PriceToSub = db.GetProductPriceByID(lineInOrder.ProductID);
+
+                if(cancelLine.PriceToSub <= order.TotalPrice)
+                {
+                    cancelLine.OrderId = lineInOrder.OrderID;
+                    cancelLine.ProductId = lineInOrder.ProductID;
+                    cancelLine.ProductName = lineInOrder.ProductName + " - בוטל - ";
+
+                    if (lineInOrder.Amount > 1)//check if ordered more then one from this product
+                    {
+                        lineInOrder.Amount--;
+                        if (lineInOrder.TotalPrice > cancelLine.PriceToSub)
+                            lineInOrder.TotalPrice -= cancelLine.PriceToSub;
+                        db.UpdateLineInOrder(lineInOrder);
+                    }
+                    else//if there is only one from the product remove the line
+                        db.RemoveLineOfOrder(lineInOrder.OrderID, lineInOrder.ProductID);
+
+                    db.InsertCancelOfOrder(cancelLine);
+                    order.TotalPrice -= cancelLine.PriceToSub;
+                    order.Cancels = "Yes";
+                    db.UpdateOrder(order);
+                    linesInExistOrders = new List<LinesInOrder>(db.GetLinesOfOrder(order.OrderID));
+                    FillOrderList();
+                }
+                else
+                    MessageBox.Show("מחיר ההזמנה קטן ממחיר המוצר, לא ניתן לבטל");
+
+            }
+            else
+                MessageBox.Show("המוצר לא בוטל");
+        }
+
 
         /// <summary>
         /// method wich create and fill the object of the line in order to cancel with the correct information
@@ -870,7 +942,6 @@ namespace Sadot
             lineInOrder.ProductID = linesToCancel.ProductID;
             lineInOrder.ProductName = linesToCancel.ProductName + " - בוטל - ";
             lineInOrder.TotalPrice = linesToCancel.TotalPrice;
-            lineInOrder.CancelReason = linesToCancel.CancelReason;
             if (linesToCancel.Amount > 1)
                 lineInOrder.Amount = linesToCancel.Amount - 1;
             else
@@ -916,7 +987,7 @@ namespace Sadot
                         FillOrderList();
                     }
                     else
-                        MessageBox.Show("לא ניתן להוריד כמות למוצר שסופק");
+                        MessageBox.Show(" לא ניתן לבצע את הפעולה על המוצר הנבחר מפני שהמוצר סופק או בוטל");
                 }
             }
             else
@@ -942,7 +1013,7 @@ namespace Sadot
                     FillOrderList();
                 }
                 else
-                    MessageBox.Show("לא ניתן להוסיף כמות למוצר שסופק");
+                    MessageBox.Show(" לא ניתן לבצע את הפעולה על המוצר הנבחר מפני שהמוצר סופק או בוטל");
             }
             else
                 MessageBox.Show("יש צורך לבחור מוצר בכדי להוסיף לו כמות", "הודעת מערכת", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -955,12 +1026,13 @@ namespace Sadot
         private int CheckIndex()
         {
             int index = dgvOrderList.CurrentCell.RowIndex;
+            int sumOfCancelsAndExistProducts = linesInExistOrders.Count + cancelsInOrder.Count;
             if (isExistOrder)
             {
-                if (index < linesInExistOrders.Count)
+                if (index < sumOfCancelsAndExistProducts)
                     index = -1;
                 else
-                    index -= linesInExistOrders.Count;
+                    index -= sumOfCancelsAndExistProducts;
             }
             return index;
         }
@@ -1075,22 +1147,23 @@ namespace Sadot
                 int index = dgvOrderList.CurrentCell.RowIndex;
                 if (index < linesInExistOrders.Count)
                 {
-                    if (linesInExistOrders[index].CancelReason == "No")
-                    {
-                        int price = int.Parse(dgvOrderList.Rows[index].Cells[2].Value.ToString());
-                        UpdateLablPrice(price * -1);
-                        dgvOrderList.Rows[index].Cells[2].Value = 0;
-                        linesInExistOrders[index].TotalPrice -= price;//product price par unit
-                        linesInExistOrders[index].ProductName += " - על חשבון הבית";
-                        db.UpdateLineInOrder(linesInExistOrders[index]);
-                        db.UpdateOrder(order);
-                        FillOrderList();
-                    }
-                    else
-                        MessageBox.Show("לא ניתן לתת חינם מוצר שבוטל");
+
+                    int price = int.Parse(dgvOrderList.Rows[index].Cells[2].Value.ToString());
+                    UpdateLablPrice(price * -1);
+                    dgvOrderList.Rows[index].Cells[2].Value = 0;
+                    linesInExistOrders[index].TotalPrice -= price;//product price par unit
+                    linesInExistOrders[index].ProductName += " - על חשבון הבית";
+                    db.UpdateLineInOrder(linesInExistOrders[index]);
+                    db.UpdateOrder(order);
+                    FillOrderList();
                 }
                 else
-                    MessageBox.Show("יש להזמין מוצר זה ");
+                {
+                    if (index >= linesInExistOrders.Count + cancelsInOrder.Count)
+                        MessageBox.Show("יש להזמין מוצר זה", "הודעת מערכת", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("לא ניתו לבצע פעול זו על מוצר שבוטל!", "הודעת מערכת", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 

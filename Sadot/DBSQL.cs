@@ -1031,6 +1031,25 @@ namespace Sadot
             return productName;
         }
 
+        /// <summary>
+        /// Method to get product price by product id
+        /// </summary>
+        public int GetProductPriceByID(int productId)
+        {
+            int price = 0;
+            string query = "SELECT `price` FROM product WHERE `id` = @productId";
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
+            cmd.Parameters.AddWithValue("@productId", productId);
+            try
+            {
+                databaseConnection.Open();
+                price = int.Parse(cmd.ExecuteScalar().ToString());
+                databaseConnection.Close();
+            }
+            catch { }
+
+            return price;
+        }
         #endregion
 
 
@@ -1474,7 +1493,7 @@ namespace Sadot
         #region DataBase Functions **Order**(GetOrdersNumber ,
 
         /// <summary>
-        /// Methos to get order number
+        /// Method to get order number
         /// </summary>
         /// <returns></returns>
         public int GetOrdersNumber()
@@ -1497,7 +1516,8 @@ namespace Sadot
         //method to insert new order in to the data base
         public void InsertNewOrder(Order newOrder)
         {
-            string query = "INSERT INTO orders(`orderID`,`tableID`, `customerID`, `orderDate`,  `isPaid`, `totalPrice` , `discount` , `employeeID`)  VALUES (@orderID , @tableID, @customerID , @date, @isPaid, @totalPrice , @discount , @employeeID)";
+            string query = "INSERT INTO orders(`orderID`,`tableID`, `customerID`, `orderDate`,  `isPaid`, `totalPrice` , `discount` , `employeeID`, `cancels`)  " +
+                                      "VALUES (@orderID , @tableID, @customerID , @date, @isPaid, @totalPrice , @discount , @employeeID, @cancels)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
             cmd.CommandTimeout = 60;
             cmd.Parameters.AddWithValue("@orderID", newOrder.OrderID);
@@ -1508,6 +1528,7 @@ namespace Sadot
             cmd.Parameters.AddWithValue("@totalPrice", newOrder.TotalPrice);
             cmd.Parameters.AddWithValue("@discount", newOrder.Discount);
             cmd.Parameters.AddWithValue("@employeeID", newOrder.EmployeeID);
+            cmd.Parameters.AddWithValue("@cancels", newOrder.Cancels);
             try
             {
                 databaseConnection.Open();
@@ -1518,12 +1539,12 @@ namespace Sadot
         }
 
         /// <summary>
-        /// Methos to insert new line into lines in order
+        /// Method to insert new line into lines in order
         /// </summary>
         /// <param name="newLine"></param>
         public void InsertLineInOrder(LinesInOrder newLine)
         {
-            string query = "INSERT INTO lines_in_orders(`orderID`,`productID`, `productName`, `amount`, `totalPrice` , `cancelReason` , `notes`)  VALUES (@orderID , @productID , @productName, @amount, @totalPrice , @cancelReason , @notes)";
+            string query = "INSERT INTO lines_in_orders(`orderID`,`productID`, `productName`, `amount`, `totalPrice` , `notes`)  VALUES (@orderID , @productID , @productName, @amount, @totalPrice , @notes)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
             cmd.CommandTimeout = 60;
             cmd.Parameters.AddWithValue("@orderID", newLine.OrderID);
@@ -1531,7 +1552,6 @@ namespace Sadot
             cmd.Parameters.AddWithValue("@productName", newLine.ProductName);
             cmd.Parameters.AddWithValue("@amount", newLine.Amount);
             cmd.Parameters.AddWithValue("@totalPrice", newLine.TotalPrice);
-            cmd.Parameters.AddWithValue("@cancelReason", newLine.CancelReason);
             cmd.Parameters.AddWithValue("@notes", newLine.Notes);
             try
             {
@@ -1543,12 +1563,12 @@ namespace Sadot
         }
 
         /// <summary>
-        ///  Methos to update  line in lines in order
+        ///  Method to update  line in lines in order
         /// </summary>
         /// <param name="newLine"></param>
         public void UpdateLineInOrder(LinesInOrder newLine)
         {
-            string query = "UPDATE `lines_in_orders` SET `productName`= @name , `amount`= @amount ,`totalPrice`= @totalPrice , `cancelReason` = @cancelReason , `notes` = @notes WHERE `orderID` = @orderID AND `productID`= @productID ";
+            string query = "UPDATE `lines_in_orders` SET `productName`= @name , `amount`= @amount ,`totalPrice`= @totalPrice , `notes` = @notes WHERE `orderID` = @orderID AND `productID`= @productID ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
             cmd.CommandTimeout = 60;
             cmd.Parameters.AddWithValue("@name", newLine.ProductName);
@@ -1556,7 +1576,6 @@ namespace Sadot
             cmd.Parameters.AddWithValue("@totalPrice", newLine.TotalPrice);
             cmd.Parameters.AddWithValue("@orderID", newLine.OrderID);
             cmd.Parameters.AddWithValue("@productID", newLine.ProductID);
-            cmd.Parameters.AddWithValue("@cancelReason", newLine.CancelReason);
             cmd.Parameters.AddWithValue("@notes", newLine.Notes);
             try
             {
@@ -1574,7 +1593,7 @@ namespace Sadot
         /// <param name="orderToUpdate"></param>
         public void UpdateOrder(Order orderToUpdate)
         {
-            string query = "UPDATE `orders` SET `customerID` = @customerID , `isPaid`= @isPaid ,`totalPrice`= @totalPrice , `discount` = @discount WHERE `orderID`= @orderID AND `tableID`= @tableID ";
+            string query = "UPDATE `orders` SET `customerID` = @customerID , `isPaid`= @isPaid ,`totalPrice`= @totalPrice , `discount` = @discount, `cancels` = @cancels WHERE `orderID`= @orderID AND `tableID`= @tableID ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
             cmd.CommandTimeout = 60;
             cmd.Parameters.AddWithValue("@customerID", orderToUpdate.CustomerId);
@@ -1583,6 +1602,7 @@ namespace Sadot
             cmd.Parameters.AddWithValue("@discount", orderToUpdate.Discount);
             cmd.Parameters.AddWithValue("@orderID", orderToUpdate.OrderID);
             cmd.Parameters.AddWithValue("@tableID", orderToUpdate.TableID);
+            cmd.Parameters.AddWithValue("@cancels", orderToUpdate.Cancels);
             try
             {
                 databaseConnection.Open();
@@ -1617,7 +1637,7 @@ namespace Sadot
         }
 
         /// <summary>
-        /// Method to get prder info by table id
+        /// Method to get order info by table id
         /// </summary>
         /// <param name="tabelID"></param>
         /// <returns></returns>
@@ -1643,6 +1663,7 @@ namespace Sadot
                     order.TotalPrice = int.Parse(reader["totalPrice"].ToString());
                     order.Discount = int.Parse(reader["discount"].ToString());
                     order.EmployeeID = int.Parse(reader["employeeID"].ToString());
+                    order.Cancels = reader["cancels"].ToString();
                 }
                 databaseConnection.Close();
             }
@@ -1650,7 +1671,7 @@ namespace Sadot
         }
 
         /// <summary>
-        /// Method to get all the lines in the current order
+        /// Method to get all the lines of the current order
         /// </summary>
         /// <param name="orderID"></param>
         /// <returns></returns>
@@ -1671,7 +1692,6 @@ namespace Sadot
                     line.ProductName = reader["productName"].ToString();
                     line.Amount = int.Parse(reader["amount"].ToString());
                     line.TotalPrice = int.Parse(reader["totalPrice"].ToString());
-                    line.CancelReason = reader["cancelReason"].ToString();
                     line.Notes = reader["notes"].ToString();
                     lines.Add(line);
                 }
@@ -1708,6 +1728,7 @@ namespace Sadot
                     order.TotalPrice = int.Parse(reader["totalPrice"].ToString());
                     order.Discount = int.Parse(reader["discount"].ToString());
                     order.EmployeeID = int.Parse(reader["employeeID"].ToString());
+                    order.Cancels = reader["cancels"].ToString();
                     orders.Add(order);
                 }
                 databaseConnection.Close();
@@ -1759,6 +1780,7 @@ namespace Sadot
                     order.TotalPrice = int.Parse(reader["totalPrice"].ToString());
                     order.Discount = int.Parse(reader["discount"].ToString());
                     order.EmployeeID = int.Parse(reader["employeeID"].ToString());
+                    order.Cancels = reader["cancels"].ToString();
                     orders.Add(order);
                 }
                 databaseConnection.Close();
@@ -2219,13 +2241,13 @@ namespace Sadot
         /// method to remove line from spcific order
         /// </summary>
         /// <param name="orderId">the id of the order to remove the line from</param>
-        /// <param name="lineId">the id of the line to remove </param>
-        public void RemoveLineOfOrder(int orderId, int lineId)
+        /// <param name="productId">the id of the line to remove </param>
+        public void RemoveLineOfOrder(int orderId, int productId)
         {
-            string query = "DELETE FROM `lines_in_orders` WHERE `orderID` = @orderId AND `productID` = @lineId";
+            string query = "DELETE FROM `lines_in_orders` WHERE `orderID` = @orderId AND `productID` = @productId";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
             cmd.Parameters.AddWithValue("@orderId", orderId);
-            cmd.Parameters.AddWithValue("@lineId", lineId);
+            cmd.Parameters.AddWithValue("@productId", productId);
             try
             {
                 databaseConnection.Open();
@@ -2233,6 +2255,58 @@ namespace Sadot
                 databaseConnection.Close();
             }
             catch { }
+        }
+
+        /// <summary>
+        /// Method to insert new cancel into cancellations in orders
+        /// </summary>
+        /// <param name="newLine"></param>
+        public void InsertCancelOfOrder(CancellationsInOrder newCancle)
+        {
+            string query = "INSERT INTO cancellationsInOrders(`cancleID`,`orderID`, `productID`, `productName`, `priceToSub`)  VALUES (@cancleID , @orderID , @productID, @productName, @priceToSub)";
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
+            cmd.CommandTimeout = 60;
+            cmd.Parameters.AddWithValue("@cancleID", null);//null for auto increment
+            cmd.Parameters.AddWithValue("@orderID", newCancle.OrderId);
+            cmd.Parameters.AddWithValue("@productID", newCancle.ProductId);
+            cmd.Parameters.AddWithValue("@productName", newCancle.ProductName);
+            cmd.Parameters.AddWithValue("@priceToSub", newCancle.PriceToSub);
+            try
+            {
+                databaseConnection.Open();
+                cmd.ExecuteNonQuery();
+                databaseConnection.Close();
+            }
+            catch { }
+        }
+
+        /// <summary>
+        /// Method to get all the cancels of the givin order
+        /// </summary>
+        /// <param name="orderID"></param>
+        /// <returns></returns>
+        public CancellationsInOrder[] GetCancelsOfOrder(int orderID)
+        {
+            ArrayList cancels = new ArrayList();
+            string query = "SELECT * FROM cancellationsInOrders WHERE `orderID` = @orderID";
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
+            cmd.Parameters.AddWithValue("@orderID", orderID);
+            databaseConnection.Open();
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    CancellationsInOrder cancel = new CancellationsInOrder();
+                    cancel.CancleId = int.Parse(reader["cancleID"].ToString());
+                    cancel.OrderId = orderID;
+                    cancel.ProductId = int.Parse(reader["productID"].ToString());
+                    cancel.ProductName = reader["productName"].ToString();
+                    cancel.PriceToSub = int.Parse(reader["priceToSub"].ToString());
+                    cancels.Add(cancel);
+                }
+                databaseConnection.Close();
+            }
+            return (CancellationsInOrder[])cancels.ToArray(typeof(CancellationsInOrder));
         }
 
     }
