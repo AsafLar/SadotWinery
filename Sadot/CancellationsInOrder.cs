@@ -66,5 +66,20 @@ namespace Sadot
             get { return priceToSub; }
             set { priceToSub = value; }
         }
+
+        public string printName()
+        {
+            return this.productName + "(בוטל)";
+        }
+
+        public string printNameForRecipt(DBSQL db)
+        {
+            Product canceledProdcut = db.GetProductById(this.ProductId);
+
+            if("Dish" == canceledProdcut.Type)
+               return canceledProdcut.Name + "-בוטל";
+            else
+               return this.productName + "-בוטל";
+        }
     }
 }

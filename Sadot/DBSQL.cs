@@ -991,7 +991,7 @@ namespace Sadot
         /// <summary>
         /// Method to get product type by product id
         /// </summary>
-        public bool GetProductTypeByID(int productId)
+        public string GetProductTypeByID(int productId)
         {
             string productType = string.Empty;
             string query = "SELECT `type` FROM product WHERE `id` = @productId";
@@ -1005,10 +1005,8 @@ namespace Sadot
             }
             catch { }
 
-            if (productType == "Wine")
-                return true;
-            else
-                return false;
+            return productType; 
+             
         }
 
         /// <summary>

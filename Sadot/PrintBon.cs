@@ -41,7 +41,7 @@ namespace Sadot
         StringFormat drawFormatCenter;
         StringFormat drawFormatLeft;
         StringFormat drawFormatRight;
-
+        private CancellationsInOrder[] curr_order_cancellations;
         /// <summary>
         /// method wich send the event of printing and all the necessary information to print on the bon
         /// (lines in order arra, table number, emploee id)
@@ -144,9 +144,8 @@ namespace Sadot
             func(" בר ", e);
             for (int i = 0; i < Bar.Count; i++)
             {
-                bool isWine = false;
-                isWine = db.GetProductTypeByID(Bar[i].ProductID);
-                if (isWine)
+                string productType = db.GetProductTypeByID(Bar[i].ProductID); 
+                if ("Wine" == productType)
                 {
                     string[] str = Bar[i].ProductName.Split(new char[] { '-' });
                     graphics.DrawString(str[0] + " X" + Bar[i].Amount, bonFontBold, new SolidBrush(Color.Black), new Rectangle(startX, startY + Offset, endX, 30), drawFormatRight);
@@ -322,6 +321,24 @@ namespace Sadot
                 startX = 0;
                 startY += height + dif;
             }
+
+            if(orderInfo.isCancels())
+            {
+                curr_order_cancellations = db.GetCancelsOfOrder(orderInfo.OrderID);
+                for (int i = 0; i < curr_order_cancellations.Length; i++)
+                {
+                    graphics.DrawString((curr_order_cancellations[i].PriceToSub * -1).ToString(), new Font("Courier New", 10), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
+                    startX += width + dif;
+                    graphics.DrawString("1", new Font("Courier New", 10), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
+                    startX += width + dif;
+                    graphics.DrawString((curr_order_cancellations[i].PriceToSub).ToString(), new Font("Courier New", 10), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
+                    startX += width + dif;
+                    graphics.DrawString(curr_order_cancellations[i].printNameForRecipt(db), new Font("Courier New", 10), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
+                    startX = 0;
+                    startY += height + dif;
+                }
+            }
+
             graphics.DrawString(underLine, underLineFont, new SolidBrush(Color.Black), startX, startY );
             startY = startY + 20;
             graphics.DrawString("סה\"כ       : " + (orderInfo.TotalPrice - orderInfo.Discount) + " ש\"ח " , bonFont, new SolidBrush(Color.Black), new Rectangle(startX, startY , endX, 20), drawFormatRight);

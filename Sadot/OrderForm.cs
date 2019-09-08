@@ -54,7 +54,10 @@ namespace Sadot
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             table = tableInfo;
             lblTableOrder.Text = "הזמנה עבור שולחן מספר  " + table.TableID;
-        }
+
+            linesInExistOrders = new List<LinesInOrder>();
+            cancelsInOrder = new List<CancellationsInOrder>();
+    }
 
         /// <summary>
         /// method wich works when OrderForm loads
@@ -127,6 +130,7 @@ namespace Sadot
             linesInExistOrders = new List<LinesInOrder>(db.GetLinesOfOrder(order.OrderID));
             SelectedCustomer();
             FillOrderListWithExistsProducts();
+            FillListWithCancels();
             btnSwitchTable.Enabled = false;
             btnBill.Enabled = false;
             tcOrder.Enabled = false;
@@ -284,7 +288,7 @@ namespace Sadot
                 cancelsInOrder = new List<CancellationsInOrder>(db.GetCancelsOfOrder(order.OrderID));
                 for (int i = 0; i < cancelsInOrder.Count; i++)
                 {
-                    dgvOrderList.Rows.Add(cancelsInOrder[i].ProductName, 1, cancelsInOrder[i].PriceToSub * -1);
+                    dgvOrderList.Rows.Add(cancelsInOrder[i].printName(), 1, cancelsInOrder[i].PriceToSub * -1);
                     dgvOrderList.Rows[lastRowIndex + i].DefaultCellStyle.BackColor = Color.Yellow;
                 }  
             }
@@ -479,13 +483,13 @@ namespace Sadot
                 if (glassOrBottle == "כוס")//if the user chose to add glas of wine
                 {
                     lineInOrder.TotalPrice = tmpWine.PriceGlass;
-                    lineInOrder.ProductName += " - כוס ";
+                    lineInOrder.ProductName += "-כוס";
                     lineInOrder.Notes = "כוס";
                 }
                 else if (glassOrBottle == "בקבוק")
                 {
                     lineInOrder.TotalPrice = tmpWine.PriceBottle;//if the user chose to add bottle of wine
-                    lineInOrder.ProductName += " - בקבוק ";
+                    lineInOrder.ProductName += "-בקבוק";
                     using (NumberOfGlass numberOfGlass = new NumberOfGlass()) //Pop up the form to choose glass or bottle
                     {
                         if (numberOfGlass.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -494,8 +498,8 @@ namespace Sadot
                 }
                 else if (glassOrBottle == "בקבוק לקחת")
                 {
-                    lineInOrder.TotalPrice = (tmpWine.PriceBottle - (tmpWine.PriceBottle * 10 / 100)) - 1;//if the user chose to add to take bottle of wine  לחשב 10% הנחנה
-                    lineInOrder.ProductName += " - בקבוק לקחת ";
+                    lineInOrder.TotalPrice = (tmpWine.PriceBottle - (tmpWine.PriceBottle * 10 / 100)) - 1;//if the user chose to add to take bottle of wine -  10% discount 
+                    lineInOrder.ProductName += "-בקבוק לקחת";
                 }
             }
         }
@@ -585,31 +589,15 @@ namespace Sadot
             if (dgvOrderList.SelectedRows.Count > 0)
             {
                 index = dgvOrderList.CurrentCell.RowIndex;
-                if (isExistOrder)
+                if (index >= sumOfCancelsAndExistProducts)
                 {
-                    if (index < sumOfCancelsAndExistProducts)
-                        MessageBox.Show("לא ניתן למחוק מוצר שסופק או בוטל");
-                    else
-                    {
-                        if (linesInOrders[index - sumOfCancelsAndExistProducts].ProductID == 66)//check if the user choose to delete the discount
-                        {
-                            linesInOrders.RemoveAt(index - linesInExistOrders.Count);
-                            btnDiscount.Enabled = true;
-                        }
-                        else
-                        {
-                            order.TotalPrice -= linesInOrders[index - sumOfCancelsAndExistProducts].TotalPrice;
-                            linesInOrders.RemoveAt(index - linesInExistOrders.Count);
-                        }
-                    }
+                    order.TotalPrice -= linesInOrders[index - sumOfCancelsAndExistProducts].TotalPrice;
+                    linesInOrders.RemoveAt(index - sumOfCancelsAndExistProducts);
+                    lblPrice.Text = order.TotalPrice.ToString();
+                    FillOrderList();
                 }
                 else
-                {
-                    order.TotalPrice -= linesInOrders[index].TotalPrice;
-                    linesInOrders.RemoveAt(index);
-                }
-                lblPrice.Text = order.TotalPrice.ToString();
-                FillOrderList();
+                    MessageBox.Show("לא ניתן למחוק מוצר שסופק או בוטל");
             }
             else
                 MessageBox.Show("בחר מוצר למחיקה ");
@@ -804,7 +792,7 @@ namespace Sadot
                 }
                 else
                 {
-                    if(index < linesInExistOrders.Count - 1)
+                    if(index < linesInExistOrders.Count)
                     {
                         if (linesInExistOrders[index].ProductID == 66)
                         {
@@ -903,7 +891,7 @@ namespace Sadot
                 {
                     cancelLine.OrderId = lineInOrder.OrderID;
                     cancelLine.ProductId = lineInOrder.ProductID;
-                    cancelLine.ProductName = lineInOrder.ProductName + " - בוטל - ";
+                    cancelLine.ProductName = lineInOrder.ProductName;
 
                     if (lineInOrder.Amount > 1)//check if ordered more then one from this product
                     {
