@@ -33,6 +33,19 @@ namespace Sadot
         }
 
         /// <summary>
+        /// Copy Constractor function
+        /// </summary>
+        public LinesInOrder(LinesInOrder instance_of)
+        {
+            this.orderID = instance_of.orderID;
+            this.productID = instance_of.productID;
+            this.productName = instance_of.productName;
+            this.amount = instance_of.amount;
+            this.totalPrice = instance_of.totalPrice;
+            this.notes = instance_of.notes;
+        }
+
+        /// <summary>
         /// OrderID ( get , set )
         /// </summary>
         public int OrderID
@@ -84,6 +97,31 @@ namespace Sadot
         {
             get { return notes; }
             set { notes = value; }
+        }
+
+        public bool isLineGlass()
+        {
+            return (this.Notes == "כוס");
+        }
+
+        public bool isLineTakeAwayBottle()
+        {
+            return (this.Notes == "בקבוק לקחת");
+        }
+
+        public bool isLineBottle()
+        {
+            return (this.Notes != "none" && this.Notes != "" && this.Notes != "כוס" && this.Notes != "בקבוק לקחת");
+        }
+
+        public int getProductPrice()
+        {
+            int retVal = 0;
+            if(TotalPrice != 0)
+            {
+                retVal = this.TotalPrice / this.Amount;
+            }
+            return retVal;
         }
     }
 }

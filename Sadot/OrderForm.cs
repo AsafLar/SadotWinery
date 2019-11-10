@@ -3,6 +3,7 @@
  * class with the code of the form of making order when user press on table, this is the main form of the user to place order
  * programmers: Asaf lariach & Yotam kaufman 
  */
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace Sadot
 {
     public partial class OrderForm : Form
     {
+        
         private DBSQL db = new DBSQL();      //db connection
         private string glassOrBottle;        // flag to know if chosen glass or bottle
         private Order order;                 // the order we work with could be existent one or new one
@@ -40,6 +42,10 @@ namespace Sadot
         private Table table;
         private Product[] currentProductByType; //array of the products of the same type (wine, dish, hot drink, soft drink...)
         private CancellationsInOrder cancelLine;
+
+        /*additions to glass and take away bottle to prevent duplicate lines IDS*/
+        public const int GLASS_ID_SCALE_FACTOR = 4000;
+        public const int TA_BOTTLE_ID_SCALE_FACTOR = 6000;
 
         /// <summary>
         /// OrderForm form constuctor
@@ -348,10 +354,14 @@ namespace Sadot
             for (int i = 0; i < linesInExistOrders.Count; i++)
             {
                 tmpStock.ProductID = linesInExistOrders[i].ProductID;
-                if(linesInExistOrders[i].Notes == "כוס")
+                if(linesInExistOrders[i].isLineGlass())
                 {
+                    tmpStock.ProductID -= GLASS_ID_SCALE_FACTOR;
                     tmpStock.TotalAmount = linesInExistOrders[i].Amount/4;
                 }
+                else if (linesInExistOrders[i].isLineTakeAwayBottle())
+                    tmpStock.ProductID -= TA_BOTTLE_ID_SCALE_FACTOR;
+
                 tmpStock.TotalAmount = linesInExistOrders[i].Amount;
                 tmpStock.Date = DateTime.Now.Day.ToString();
                 db.UpdateProductInStockByDate(tmpStock.Date, tmpStock.TotalAmount, tmpStock.ProductID);
@@ -482,15 +492,16 @@ namespace Sadot
                 }
                 if (glassOrBottle == "כוס")//if the user chose to add glas of wine
                 {
+                    lineInOrder.ProductID += GLASS_ID_SCALE_FACTOR;
                     lineInOrder.TotalPrice = tmpWine.PriceGlass;
-                    lineInOrder.ProductName += "-כוס";
+                    lineInOrder.ProductName += " - כוס";
                     lineInOrder.Notes = "כוס";
                 }
                 else if (glassOrBottle == "בקבוק")
                 {
                     lineInOrder.TotalPrice = tmpWine.PriceBottle;//if the user chose to add bottle of wine
-                    lineInOrder.ProductName += "-בקבוק";
-                    using (NumberOfGlass numberOfGlass = new NumberOfGlass()) //Pop up the form to choose glass or bottle
+                    lineInOrder.ProductName += " - בקבוק";
+                    using (NumberOfGlass numberOfGlass = new NumberOfGlass()) //Pop up the form to choose number of glasses
                     {
                         if (numberOfGlass.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                             lineInOrder.Notes = numberOfGlass.Number.ToString();
@@ -498,8 +509,10 @@ namespace Sadot
                 }
                 else if (glassOrBottle == "בקבוק לקחת")
                 {
+                    lineInOrder.ProductID += TA_BOTTLE_ID_SCALE_FACTOR;
                     lineInOrder.TotalPrice = (tmpWine.PriceBottle - (tmpWine.PriceBottle * 10 / 100)) - 1;//if the user chose to add to take bottle of wine -  10% discount 
-                    lineInOrder.ProductName += "-בקבוק לקחת";
+                    lineInOrder.ProductName += " - בקבוק לקחת";
+                    lineInOrder.Notes = "בקבוק לקחת";
                 }
             }
         }
@@ -885,34 +898,38 @@ namespace Sadot
             {
                 lineInOrder = linesInExistOrders[index];
                 cancelLine = new CancellationsInOrder();
-                cancelLine.PriceToSub = db.GetProductPriceByID(lineInOrder.ProductID);
+                cancelLine.PriceToSub = lineInOrder.getProductPrice();
 
-                if(cancelLine.PriceToSub <= order.TotalPrice)
+                if (cancelLine.PriceToSub <= order.TotalPrice)
                 {
-                    cancelLine.OrderId = lineInOrder.OrderID;
-                    cancelLine.ProductId = lineInOrder.ProductID;
-                    cancelLine.ProductName = lineInOrder.ProductName;
-
-                    if (lineInOrder.Amount > 1)//check if ordered more then one from this product
+                    if (cancelLine.PriceToSub != 0)
                     {
-                        lineInOrder.Amount--;
-                        if (lineInOrder.TotalPrice > cancelLine.PriceToSub)
-                            lineInOrder.TotalPrice -= cancelLine.PriceToSub;
-                        db.UpdateLineInOrder(lineInOrder);
-                    }
-                    else//if there is only one from the product remove the line
-                        db.RemoveLineOfOrder(lineInOrder.OrderID, lineInOrder.ProductID);
+                        cancelLine.OrderId = lineInOrder.OrderID;
+                        cancelLine.ProductId = lineInOrder.ProductID;
+                        cancelLine.ProductName = lineInOrder.ProductName;
 
-                    db.InsertCancelOfOrder(cancelLine);
-                    order.TotalPrice -= cancelLine.PriceToSub;
-                    order.Cancels = "Yes";
-                    db.UpdateOrder(order);
-                    linesInExistOrders = new List<LinesInOrder>(db.GetLinesOfOrder(order.OrderID));
-                    FillOrderList();
+                        if (lineInOrder.Amount > 1)//check if ordered more then one from this product
+                        {
+                            lineInOrder.Amount--;
+                            if (lineInOrder.TotalPrice > cancelLine.PriceToSub)
+                                lineInOrder.TotalPrice -= cancelLine.PriceToSub;
+                            db.UpdateLineInOrder(lineInOrder);
+                        }
+                        else//if there is only one from the product remove the line
+                            db.RemoveLineOfOrder(lineInOrder.OrderID, lineInOrder.ProductID);
+
+                        db.InsertCancelOfOrder(cancelLine);
+                        order.TotalPrice -= cancelLine.PriceToSub;
+                        order.Cancels = "Yes";
+                        db.UpdateOrder(order);
+                        linesInExistOrders = new List<LinesInOrder>(db.GetLinesOfOrder(order.OrderID));
+                        FillOrderList();
+                    }
+                    else
+                        MessageBox.Show("מחיר המוצר הוא 0 שקלים, לא ניתן לבטל!");
                 }
                 else
                     MessageBox.Show("מחיר ההזמנה קטן ממחיר המוצר, לא ניתן לבטל");
-
             }
             else
                 MessageBox.Show("המוצר לא בוטל");

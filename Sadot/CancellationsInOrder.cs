@@ -72,14 +72,44 @@ namespace Sadot
             return this.productName + "(בוטל)";
         }
 
+        //public string printNameForRecipt(DBSQL db)
+        //{
+        //    if (this.ProductId > 4000 && this.ProductId < 6000)
+        //        this.
+        //    Product canceledProdcut = db.GetProductById(this.ProductId);
+
+        //    if("Dish" == canceledProdcut.Type)
+        //       return canceledProdcut.Name + "-בוטל";
+        //    else
+        //       return this.productName + "-בוטל";
+        //}
+
         public string printNameForRecipt(DBSQL db)
         {
-            Product canceledProdcut = db.GetProductById(this.ProductId);
+            Product canceledProdcut;
+            string result = string.Empty;
 
-            if("Dish" == canceledProdcut.Type)
-               return canceledProdcut.Name + "-בוטל";
+            if (this.ProductId > 4000 && this.ProductId < 6000)
+                this.ProductId -= 4000;
+            if (this.ProductId > 6000)
+                this.ProductId -= 6000;
+
+            canceledProdcut = db.GetProductById(this.ProductId);
+
+            if ("Dish" == canceledProdcut.Type)
+                result = canceledProdcut.Name + "-בוטל";
+            else if ("Wine" == canceledProdcut.Type)
+            {
+                string[] str = this.ProductName.Split('-');
+                if(str[1] == "בקבוק לקחת")
+                    result = str[0] + "\n" + str[1] + "\n" + "בוטל";
+                else
+                    result = str[0] + "\n" + str[1] + "-בוטל";
+            }
             else
-               return this.productName + "-בוטל";
+                result = this.productName + "-בוטל";
+
+            return result;
         }
     }
 }

@@ -54,6 +54,7 @@ namespace Sadot
 
                 if (user != null)
                 {
+                    checkMonthAndYearForStock();
                     if (user.Permission == "מנהל")
                     {
                         AdminHomePage adminHomePage = new AdminHomePage(this);
@@ -73,6 +74,33 @@ namespace Sadot
                     MessageBox.Show("שם משתמש או סיסמא שגויים נסה שנית ", "הודעת מערכת", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtPassword.Text = string.Empty;
                 }
+            }
+        }
+
+        private void checkMonthAndYearForStock()
+        {
+            Stock[] stock;
+            DateTime currentDate = DateTime.Now;
+            int monthFromStock = db.GetCurrentMonth();
+            int yearFromStock = db.GetCurrentyYear();
+            string qurey;
+            //check if this is a new month
+            if (currentDate.Month != monthFromStock)
+            {
+                qurey = "SELECT productID, product.name , SUM(`1`+`2`+`3`+`4`+`5`+`6`+`7`+`8`+`9`+`10`+`11`+`12`+`13`+`14`+`15`+`16`+`17`+`18`+`19`+`20`+`21`+`22`+`23`+`24`+`25`+`26`+`27`+`28`+`29`+`30`+`31`) AS total FROM `stockByDate` INNER JOIN product ON stockByDate.productID = product.id WHERE 1 GROUP BY `productID` ";
+                stock = db.GetStockDataBy(qurey);
+                //loop to pass on all the array with stock details
+                for (int i = 0; i < stock.Length; i++)
+                {
+                    db.UpdateProductInStockByYear(monthFromStock.ToString(), stock[i].TotalAmount, stock[i].ProductID, currentDate.Month);//(string num, double amount, int productID, int currentMonth)
+                }
+                db.ResetStockByDate();
+            }
+            //check if this is a new year
+            if (currentDate.Year != yearFromStock)
+            {
+                qurey = "SELECT productID, product.name , SUM(`1`+`2`+`3`+`4`+`5`+`6`+`7`+`8`+`9`+`10`+`11`+`12`) AS total FROM `stockByYear` INNER JOIN product ON stockByYear.productID = product.id WHERE 1 GROUP BY `productID` ";
+                db.ResetStockByYear(currentDate.Year);
             }
         }
 
