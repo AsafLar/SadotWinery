@@ -45,10 +45,15 @@ namespace Sadot
         {
             lblDishName.Text = dishName;
             ingredients = db.GetDishIngredientsByID2(dishID);
-            for(int i = 0; i < ingredients.Length; i++)
+            for (int i = 0; i < ingredients.Length; i++)
             {
-                clbIngredientsOfDish.Items.Add(" בלי "+ingredients[i].Name);
+                clbIngredientsOfDish.Items.Add(" בלי " + ingredients[i].Name);
+                clbIngredientsOfDish2.Items.Add(ingredients[i].Name + " בצד ");
+
+                //clbIngredientsOfDish.Items.Add(ing0redients[i].Name);
             }
+
+
         }
 
         /// <summary>
@@ -59,14 +64,20 @@ namespace Sadot
         /// <param name="e"></param>
         private void btnOK_Click(object sender, EventArgs e)
         {
-            int  i;
-            for ( i = 0  ; i < clbIngredientsOfDish.Items.Count; i++)
+            int i;
+
+            for (i = 0; i < clbIngredientsOfDish.Items.Count; i++)
             {
                 if (clbIngredientsOfDish.GetItemCheckState(i) == CheckState.Checked)
                 {
-                    ingredentsToRemove += "-" + clbIngredientsOfDish.Items[i].ToString() ;   
+                    ingredentsToRemove += "-" + clbIngredientsOfDish.Items[i].ToString();
+                }
+                if (clbIngredientsOfDish2.GetItemCheckState(i) == CheckState.Checked)
+                {
+                    ingredentsToRemove += "-" + clbIngredientsOfDish2.Items[i].ToString();
                 }
             }
         }
+        
     }
 }
