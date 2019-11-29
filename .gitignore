@@ -9,3 +9,9 @@ Sadot/obj/Debug/Sadot.csproj.FileListAbsolute.txt
 *.ide-wal
 Sadot/obj/Debug/
 Sadot/bin/Debug/MySql.Data.dll
+*.dll
+*.xml
+Sadot/bin/Release/Sadot.exe.config
+*.resources
+*.CopyComplete
+*.txt
