@@ -111,7 +111,10 @@ namespace Sadot
 
         public bool isLineBottle()
         {
-            return (this.Notes != "none" && this.Notes != "" && this.Notes != "כוס" && this.Notes != "בקבוק לקחת");
+            return (this.Notes != "none" && this.Notes != "" && this.Notes != "כוס" && this.Notes != "בקבוק לקחת" && this.Notes.All(char.IsNumber));
+
+            //return (this.Notes.All(char.IsNumber) || (this.Notes != "none" && this.Notes != "" && this.Notes != "כוס"));
+
         }
 
         public int getProductPrice()

@@ -18,8 +18,9 @@ namespace Sadot
 {
     class DBSQL
     {
-        /*private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_sadot;UID=u691360607_admin;PASSWORD=admin1234;SslMode=none;";*/ //regular data base
-        private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_test;UID=u691360607_asaf;PASSWORD=sadottest;SslMode=none;"; //test data base for development
+        //private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_sadot;UID=u691360607_admin;PASSWORD=admin1234;SslMode=none;";//regular data base
+        //private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_test;UID=u691360607_asaf;PASSWORD=sadottest;SslMode=none;"; //test data base for development
+          private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_sadot_new;UID=u691360607_admin2;PASSWORD=admin1234;SslMode=none;";//new data base
         MySqlConnection databaseConnection = new MySqlConnection(connectionString);
 
         #region DataBase Functions **Login** ( CheckLogin )
@@ -1050,7 +1051,6 @@ namespace Sadot
         }
         #endregion
 
-
         #region DataBase Functions **Dish**(InsertNewDish ,InserIngredientsOfDish ,DeleteIngredientsOfDish ,UpdateIngredientsOfDish , UpdateDish ,GetDishIdByName ,GetDishIngredientsByID ,GetDishIngredientsByID2 ,GetDishData ,IsDishNameAlreadyExists ,InsertIngredientsOfDish
 
         /// <summary>
@@ -1488,7 +1488,7 @@ namespace Sadot
 
         #endregion
 
-        #region DataBase Functions **Order**(GetOrdersNumber ,
+        #region DataBase Functions **Order**(GetOrdersNumber , InsertNewOrder , InsertLineInOrder , UpdateLineInOrder
 
         /// <summary>
         /// Method to get order number
@@ -1536,7 +1536,7 @@ namespace Sadot
             catch { }
         }
 
-        /// <summary>
+        /// <summary>;   
         /// Method to insert new line into lines in order
         /// </summary>
         /// <param name="newLine"></param>
@@ -1787,7 +1787,6 @@ namespace Sadot
         }
 
         #endregion
-
 
         #region DataBase Functions **Stock**
 
@@ -2136,7 +2135,6 @@ namespace Sadot
         }
 
         #endregion
-
 
         #region DataBase Functions **Event**
 
