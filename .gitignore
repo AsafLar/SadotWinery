@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Sadot/bin/Debug/MySql.Data.xml
 *.exe
 *.suo
@@ -8,3 +9,17 @@ Sadot/obj/Debug/Sadot.csproj.FileListAbsolute.txt
 *.ide
 *.ide-wal
 Sadot/obj/Debug/
+=======
+
+\.vs/Sadot/v15/\.suo
+
+\.vs/Sadot/v15/Server/sqlite3/
+
+*.ide
+
+*.ide-shm
+
+*.ide-wal
+
+\.vs/Sadot/v15/
+>>>>>>> origin/master
