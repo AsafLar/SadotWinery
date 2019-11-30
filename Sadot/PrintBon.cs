@@ -349,13 +349,15 @@ namespace Sadot
                 startX += width + dif;
                 graphics.DrawString((Receipt[i].TotalPrice / Receipt[i].Amount).ToString(), new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
                 startX += width + dif;
-                if(Receipt[i].isLineGlass() || Receipt[i].isLineTakeAwayBottle())
+                if (Receipt[i].isLineGlass() || Receipt[i].isLineTakeAwayBottle())
                     graphics.DrawString(SplitProductName(Receipt[i].ProductName.ToString()) + "\n" + Receipt[i].Notes, new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
                 else if (Receipt[i].isLineBottle())
                 {
                     graphics.DrawString(SplitProductName(Receipt[i].ProductName.ToString()) + "\n" + "בקבוק", new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
                     //graphics.DrawString(SplitProductName(Receipt[i].ProductName.ToString()) , new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
                 }
+                else if (Receipt[i].ProductName.Contains("טעימות"))
+                    graphics.DrawString(Receipt[i].ProductName.ToString(), new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
                 else
                     graphics.DrawString(SplitProductName(Receipt[i].ProductName.ToString()), new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
                 startX = 0;
