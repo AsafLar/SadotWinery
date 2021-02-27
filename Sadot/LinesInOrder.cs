@@ -19,7 +19,6 @@ namespace Sadot
         private string productName;
         private int amount;
         private int totalPrice;
-        private string cancelReason;
         private string notes;
 
         /// <summary>
@@ -30,8 +29,20 @@ namespace Sadot
             orderID = -1;
             amount = 1;
             totalPrice = -1;
-            cancelReason = "No";
             notes = "";
+        }
+
+        /// <summary>
+        /// Copy Constractor function
+        /// </summary>
+        public LinesInOrder(LinesInOrder instance_of)
+        {
+            this.orderID = instance_of.orderID;
+            this.productID = instance_of.productID;
+            this.productName = instance_of.productName;
+            this.amount = instance_of.amount;
+            this.totalPrice = instance_of.totalPrice;
+            this.notes = instance_of.notes;
         }
 
         /// <summary>
@@ -80,21 +91,40 @@ namespace Sadot
         }
 
         /// <summary>
-        /// CancelReason ( get , set )
-        /// </summary>
-        public string CancelReason
-        {
-            get { return cancelReason; }
-            set { cancelReason = value; }
-        }
-
-        /// <summary>
         /// Notes ( get , set )
         /// </summary>
         public string Notes
         {
             get { return notes; }
             set { notes = value; }
+        }
+
+        public bool isLineGlass()
+        {
+            return (this.Notes == "כוס");
+        }
+
+        public bool isLineTakeAwayBottle()
+        {
+            return (this.Notes == "בקבוק לקחת");
+        }
+
+        public bool isLineBottle()
+        {
+            return (this.Notes != "none" && this.Notes != "" && this.Notes != "כוס" && this.Notes != "בקבוק לקחת" && this.Notes.All(char.IsNumber));
+
+            //return (this.Notes.All(char.IsNumber) || (this.Notes != "none" && this.Notes != "" && this.Notes != "כוס"));
+
+        }
+
+        public int getProductPrice()
+        {
+            int retVal = 0;
+            if(TotalPrice != 0)
+            {
+                retVal = this.TotalPrice / this.Amount;
+            }
+            return retVal;
         }
     }
 }

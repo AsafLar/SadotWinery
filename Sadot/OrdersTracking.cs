@@ -35,6 +35,7 @@ namespace Sadot
         Customer selectedOrderCustomerDetails;
         Table[] tables;
         Customer[] customers;
+        private List<CancellationsInOrder> cancelsInOrder; // List with all the canceles of cur order
 
         /// <summary>
         /// OrdersTracking user control constractor
@@ -178,18 +179,28 @@ namespace Sadot
         /// </summary>
         private void FillOrderLines()
         {
-            orderTotalPrice = 0;
+            int lastRowIndex = 0;
             dgvOrderLines.Rows.Clear();
             //loop to pass selected order lines array
             for (int i = 0; i < selctedOrderLines.Length; i++)
             {
                 dgvOrderLines.Rows.Add(selctedOrderLines[i].ProductName, selctedOrderLines[i].Amount, selctedOrderLines[i].TotalPrice);
                 dgvOrderLines.Rows[i].Selected = false;
-                orderTotalPrice += selctedOrderLines[i].TotalPrice;
             }
+            lastRowIndex = selctedOrderLines.Length;
+            if (selectedOrderDetails.isCancels())//check if the current order has cancles
+            {
+                cancelsInOrder = new List<CancellationsInOrder>(db.GetCancelsOfOrder(selectedOrderDetails.OrderID));
+                for (int i = 0; i < cancelsInOrder.Count; i++)
+                {
+                    dgvOrderLines.Rows.Add(cancelsInOrder[i].printName(), 1, cancelsInOrder[i].PriceToSub * -1);
+                    dgvOrderLines.Rows[lastRowIndex + i].DefaultCellStyle.BackColor = Color.Yellow;
+                }
+            }
+
             lblCustomerName2.Text = (selectedOrderCustomerDetails == null) ? "לא נבחר לקוח" : selectedOrderCustomerDetails.GetFullName();
             lblEmployeeName2.Text = selectedOrderEmployeeDetails.GetFullName();
-            lblOrderTotalPrice2.Text = orderTotalPrice.ToString();
+            lblOrderTotalPrice2.Text = selectedOrderDetails.TotalPrice.ToString() + " ש''ח ";
         }
 
         /// <summary>

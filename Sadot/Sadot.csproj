@@ -68,6 +68,7 @@
     <Compile Include="AdminHomePage.Designer.cs">
       <DependentUpon>AdminHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CancellationsInOrder.cs" />
     <Compile Include="ManageDishPage.cs">
       <SubType>Form</SubType>
     </Compile>

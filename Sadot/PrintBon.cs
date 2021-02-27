@@ -30,7 +30,9 @@ namespace Sadot
         private Font titleFont = new Font("Courier New", 25, FontStyle.Bold);
         private Font infoFont = new Font("Courier New", 15);
         private Font bonFontBold = new Font("Courier New", 18, FontStyle.Bold);
+        private Font bonFontBold_2 = new Font("Courier New", 14, FontStyle.Bold);
         private Font bonFont = new Font("Courier New", 15);
+        private Font bonFontDiscount = new Font("Courier New", 13);
         private Font underLineFont = new Font("Courier New", 10);
         private PaperSize psize = new PaperSize("Custom", 80, 200);
         private int startX = 0;
@@ -41,6 +43,11 @@ namespace Sadot
         StringFormat drawFormatCenter;
         StringFormat drawFormatLeft;
         StringFormat drawFormatRight;
+        private CancellationsInOrder[] curr_order_cancellations;
+
+        /*additions to glass and take away bottle to prevent duplicate lines IDS*/
+        public const int GLASS_ID_SCALE_FACTOR = 4000;
+        public const int TA_BOTTLE_ID_SCALE_FACTOR = 6000;
 
         /// <summary>
         /// method wich send the event of printing and all the necessary information to print on the bon
@@ -92,13 +99,21 @@ namespace Sadot
             string department = string.Empty;
             for (int i = 0; i < linesInOrde.Length; i++)
             {
-                department = db.GetProdductDepartmentByID(linesInOrde[i].ProductID);
+                LinesInOrder curr_line = new LinesInOrder(linesInOrde[i]);
+
+                if (curr_line.isLineGlass())
+                    curr_line.ProductID -= GLASS_ID_SCALE_FACTOR;
+
+                if (curr_line.isLineTakeAwayBottle())
+                    curr_line.ProductID -= TA_BOTTLE_ID_SCALE_FACTOR;
+
+                department = db.GetProdductDepartmentByID(curr_line.ProductID);
                 if (department == "kitchen")
-                    kitchen.Add(linesInOrde[i]);
+                    kitchen.Add(curr_line);
                 if (department == "Bar")
-                    Bar.Add(linesInOrde[i]);
+                    Bar.Add(curr_line);
                 if (department == "Waiters")
-                    Waiters.Add(linesInOrde[i]);
+                    Waiters.Add(curr_line);
                 department = string.Empty;
             }
         }
@@ -144,19 +159,26 @@ namespace Sadot
             func(" בר ", e);
             for (int i = 0; i < Bar.Count; i++)
             {
-                bool isWine = false;
-                isWine = db.GetProductTypeByID(Bar[i].ProductID);
-                if (isWine)
+                string productType = db.GetProductTypeByID(Bar[i].ProductID); 
+                if ("Wine" == productType)
                 {
-                    string[] str = Bar[i].ProductName.Split(new char[] { '-' });
-                    graphics.DrawString(str[0] + " X" + Bar[i].Amount, bonFontBold, new SolidBrush(Color.Black), new Rectangle(startX, startY + Offset, endX, 30), drawFormatRight);
-                    Offset = Offset + 20;
-                    graphics.DrawString(str[1] + "_____", bonFont, new SolidBrush(Color.Black), new Rectangle(startX, startY + Offset, endX, 20), drawFormatRight);
-                    Offset = Offset + 20;
-                    if(Bar[i].Notes != "none" && Bar[i].Notes != "" && Bar[i].Notes != "כוס")
+                    if(Bar[i].ProductName.Contains("-"))
                     {
-                        graphics.DrawString(Bar[i].Notes + "X  כוסות", bonFont, new SolidBrush(Color.Black), new Rectangle(startX, startY + Offset, endX, 20), drawFormatRight);
+                        string[] str = Bar[i].ProductName.Split(new char[] { '-' });
+                        graphics.DrawString(str[0] + " X" + Bar[i].Amount, bonFontBold, new SolidBrush(Color.Black), new Rectangle(startX, startY + Offset, endX, 30), drawFormatRight);
                         Offset = Offset + 20;
+                        graphics.DrawString(str[1] + "_____", bonFont, new SolidBrush(Color.Black), new Rectangle(startX, startY + Offset, endX, 20), drawFormatRight);
+                        Offset = Offset + 20;
+                        if (Bar[i].isLineBottle())
+                        {
+                            graphics.DrawString(Bar[i].Notes + " X  כוסות", bonFont, new SolidBrush(Color.Black), new Rectangle(startX, startY + Offset, endX, 20), drawFormatRight);
+                            Offset = Offset + 20;
+                        }
+                    }
+                    else
+                    {
+                        graphics.DrawString(Bar[i].ProductName + " X" + Bar[i].Amount, bonFontBold_2, new SolidBrush(Color.Black), new Rectangle(startX, startY + Offset, endX, 30), drawFormatRight);
+                        Offset = Offset + 25;
                     }
                 }
                 else
@@ -221,25 +243,31 @@ namespace Sadot
             Offset = Offset + 20;
         }
 
-        /// <summary>
-        /// method wich fill the lists to print the details on the receipt
-        /// </summary>
-        /// <param name="orderLines">the array with the lines of the order to print on the receipt</param>
-        private void FillListsToPrintReceipt(LinesInOrder[] orderLines)
-        {
-            string department = string.Empty;
-            for (int i = 0; i < orderLines.Length; i++)
-            {
-                department = db.GetProdductDepartmentByID(orderLines[i].ProductID);
-                if (department == "kitchen")
-                    kitchen.Add(orderLines[i]);
-                if (department == "Bar")
-                    Bar.Add(orderLines[i]);
-                if (department == "Waiters")
-                    Waiters.Add(orderLines[i]);
-                department = string.Empty;
-            }
-        }
+        ///// <summary>
+        ///// method wich fill the lists to print the details on the receipt
+        ///// </summary>
+        ///// <param name="orderLines">the array with the lines of the order to print on the receipt</param>
+        //private void FillListsToPrintReceipt(LinesInOrder[] orderLines)
+        //{
+        //    string department = string.Empty;
+        //    for (int i = 0; i < orderLines.Length; i++)
+        //    {
+        //        if (orderLines[i].isLineGlass())
+        //            orderLines[i].ProductID -= GLASS_ID_SCALE_FACTOR;
+
+        //        if (orderLines[i].isLineTakeAwayBottle())
+        //            orderLines[i].ProductID -= TA_BOTTLE_ID_SCALE_FACTOR;
+
+        //        department = db.GetProdductDepartmentByID(orderLines[i].ProductID);
+        //        if (department == "kitchen")
+        //            kitchen.Add(orderLines[i]);
+        //        if (department == "Bar")
+        //            Bar.Add(orderLines[i]);
+        //        if (department == "Waiters")
+        //            Waiters.Add(orderLines[i]);
+        //        department = string.Empty;
+        //    }
+        //}
         private Order orderInfo;
 
         /// <summary>
@@ -312,31 +340,81 @@ namespace Sadot
 
             for (int i = 0; i < Receipt.Length; i++)
             {
-                graphics.DrawString(Receipt[i].TotalPrice.ToString(), new Font("Courier New", 10), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
+                if(Receipt[i].ProductName.Contains("על חשבון הבית"))
+                    graphics.DrawString("OTH", new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
+                else
+                    graphics.DrawString(Receipt[i].TotalPrice.ToString(), new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
                 startX += width + dif;
-                graphics.DrawString(Receipt[i].Amount.ToString() , new Font("Courier New", 10), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
+                graphics.DrawString(Receipt[i].Amount.ToString() , new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
                 startX += width + dif;
-                graphics.DrawString((Receipt[i].TotalPrice / Receipt[i].Amount).ToString(), new Font("Courier New", 10), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
+                graphics.DrawString((Receipt[i].TotalPrice / Receipt[i].Amount).ToString(), new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
                 startX += width + dif;
-                graphics.DrawString(SplitProductName(Receipt[i].ProductName.ToString()), new Font("Courier New", 10), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
+                if (Receipt[i].isLineGlass() || Receipt[i].isLineTakeAwayBottle())
+                    graphics.DrawString(SplitProductName(Receipt[i].ProductName.ToString()) + "\n" + Receipt[i].Notes, new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
+                else if (Receipt[i].isLineBottle())
+                {
+                    graphics.DrawString(SplitProductName(Receipt[i].ProductName.ToString()) + "\n" + "בקבוק", new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
+                    //graphics.DrawString(SplitProductName(Receipt[i].ProductName.ToString()) , new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
+                }
+                else if (Receipt[i].ProductName.Contains("טעימות"))
+                    graphics.DrawString(Receipt[i].ProductName.ToString(), new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
+                else
+                    graphics.DrawString(SplitProductName(Receipt[i].ProductName.ToString()), new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
                 startX = 0;
                 startY += height + dif;
             }
-            graphics.DrawString(underLine, underLineFont, new SolidBrush(Color.Black), startX, startY );
-            startY = startY + 20;
-            graphics.DrawString("סה\"כ       : " + (orderInfo.TotalPrice - orderInfo.Discount) + " ש\"ח " , bonFont, new SolidBrush(Color.Black), new Rectangle(startX, startY , endX, 20), drawFormatRight);
-            startY +=  20;
 
-            if(orderInfo.Discount > 0)
+            if(orderInfo.isCancels())
             {
-                graphics.DrawString("הנחה         : " + orderInfo.Discount.ToString() + " ש\"ח ", bonFont, new SolidBrush(Color.Black), new Rectangle(startX, startY, endX, 20), drawFormatRight);
-                startY += 20;
+                curr_order_cancellations = db.GetCancelsOfOrder(orderInfo.OrderID);
+                for (int i = 0; i < curr_order_cancellations.Length; i++)
+                {
+                    graphics.DrawString((curr_order_cancellations[i].PriceToSub * -1).ToString(), new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
+                    startX += width + dif;
+                    graphics.DrawString("1", new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
+                    startX += width + dif;
+                    graphics.DrawString((curr_order_cancellations[i].PriceToSub).ToString(), new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, width, height), drawFormatRight);
+                    startX += width + dif;
+                    graphics.DrawString(curr_order_cancellations[i].printNameForRecipt(db), new Font("Courier New", 8), new SolidBrush(Color.Black), new Rectangle(startX, startY, 130, height), drawFormatRight);
+                    startX = 0;
+                    startY += height + dif;
+                }
             }
+
+            //**********Befor changes   -  13.11.19**********
+            //graphics.DrawString(underLine, underLineFont, new SolidBrush(Color.Black), startX, startY );
+            //startY = startY + 20;
+            //graphics.DrawString("סה\"כ       : " + (orderInfo.TotalPrice - orderInfo.Discount) + " ש\"ח " , bonFont, new SolidBrush(Color.Black), new Rectangle(startX, startY , endX, 20), drawFormatRight);
+            //startY +=  20;
+
+            //if(orderInfo.Discount != 0)
+            //{
+            //    graphics.DrawString("הנחה         : " + orderInfo.Discount.ToString() + " ש\"ח ", bonFont, new SolidBrush(Color.Black), new Rectangle(startX, startY, endX, 20), drawFormatRight);
+            //    startY += 20;
+            //}
+
+            graphics.DrawString(underLine, underLineFont, new SolidBrush(Color.Black), startX, startY);
+            startY = startY + 20;
+
+            if (orderInfo.Discount != 0)
+            {
+                graphics.DrawString("סה\"כ לפני הנחה :" + (orderInfo.TotalPrice - orderInfo.Discount) + " ש\"ח ", bonFontDiscount, new SolidBrush(Color.Black), new Rectangle(startX, startY, endX, 20), drawFormatRight);
+                startY += 25;
+
+                graphics.DrawString("*הנחה           : " + (orderInfo.Discount * -1).ToString() + " ש\"ח ", bonFontDiscount, new SolidBrush(Color.Black), new Rectangle(startX, startY, endX, 20), drawFormatRight);
+                startY += 25;
+
+                graphics.DrawString("**-----------------------------**", underLineFont, new SolidBrush(Color.Black), startX, startY);
+                startY += 20;
+
+            }
+
+
             graphics.DrawString("סה\"כ לתשלום: " + orderInfo.TotalPrice.ToString() + " ש\"ח ", bonFont, new SolidBrush(Color.Black), new Rectangle(startX, startY, endX, 30), drawFormatRight);
             startY += 20;
-            graphics.DrawString("תודה רבה יקב שדות", underLineFont, new SolidBrush(Color.Black), new Rectangle(startX, startY , endX, 20), drawFormatRight);
+            graphics.DrawString("   **תודה רבה יקב שדות**", underLineFont, new SolidBrush(Color.Black), new Rectangle(startX, startY , endX, 20), drawFormatRight);
             startY += 20;
-            graphics.DrawString("מסמך זה אינו קבלה" , underLineFont, new SolidBrush(Color.Black), new Rectangle(startX, startY , endX, 20), drawFormatRight);
+            graphics.DrawString("   **מסמך זה אינו קבלה**" , underLineFont, new SolidBrush(Color.Black), new Rectangle(startX, startY , endX, 20), drawFormatRight);
             startY += 20;
         }
 

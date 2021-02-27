@@ -96,8 +96,21 @@ namespace Sadot
             {
                 int index = dgvIngredientsList.CurrentCell.RowIndex;
                 if (updateFlag)
-                    IngredientsToRemoveFromDish.Add(dishIngredients[index]);
-
+                {
+                    if (index >= dishIngredients.Length)
+                    {
+                        int idOfIngToRemove = int.Parse(dgvIngredientsList.Rows[index].Cells[0].Value.ToString());
+                        int indexToRemove = 0;
+                        for(int i = 0; i < IngredientsToAddToDish.Count; i++)
+                        {
+                            if (IngredientsToAddToDish[i].IngredientID == idOfIngToRemove)
+                                indexToRemove = i;
+                        }
+                        IngredientsToAddToDish.RemoveAt(indexToRemove);
+                    }
+                    else
+                        IngredientsToRemoveFromDish.Add(dishIngredients[index]);
+                }
                 dgvIngredientsList.Rows.RemoveAt(index);
             }
             else

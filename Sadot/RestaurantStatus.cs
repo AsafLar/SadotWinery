@@ -20,6 +20,7 @@ namespace Sadot
         DBSQL db = new DBSQL();
         Table[] tables;
         Order currentOrder;
+        private List<CancellationsInOrder> cancelsInOrder; // List with all the canceles of cur order
 
         /// <summary>
         /// RestaurantStatus user control constractor
@@ -84,7 +85,7 @@ namespace Sadot
                     currentOrder = db.GetOrderByTableId(int.Parse(dgvTableList.CurrentRow.Cells[0].Value.ToString()));
                     FillPanelWithOrderDetails();
                 }
-                else //unoccupied
+                else//unoccupied
                     ClearDetails();
             }
         }
@@ -117,12 +118,23 @@ namespace Sadot
         /// <param name="linesInOrder"></param>
         private void FillLinesInOrderList(LinesInOrder[] linesInOrder)
         {
+            int lastRowIndex = 0;
             dgvOrderList.Rows.Clear();
             //loop to pass on all the lines in the specific order
             for (int i = 0; i < linesInOrder.Length; i++)
             {
                 dgvOrderList.Rows.Add(linesInOrder[i].ProductName, linesInOrder[i].Amount, linesInOrder[i].TotalPrice);
-                dgvOrderList.Rows[i].Selected = false;
+                dgvOrderList.Rows[i].Selected = false; 
+            }
+            lastRowIndex = linesInOrder.Length;
+            if (currentOrder.isCancels())//check if the current order has cancles
+            {
+                cancelsInOrder = new List<CancellationsInOrder>(db.GetCancelsOfOrder(currentOrder.OrderID));
+                for (int i = 0; i < cancelsInOrder.Count; i++)
+                {
+                    dgvOrderList.Rows.Add(cancelsInOrder[i].printName(), 1, cancelsInOrder[i].PriceToSub * -1);
+                    dgvOrderList.Rows[lastRowIndex + i].DefaultCellStyle.BackColor = Color.Yellow;
+                }
             }
         }
 

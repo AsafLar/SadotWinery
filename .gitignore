@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+Sadot/bin/Debug/MySql.Data.xml
+*.exe
+*.suo
+*.pdb
+*.ide-shm
+*.cache
+Sadot/obj/Debug/Sadot.csproj.FileListAbsolute.txt
+*.ide
+*.ide-wal
+Sadot/obj/Debug/
+<<<<<<< HEAD
+=======
 
 \.vs/Sadot/v15/\.suo
 
@@ -10,3 +23,13 @@
 *.ide-wal
 
 \.vs/Sadot/v15/
+>>>>>>> origin/master
+=======
+Sadot/bin/Debug/MySql.Data.dll
+*.dll
+*.xml
+Sadot/bin/Release/Sadot.exe.config
+*.resources
+*.CopyComplete
+*.txt
+>>>>>>> origin/Yotam_changes

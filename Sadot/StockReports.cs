@@ -69,7 +69,7 @@ namespace Sadot
             //set end date limits
             dtpEndDate.MinDate = new DateTime(today.Year, today.Month, 1);
             dtpEndDate.MaxDate = today;
-            checkMonthAndYearForStock();
+            //checkMonthAndYearForStock();
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Sadot
                 stock = db.GetStockDataBy(qurey);
                 header = "דוח מלאי עבור חודש " + " - " + (Months)monthFromStock + " - " + yearFromStock;
                 MakePdfReport(header);
-                db.GetStockDataBy(qurey);
+                //db.GetStockDataBy(qurey);
                 //loop to pass on all the array with stock details
                 for(int i  = 0; i < stock.Length; i++)
                 {
