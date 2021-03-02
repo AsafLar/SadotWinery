@@ -33,3 +33,5 @@ Sadot/bin/Release/Sadot.exe.config
 *.CopyComplete
 *.txt
 >>>>>>> origin/Yotam_changes
+Sadot/bin/Debug/
+Sadot/obj/Release/
