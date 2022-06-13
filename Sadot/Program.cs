@@ -22,6 +22,7 @@ namespace Sadot
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginPage());
+            // TODO::YARON - The tree of the files at the solution explorer should be with filters (sub-directories), separated to categories
         }
     }
 }

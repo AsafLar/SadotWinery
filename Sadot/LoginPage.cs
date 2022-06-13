@@ -65,7 +65,7 @@ namespace Sadot
                         UserHomePage userHomePage = new UserHomePage(this);
                         userHomePage.Show();
                     }
-                    this.Hide();
+                    this.Hide(); //TODO::YARON - 'this' is not necessary
                     txtUserName.Text = string.Empty;
                     txtPassword.Text = string.Empty;
                 }
@@ -88,7 +88,7 @@ namespace Sadot
             if (currentDate.Month != monthFromStock)
             {
                 qurey = "SELECT productID, product.name , SUM(`1`+`2`+`3`+`4`+`5`+`6`+`7`+`8`+`9`+`10`+`11`+`12`+`13`+`14`+`15`+`16`+`17`+`18`+`19`+`20`+`21`+`22`+`23`+`24`+`25`+`26`+`27`+`28`+`29`+`30`+`31`) AS total FROM `stockByDate` INNER JOIN product ON stockByDate.productID = product.id WHERE 1 GROUP BY `productID` ";
-                stock = db.GetStockDataBy(qurey);
+                stock = db.GetStockDataBy(qurey); //TODO::YARON - Use Thread.Task with await
                 //loop to pass on all the array with stock details
                 for (int i = 0; i < stock.Length; i++)
                 {

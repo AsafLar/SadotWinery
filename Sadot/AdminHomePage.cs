@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace Sadot
 {
-    public partial class AdminHomePage : Form
+    public partial class AdminHomePage : Form // TODO::YARON - Both Home pages can derive from Base class
     {
         private LoginPage login;
         private DBSQL db = new DBSQL();

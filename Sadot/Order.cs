@@ -129,13 +129,13 @@ namespace Sadot
         /// <summary>
         /// Cancels ( get , set )
         /// </summary>
-        public string Cancels
+        public string Cancels //TODO::YARON - enum/bool
         {
             get { return cancels; }
             set { cancels = value; }
         }
 
-        public bool isCancels()
+        public bool isCancels() // TODO::YARON - Not necessary if 'Cancels' is bool
         {
             return (this.Cancels == "Yes") ? true : false;
         }

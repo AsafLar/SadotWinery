@@ -31,7 +31,7 @@ namespace Sadot
         /// <returns> User </returns>
         public User CheckLogin(string userNameToCheck, string passwordToCheck)
         {
-            User newUser = null;
+            User newUser = null; // TODO::YARON - Use Thread.Task with await(another thread)
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM `users` WHERE `userName` = @userName AND password = @password", databaseConnection);
             cmd.Parameters.AddWithValue("@userName", userNameToCheck);
             cmd.Parameters.AddWithValue("@password", passwordToCheck);

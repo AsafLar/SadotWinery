@@ -45,20 +45,37 @@ namespace Sadot
         /// </summary>
         private void FillTableList()
         {
-            dgvTableList.Rows.Clear();
-            tables = db.GetTablesData();
+            dgvTableList.Rows.Clear(); // TODO::YARON - What's dgv?
+            tables = db.GetTablesData(); // TODO::YARON - Thread
             for (int i = 0; i < tables.Length; i++)
             {
                 dgvTableList.Rows.Add(tables[i].TableID, tables[i].TableStatus);
                 dgvTableList.Rows[i].Selected = false;
                 if (tables[i].TableStatus == "פנוי")
-                    FiilRowColor(Color.White, i);
+                    FiilRowColor(Color.White, i); // TODO::YARON - Fill instead of Fiil
                 else if (tables[i].TableStatus == "תפוס")
                     FiilRowColor(Color.Green, i);
                 else if (tables[i].TableStatus == "בחשבון")
                     FiilRowColor(Color.SkyBlue, i);
                 else
                     FiilRowColor(Color.Yellow, i);
+
+                // TODO::YARON - TableStatus should be enum and use the following switch case
+                // var color = Color.Yellow;
+                // switch (tables[i].TableStatus)
+                // {
+                //    case ETableStatus.Clear:
+                //      color = Color.White;
+                //      break;
+                //    case ETableStatus.Occupied:
+                //      color = Color.Green;
+                //      break;
+                //    case ETableStatus.OnCheck:
+                //      color = Color.SkyBlue;
+                //      break;
+                // }
+                //
+                // FiilRowColor(color, i);
             }
         }
 

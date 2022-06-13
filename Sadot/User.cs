@@ -16,7 +16,7 @@ namespace Sadot
         private int userID;
         private string userName;
         private string password;
-        private string permission;
+        private string permission; // TODO::YARON - Use enum
 
         /// <summary>
         /// Constractor function
