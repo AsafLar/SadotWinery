@@ -62,29 +62,29 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminHomePage.cs">
+    <Compile Include="Administrator\AdminHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminHomePage.Designer.cs">
+    <Compile Include="Administrator\AdminHomePage.Designer.cs">
       <DependentUpon>AdminHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="CancellationsInOrder.cs" />
-    <Compile Include="ManageDishPage.cs">
+    <Compile Include="GeneralClasses\CancellationsInOrder.cs" />
+    <Compile Include="Administrator\ManagementForms\ManageDishPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageDishPage.Designer.cs">
+    <Compile Include="Administrator\ManagementForms\ManageDishPage.Designer.cs">
       <DependentUpon>ManageDishPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageProduct.cs">
+    <Compile Include="Administrator\ManagementForms\ManageProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageProduct.Designer.cs">
+    <Compile Include="Administrator\ManagementForms\ManageProduct.Designer.cs">
       <DependentUpon>ManageProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageWine.cs">
+    <Compile Include="Administrator\ManagementForms\ManageWine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageWine.Designer.cs">
+    <Compile Include="Administrator\ManagementForms\ManageWine.Designer.cs">
       <DependentUpon>ManageWine.cs</DependentUpon>
     </Compile>
     <Compile Include="PasswordRecovery.cs">
@@ -93,179 +93,179 @@
     <Compile Include="PasswordRecovery.Designer.cs">
       <DependentUpon>PasswordRecovery.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee.cs" />
-    <Compile Include="ManageEmployees.cs">
+    <Compile Include="GeneralClasses\Employee.cs" />
+    <Compile Include="Administrator\ManagementForms\ManageEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageEmployees.Designer.cs">
+    <Compile Include="Administrator\ManagementForms\ManageEmployees.Designer.cs">
       <DependentUpon>ManageEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="MessageBill.cs">
+    <Compile Include="Administrator\ManagementForms\MessageBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MessageBill.Designer.cs">
+    <Compile Include="Administrator\ManagementForms\MessageBill.Designer.cs">
       <DependentUpon>MessageBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="CancelProductFromOrder.cs">
+    <Compile Include="User\OrderManagement\CancelProductFromOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CancelProductFromOrder.Designer.cs">
+    <Compile Include="User\OrderManagement\CancelProductFromOrder.Designer.cs">
       <DependentUpon>CancelProductFromOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Checks.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="DBSQL.cs" />
-    <Compile Include="Dish.cs" />
-    <Compile Include="DishingredentsInOrder.cs">
+    <Compile Include="GeneralClasses\Checks.cs" />
+    <Compile Include="GeneralClasses\Customer.cs" />
+    <Compile Include="GeneralClasses\DB\DBSQL.cs" />
+    <Compile Include="GeneralClasses\Dish.cs" />
+    <Compile Include="User\OrderManagement\DishingredentsInOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DishingredentsInOrder.Designer.cs">
+    <Compile Include="User\OrderManagement\DishingredentsInOrder.Designer.cs">
       <DependentUpon>DishingredentsInOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Event.cs" />
-    <Compile Include="Ingredients.cs" />
-    <Compile Include="IngredientsInDish.cs" />
-    <Compile Include="LinesInOrder.cs" />
+    <Compile Include="GeneralClasses\Event.cs" />
+    <Compile Include="GeneralClasses\Ingredients.cs" />
+    <Compile Include="GeneralClasses\IngredientsInDish.cs" />
+    <Compile Include="GeneralClasses\LinesInOrder.cs" />
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageCustomers.cs">
+    <Compile Include="Administrator\ManagementForms\ManageCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageCustomers.designer.cs">
+    <Compile Include="Administrator\ManagementForms\ManageCustomers.designer.cs">
       <DependentUpon>ManageCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyBtn.cs">
+    <Compile Include="GeneralClasses\Others\MyBtn.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ManageUsers.cs">
+    <Compile Include="Administrator\ManagementForms\ManageUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageUsers.Designer.cs">
+    <Compile Include="Administrator\ManagementForms\ManageUsers.Designer.cs">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="NumberOfGlass.cs">
+    <Compile Include="User\OrderManagement\NumberOfGlass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NumberOfGlass.Designer.cs">
+    <Compile Include="User\OrderManagement\NumberOfGlass.Designer.cs">
       <DependentUpon>NumberOfGlass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Order.cs" />
-    <Compile Include="GlassOrBottle.cs">
+    <Compile Include="GeneralClasses\Order.cs" />
+    <Compile Include="User\OrderManagement\GlassOrBottle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GlassOrBottle.Designer.cs">
+    <Compile Include="User\OrderManagement\GlassOrBottle.Designer.cs">
       <DependentUpon>GlassOrBottle.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderForm.cs">
+    <Compile Include="User\OrderManagement\OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderForm.Designer.cs">
+    <Compile Include="User\OrderManagement\OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrdersTracking.cs">
+    <Compile Include="Administrator\ManagementForms\OrdersTracking.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OrdersTracking.Designer.cs">
+    <Compile Include="Administrator\ManagementForms\OrdersTracking.Designer.cs">
       <DependentUpon>OrdersTracking.cs</DependentUpon>
     </Compile>
-    <Compile Include="BillOrUpdate.cs">
+    <Compile Include="User\OrderManagement\BillOrUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BillOrUpdate.Designer.cs">
+    <Compile Include="User\OrderManagement\BillOrUpdate.Designer.cs">
       <DependentUpon>BillOrUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="PdfReports.cs" />
-    <Compile Include="PrintBon.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="GeneralClasses\Others\PdfReports.cs" />
+    <Compile Include="GeneralClasses\Others\PrintBon.cs" />
+    <Compile Include="GeneralClasses\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RestaurantStatus.cs">
+    <Compile Include="Administrator\ManagementForms\RestaurantStatus.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RestaurantStatus.Designer.cs">
+    <Compile Include="Administrator\ManagementForms\RestaurantStatus.Designer.cs">
       <DependentUpon>RestaurantStatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectWaiter.cs">
+    <Compile Include="User\OrderManagement\SelectWaiter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectWaiter.Designer.cs">
+    <Compile Include="User\OrderManagement\SelectWaiter.Designer.cs">
       <DependentUpon>SelectWaiter.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectCustomer.cs">
+    <Compile Include="User\OrderManagement\SelectCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectCustomer.Designer.cs">
+    <Compile Include="User\OrderManagement\SelectCustomer.Designer.cs">
       <DependentUpon>SelectCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Stock.cs" />
-    <Compile Include="StockReports.cs">
+    <Compile Include="GeneralClasses\Stock.cs" />
+    <Compile Include="Administrator\ManagementForms\StockReports.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StockReports.Designer.cs">
+    <Compile Include="Administrator\ManagementForms\StockReports.Designer.cs">
       <DependentUpon>StockReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="Table.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="UserHomePage.cs">
+    <Compile Include="GeneralClasses\Table.cs" />
+    <Compile Include="GeneralClasses\User.cs" />
+    <Compile Include="User\UserHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserHomePage.Designer.cs">
+    <Compile Include="User\UserHomePage.Designer.cs">
       <DependentUpon>UserHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Wine.cs" />
-    <EmbeddedResource Include="AdminHomePage.resx">
+    <Compile Include="GeneralClasses\Wine.cs" />
+    <EmbeddedResource Include="Administrator\AdminHomePage.resx">
       <DependentUpon>AdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageDishPage.resx">
+    <EmbeddedResource Include="Administrator\ManagementForms\ManageDishPage.resx">
       <DependentUpon>ManageDishPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageProduct.resx">
+    <EmbeddedResource Include="Administrator\ManagementForms\ManageProduct.resx">
       <DependentUpon>ManageProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageWine.resx">
+    <EmbeddedResource Include="Administrator\ManagementForms\ManageWine.resx">
       <DependentUpon>ManageWine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PasswordRecovery.resx">
       <DependentUpon>PasswordRecovery.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageEmployees.resx">
+    <EmbeddedResource Include="Administrator\ManagementForms\ManageEmployees.resx">
       <DependentUpon>ManageEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MessageBill.resx">
+    <EmbeddedResource Include="Administrator\ManagementForms\MessageBill.resx">
       <DependentUpon>MessageBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CancelProductFromOrder.resx">
+    <EmbeddedResource Include="User\OrderManagement\CancelProductFromOrder.resx">
       <DependentUpon>CancelProductFromOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DishingredentsInOrder.resx">
+    <EmbeddedResource Include="User\OrderManagement\DishingredentsInOrder.resx">
       <DependentUpon>DishingredentsInOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageCustomers.resx">
+    <EmbeddedResource Include="Administrator\ManagementForms\ManageCustomers.resx">
       <DependentUpon>ManageCustomers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageUsers.resx">
+    <EmbeddedResource Include="Administrator\ManagementForms\ManageUsers.resx">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GlassOrBottle.resx">
+    <EmbeddedResource Include="User\OrderManagement\GlassOrBottle.resx">
       <DependentUpon>GlassOrBottle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NumberOfGlass.resx">
+    <EmbeddedResource Include="User\OrderManagement\NumberOfGlass.resx">
       <DependentUpon>NumberOfGlass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderForm.resx">
+    <EmbeddedResource Include="User\OrderManagement\OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrdersTracking.resx">
+    <EmbeddedResource Include="Administrator\ManagementForms\OrdersTracking.resx">
       <DependentUpon>OrdersTracking.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BillOrUpdate.resx">
+    <EmbeddedResource Include="User\OrderManagement\BillOrUpdate.resx">
       <DependentUpon>BillOrUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -278,19 +278,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RestaurantStatus.resx">
+    <EmbeddedResource Include="Administrator\ManagementForms\RestaurantStatus.resx">
       <DependentUpon>RestaurantStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectCustomer.resx">
+    <EmbeddedResource Include="User\OrderManagement\SelectCustomer.resx">
       <DependentUpon>SelectCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectWaiter.resx">
+    <EmbeddedResource Include="User\OrderManagement\SelectWaiter.resx">
       <DependentUpon>SelectWaiter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StockReports.resx">
+    <EmbeddedResource Include="Administrator\ManagementForms\StockReports.resx">
       <DependentUpon>StockReports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserHomePage.resx">
+    <EmbeddedResource Include="User\UserHomePage.resx">
       <DependentUpon>UserHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config">
@@ -330,5 +330,6 @@
   <ItemGroup>
     <None Include="Resources\loginbackground.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -57,12 +57,12 @@ namespace Sadot
                     checkMonthAndYearForStock();
                     if (user.Permission == "מנהל")
                     {
-                        AdminHomePage adminHomePage = new AdminHomePage(this);
+                        AdminHomePage adminHomePage = new AdminHomePage(this); //TODO::Both home pages can derive from base class
                         adminHomePage.Show();
                     }
                     else
                     {
-                        UserHomePage userHomePage = new UserHomePage(this);
+                        UserHomePage userHomePage = new UserHomePage(this); //TODO::Both home pages can derive from base class
                         userHomePage.Show();
                     }
                     this.Hide();
@@ -77,7 +77,7 @@ namespace Sadot
             }
         }
 
-        private void checkMonthAndYearForStock()
+        private void checkMonthAndYearForStock() //TODO:: Use thread
         {
             Stock[] stock;
             DateTime currentDate = DateTime.Now;

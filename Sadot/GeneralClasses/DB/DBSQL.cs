@@ -12,13 +12,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 
 namespace Sadot
 {
     class DBSQL
     {
-        private static string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=u691360607_sadot;Charset=utf8;";
+        private static string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=uOrig_sadot;Charset=utf8;";
         //private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_sadot;UID=u691360607_admin;PASSWORD=admin1234;SslMode=none;";//regular data base
         //private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_test;UID=u691360607_asaf;PASSWORD=sadottest;SslMode=none;"; //test data base for development
         //private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_sadot_new;UID=u691360607_admin2;PASSWORD=admin1234;SslMode=none;";//new data base
