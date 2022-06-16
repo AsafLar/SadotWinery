@@ -112,6 +112,7 @@ namespace Sadot
             lblEmployee.Text = " שם המלצר : " + selectWaiter.selctedWaiter.FirstName;
             order.EmployeeID = selectWaiter.selctedWaiter.ID;
             btnOTH.Enabled = false;
+            db.UpdateTableOrderState(table.TableID, "בתהליך");
         }
 
         /// <summary>

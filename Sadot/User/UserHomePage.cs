@@ -20,6 +20,7 @@ namespace Sadot
         private LoginPage login;
         DBSQL db = new DBSQL();
         Table[] tables;
+        Timer updateTableListTimer = new Timer();
 
         /// <summary>
         /// UserHomePage form constractor
@@ -38,6 +39,10 @@ namespace Sadot
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             FillTableList();
+
+            updateTableListTimer.Interval = 1000;
+            updateTableListTimer.Tick += new EventHandler(updateTableListTimer_Tick);
+            updateTableListTimer.Start();
         }
 
         /// <summary>
@@ -49,7 +54,14 @@ namespace Sadot
             tables = db.GetTablesData();
             for (int i = 0; i < tables.Length; i++)
             {
-                dgvTableList.Rows.Add(tables[i].TableID, tables[i].TableStatus);
+                if (tables[i].OrderState == "טרם התקבלה")
+                {
+                    DateTime waitingTime = DateTime.Now - tables[i].TimeOfOrder.TimeOfDay;
+                    dgvTableList.Rows.Add(tables[i].TableID, tables[i].TableStatus, tables[i].OrderState, waitingTime.ToString("mm:ss"));
+                }
+                else
+                    dgvTableList.Rows.Add(tables[i].TableID, tables[i].TableStatus, tables[i].OrderState, tables[i].TimeOfOrder.ToString("mm:ss"));
+
                 dgvTableList.Rows[i].Selected = false;
                 if (tables[i].TableStatus == "פנוי")
                     FiilRowColor(Color.White, i);
@@ -78,6 +90,7 @@ namespace Sadot
         /// </summary>
         private void btnExit_Click(object sender, EventArgs e)
         {
+            updateTableListTimer.Stop();
             this.Close();
         }
 
@@ -124,11 +137,24 @@ namespace Sadot
             if (orderForm.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
                 db.UpdateTableStatus(tmpTable.TableID, "תפוס");
+                db.UpdateTableOrderState(tmpTable.TableID, "טרם התקבלה");
+                db.UpdateTableTimeOfOrder(tmpTable.TableID, DateTime.Now);
+
+
             }
             if (orderForm.DialogResult == System.Windows.Forms.DialogResult.Yes)
             {
                 db.UpdateTableStatus(tmpTable.TableID, "פנוי");
+                db.UpdateTableOrderState(tmpTable.TableID, "מוכן להזמנה");
+                db.UpdateTableTimeOfOrder(tmpTable.TableID, DateTime.MinValue);
             }
+            if (orderForm.DialogResult == System.Windows.Forms.DialogResult.Abort)
+            {
+                if(tmpTable.TableStatus == "פנוי")
+                    db.UpdateTableOrderState(tmpTable.TableID, "מוכן להזמנה");
+            }
+
+
             FillTableList();
         }
 
@@ -203,6 +229,11 @@ namespace Sadot
             }
             tableOrder.IsPaid = true;
             db.UpdateOrder(tableOrder);
+        }
+
+       private void updateTableListTimer_Tick(object sender, EventArgs e)
+        {
+            FillTableList();
         }
     }
 }

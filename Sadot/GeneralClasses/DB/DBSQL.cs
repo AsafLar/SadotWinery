@@ -515,6 +515,38 @@ namespace Sadot
         }
 
 
+        public void UpdateTableOrderState(int tabelId, string orderState)
+        {
+            string query = "UPDATE `tables` SET `orderState`=@orderState WHERE `tableID` = @tabelId";
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
+            cmd.CommandTimeout = 60;
+            cmd.Parameters.AddWithValue("@orderState", orderState);
+            cmd.Parameters.AddWithValue("@tabelId", tabelId);
+            try
+            {
+                databaseConnection.Open();
+                cmd.ExecuteNonQuery();
+                databaseConnection.Close();
+            }
+            catch { }
+        }
+
+        public void UpdateTableTimeOfOrder(int tabelId, DateTime timeOfOrder)
+        {
+            string query = "UPDATE `tables` SET `timeOfOrder`=@timeOfOrder WHERE `tableID` = @tabelId";
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
+            cmd.CommandTimeout = 60;
+            cmd.Parameters.AddWithValue("@timeOfOrder", timeOfOrder.ToLongTimeString());
+            cmd.Parameters.AddWithValue("@tabelId", tabelId);
+            try
+            {
+                databaseConnection.Open();
+                cmd.ExecuteNonQuery();
+                databaseConnection.Close();
+            }
+            catch { }
+        }
+
         /// <summary>
         /// Method to update tables status in to the database
         /// </summary>
@@ -550,6 +582,8 @@ namespace Sadot
                     Table table = new Table();
                     table.TableID = int.Parse(reader["tableID"].ToString());
                     table.TableStatus = reader["tableStatus"].ToString();
+                    table.OrderState = reader["orderState"].ToString();
+                    table.TimeOfOrder = DateTime.Parse(reader["timeOfOrder"].ToString());
                     tables.Add(table);
                 }
                 databaseConnection.Close();
