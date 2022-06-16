@@ -19,7 +19,7 @@ namespace Sadot
 {
     public partial class OrderForm : Form
     {
-        
+
         private DBSQL db = new DBSQL();      //db connection
         private string glassOrBottle;        // flag to know if chosen glass or bottle
         private Order order;                 // the order we work with could be existent one or new one
@@ -63,7 +63,7 @@ namespace Sadot
 
             linesInExistOrders = new List<LinesInOrder>();
             cancelsInOrder = new List<CancellationsInOrder>();
-    }
+        }
 
         /// <summary>
         /// method wich works when OrderForm loads
@@ -88,7 +88,7 @@ namespace Sadot
                 if (billOrUpdate.DialogResult == System.Windows.Forms.DialogResult.No)
                     InBill();
             }
-                
+
         }
 
         /// <summary>
@@ -96,6 +96,7 @@ namespace Sadot
         /// </summary>
         public void NewOrder()
         {
+            btnMarkOrderAsReceived.Enabled = false;
             btnBill.Enabled = false;
             btnPay.Enabled = false;
             btnDiscount.Enabled = false;
@@ -159,7 +160,7 @@ namespace Sadot
         private void SelectedEmployee()
         {
             selectedEmployee = db.GetEmployeeById(order.EmployeeID);
-            lblEmployee.Text = " שם המלצר : " + selectedEmployee.FirstName ;
+            lblEmployee.Text = " שם המלצר : " + selectedEmployee.FirstName;
         }
 
         /// <summary>
@@ -187,6 +188,10 @@ namespace Sadot
             FillOrderListWithExistsProducts();
             FillListWithCancels();
             btnOTH.Enabled = true;
+            if (table.OrderState == "הזמנה בהכנה")
+                btnMarkOrderAsReceived.Enabled = true;
+            else
+                btnMarkOrderAsReceived.Enabled = false;
         }
 
         /// <summary>
@@ -290,14 +295,14 @@ namespace Sadot
         private void FillListWithCancels()
         {
             int lastRowIndex = linesInExistOrders.Count();
-            if(order.isCancels())
+            if (order.isCancels())
             {
                 cancelsInOrder = new List<CancellationsInOrder>(db.GetCancelsOfOrder(order.OrderID));
                 for (int i = 0; i < cancelsInOrder.Count; i++)
                 {
                     dgvOrderList.Rows.Add(cancelsInOrder[i].printName(), 1, cancelsInOrder[i].PriceToSub * -1);
                     dgvOrderList.Rows[lastRowIndex + i].DefaultCellStyle.BackColor = Color.Yellow;
-                }  
+                }
             }
         }
 
@@ -355,10 +360,10 @@ namespace Sadot
             for (int i = 0; i < linesInExistOrders.Count; i++)
             {
                 tmpStock.ProductID = linesInExistOrders[i].ProductID;
-                if(linesInExistOrders[i].isLineGlass())
+                if (linesInExistOrders[i].isLineGlass())
                 {
                     tmpStock.ProductID -= GLASS_ID_SCALE_FACTOR;
-                    tmpStock.TotalAmount = linesInExistOrders[i].Amount/4;
+                    tmpStock.TotalAmount = linesInExistOrders[i].Amount / 4;
                 }
                 else if (linesInExistOrders[i].isLineTakeAwayBottle())
                     tmpStock.ProductID -= TA_BOTTLE_ID_SCALE_FACTOR;
@@ -559,7 +564,7 @@ namespace Sadot
         {
             bool flag = true;
             PrintBon printBon = new PrintBon();
-            printBon.Print(linesInOrders.ToArray(), order.TableID , order.EmployeeID);
+            printBon.Print(linesInOrders.ToArray(), order.TableID, order.EmployeeID);
             if (isExistOrder)
             {
                 for (int i = 0; i < linesInOrders.Count; i++)
@@ -577,7 +582,7 @@ namespace Sadot
                     }
                     if (flag)
                     {
-                        db.InsertLineInOrder(linesInOrders[i]); 
+                        db.InsertLineInOrder(linesInOrders[i]);
                     }
                 }
                 db.UpdateOrder(order);
@@ -646,7 +651,7 @@ namespace Sadot
         {
             if (isExistOrder)//check if this is exist order
             {
-                if(order.TableID < 200)
+                if (order.TableID < 200)
                 {
                     if (linesInOrders.Count == 0)//check if there is products that is not part of the exist order
                     {
@@ -654,10 +659,10 @@ namespace Sadot
                         {
                             if (CheckIfTableIsAvailable(int.Parse(cbTablesList.Text)))
                             {  //if the change is to empty table
-                                db.UpdateTableStatus(order.TableID, "פנוי");
+                                db.UpdateTableParams(order.TableID, "פנוי", "NA", DateTime.MinValue);
                                 order.TableID = int.Parse(cbTablesList.Text);
                                 db.UpdateOrderTable(order);
-                                db.UpdateTableStatus(order.TableID, "תפוס");
+                                db.UpdateTableParams(order.TableID, "תפוס", table.OrderState, table.TimeOfOrder);
                             }
                             else
                             {  //else the change to occupid table
@@ -719,7 +724,7 @@ namespace Sadot
         /// </summary>
         private void btnBill_Click(object sender, EventArgs e)
         {
-            if(!isInBill)
+            if (!isInBill)
             {
                 if (linesInOrders.Count > 0)
                     MessageBox.Show("לא ניתן להדפיס חשבון בלי לבצע הזמנה של המוצר החדשים");
@@ -806,7 +811,7 @@ namespace Sadot
                 }
                 else
                 {
-                    if(index < linesInExistOrders.Count)
+                    if (index < linesInExistOrders.Count)
                     {
                         if (linesInExistOrders[index].ProductID == 66)
                         {
@@ -1059,7 +1064,7 @@ namespace Sadot
         private void PrintBill()
         {
             PrintBon printBon = new PrintBon();
-            printBon.PrintReceipt(linesInExistOrders.ToArray(),order.TableID , order);
+            printBon.PrintReceipt(linesInExistOrders.ToArray(), order.TableID, order);
         }
 
         /// <summary>
@@ -1240,16 +1245,28 @@ namespace Sadot
         private bool CheckIfPartOfBillAllreadyPaid(int id)
         {
             bool flag = false;
-            for(int i = 0; i < linesInExistOrders.Count; i++)
+            for (int i = 0; i < linesInExistOrders.Count; i++)
             {
                 if (linesInExistOrders[i].ProductID == id)
                 {
                     lineInOrder = linesInExistOrders[i];
                     flag = true;
                 }
-                    
+
             }
             return flag;
+        }
+
+        private void btnMarkOrderAsReceived_Click(object sender, EventArgs e)
+        {
+            if (table.OrderState == "הזמנה בהכנה")
+            {
+                table.TimeOfOrder = DateTime.Now - table.TimeOfOrder.TimeOfDay;
+                table.OrderState = "הזמנה התקבלה";
+                db.UpdateTableOrderState(table.TableID, table.OrderState);
+                db.UpdateTableTimeOfOrder(table.TableID, table.TimeOfOrder);
+                btnMarkOrderAsReceived.Enabled = false;
+            }
         }
     }
 }

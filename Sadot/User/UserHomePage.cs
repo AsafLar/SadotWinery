@@ -54,7 +54,7 @@ namespace Sadot
             tables = db.GetTablesData();
             for (int i = 0; i < tables.Length; i++)
             {
-                if (tables[i].OrderState == "טרם התקבלה")
+                if (tables[i].OrderState == "הזמנה בהכנה")
                 {
                     DateTime waitingTime = DateTime.Now - tables[i].TimeOfOrder.TimeOfDay;
                     dgvTableList.Rows.Add(tables[i].TableID, tables[i].TableStatus, tables[i].OrderState, waitingTime.ToString("mm:ss"));
@@ -136,22 +136,18 @@ namespace Sadot
 
             if (orderForm.DialogResult == System.Windows.Forms.DialogResult.OK)
             {
-                db.UpdateTableStatus(tmpTable.TableID, "תפוס");
-                db.UpdateTableOrderState(tmpTable.TableID, "טרם התקבלה");
-                db.UpdateTableTimeOfOrder(tmpTable.TableID, DateTime.Now);
-
-
+                db.UpdateTableParams(tmpTable.TableID, "תפוס", "הזמנה בהכנה", DateTime.Now);
             }
             if (orderForm.DialogResult == System.Windows.Forms.DialogResult.Yes)
             {
-                db.UpdateTableStatus(tmpTable.TableID, "פנוי");
-                db.UpdateTableOrderState(tmpTable.TableID, "מוכן להזמנה");
-                db.UpdateTableTimeOfOrder(tmpTable.TableID, DateTime.MinValue);
+                db.UpdateTableParams(tmpTable.TableID, "פנוי", "NA", DateTime.MinValue);
             }
             if (orderForm.DialogResult == System.Windows.Forms.DialogResult.Abort)
             {
                 if(tmpTable.TableStatus == "פנוי")
-                    db.UpdateTableOrderState(tmpTable.TableID, "מוכן להזמנה");
+                {
+                    db.UpdateTableOrderState(tmpTable.TableID, "NA");
+                }       
             }
 
 
@@ -231,7 +227,10 @@ namespace Sadot
             db.UpdateOrder(tableOrder);
         }
 
-       private void updateTableListTimer_Tick(object sender, EventArgs e)
+        /// <summary>
+        /// Timr event wich updates the table list every timer tick
+        /// </summary>
+        private void updateTableListTimer_Tick(object sender, EventArgs e)
         {
             FillTableList();
         }

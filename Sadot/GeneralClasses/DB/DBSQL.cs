@@ -566,6 +566,24 @@ namespace Sadot
             catch { }
         }
 
+        public void UpdateTableParams(int id, string status, string orderState, DateTime timeOfOrder)
+        {
+            string query = "UPDATE `tables` SET `tableStatus`= @status , `orderState`= @orderState , `timeOfOrder`= @timeOfOrder  WHERE `tableID` = @id";
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
+            cmd.CommandTimeout = 60;
+            cmd.Parameters.AddWithValue("@status", status);
+            cmd.Parameters.AddWithValue("@orderState", orderState);
+            cmd.Parameters.AddWithValue("@timeOfOrder", timeOfOrder);
+            cmd.Parameters.AddWithValue("@id", id);
+            try
+            {
+                databaseConnection.Open();
+                cmd.ExecuteNonQuery();
+                databaseConnection.Close();
+            }
+            catch { }
+        }
+
         /// <summary>
         /// Method to get tables data from the database
         /// </summary>
