@@ -1254,6 +1254,10 @@ namespace Sadot
             return flag;
         }
 
+        /// <summary>
+        /// method wich works when the user press on "MarkOrderAsReceived" button
+        /// the method will update current table OrderState to "order received"
+        /// </summary>
         private void btnMarkOrderAsReceived_Click(object sender, EventArgs e)
         {
             if (table.OrderState == "הזמנה בהכנה")

@@ -514,7 +514,9 @@ namespace Sadot
             catch (Exception e) { MessageBox.Show(e.Message); }
         }
 
-
+        /// <summary>
+        /// Method to update order state of specific table 
+        /// </summary>
         public void UpdateTableOrderState(int tabelId, string orderState)
         {
             string query = "UPDATE `tables` SET `orderState`=@orderState WHERE `tableID` = @tabelId";
@@ -528,9 +530,15 @@ namespace Sadot
                 cmd.ExecuteNonQuery();
                 databaseConnection.Close();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
+        /// <summary>
+        /// Method to update time of order of specific table 
+        /// </summary>
         public void UpdateTableTimeOfOrder(int tabelId, DateTime timeOfOrder)
         {
             string query = "UPDATE `tables` SET `timeOfOrder`=@timeOfOrder WHERE `tableID` = @tabelId";
@@ -544,7 +552,10 @@ namespace Sadot
                 cmd.ExecuteNonQuery();
                 databaseConnection.Close();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         /// <summary>
@@ -563,9 +574,15 @@ namespace Sadot
                 cmd.ExecuteNonQuery();
                 databaseConnection.Close();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
+        /// <summary>
+        /// Method to update all parameters of specific table
+        /// </summary>
         public void UpdateTableParams(int id, string status, string orderState, DateTime timeOfOrder)
         {
             string query = "UPDATE `tables` SET `tableStatus`= @status , `orderState`= @orderState , `timeOfOrder`= @timeOfOrder  WHERE `tableID` = @id";
@@ -581,7 +598,10 @@ namespace Sadot
                 cmd.ExecuteNonQuery();
                 databaseConnection.Close();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         /// <summary>
@@ -625,7 +645,10 @@ namespace Sadot
                 cmd.ExecuteNonQuery();
                 databaseConnection.Close();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
@@ -648,8 +671,11 @@ namespace Sadot
                 res = cmd.ExecuteScalar().ToString();
                 databaseConnection.Close();
             }
-            catch { }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             return res;
         }
 
