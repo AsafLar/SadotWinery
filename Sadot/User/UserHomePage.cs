@@ -100,8 +100,17 @@ namespace Sadot
 
                 if (tables[i].TableStatus == "פנוי")
                 {
-                    FiilRowColor(Color.White, i);
-                    tableButtons[tables[i].TableID].BackColor = System.Drawing.Color.White;
+                    if (tables[i].OrderState == "NA")
+                    {
+                        FiilRowColor(Color.White, i);
+                        tableButtons[tables[i].TableID].BackColor = System.Drawing.Color.White;
+                    }
+                    else
+                    {
+                        FiilRowColor(Color.Yellow, i);
+                        tableButtons[tables[i].TableID].BackColor = System.Drawing.Color.Yellow;
+                    }
+                    
                 }
                 else if (tables[i].TableStatus == "תפוס")
                 {
@@ -121,8 +130,6 @@ namespace Sadot
                     FiilRowColor(Color.SkyBlue, i);
                     tableButtons[tables[i].TableID].BackColor = System.Drawing.Color.SkyBlue;
                 }      
-                else
-                    FiilRowColor(Color.Yellow, i);
             }
         }
 
@@ -160,7 +167,7 @@ namespace Sadot
         /// the method will get the table details from data base and open the order form 
         /// of the chosen table
         /// </summary>
-        private void btnTable_Click_1(object sender, EventArgs e)
+        private void btnTableClickEvent(object sender, EventArgs e)
         {
             Table tmpTable = GetTableById(((MyBtn)sender).ID);
             OpenOrderForm(tmpTable);
@@ -293,12 +300,16 @@ namespace Sadot
         public void CreateTableButtons()
         {
             for (int i = (int)ETableIDs.TABLE_ID_0; i < (int)ETableIDs.MAX_TABLES; i++)
-                tableButtons[i] = new MyBtn(i);
-
+            {
+                tableButtons[i] = new MyBtn(i, new System.EventHandler(this.btnTableClickEvent));
+            }
+                
             InitilazeTableButtonsDefaultsAttributes();
 
             for (int i = (int)ETableIDs.TABLE_ID_0; i < (int)ETableIDs.MAX_TABLES; i++)
-                this.MainPanel.Controls.Add(tableButtons[i]);
+            {
+                MainPanel.Controls.Add(tableButtons[i]);
+            }
         }
 
         /// <summary>
@@ -306,192 +317,114 @@ namespace Sadot
         /// </summary>
         public void InitilazeTableButtonsDefaultsAttributes()
         {
-            // btnTable0
-            // 
             tableButtons[0].Location = new System.Drawing.Point(357, 657);
             tableButtons[0].Size = new System.Drawing.Size(103, 90);
             tableButtons[0].TabIndex = 63;
-            tableButtons[0].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable1
-            // 
+
             tableButtons[1].Location = new System.Drawing.Point(623, 651);
             tableButtons[1].Size = new System.Drawing.Size(74, 96);
             tableButtons[1].TabIndex = 64;
-            tableButtons[1].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable2
-            // 
+
             tableButtons[2].Location = new System.Drawing.Point(828, 703);
             tableButtons[2].Size = new System.Drawing.Size(74, 96);
             tableButtons[2].TabIndex = 61;
-            tableButtons[2].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable3
-            //      
+  
             tableButtons[3].Location = new System.Drawing.Point(782, 408);
             tableButtons[3].Size = new System.Drawing.Size(99, 252);
             tableButtons[3].TabIndex = 32;
-            tableButtons[3].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable4
-            // 
+ 
             tableButtons[4].Location = new System.Drawing.Point(704, 290);
             tableButtons[4].Size = new System.Drawing.Size(109, 88);
             tableButtons[4].TabIndex = 60;
-            tableButtons[4].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable5
-            // 
+
             tableButtons[5].Location = new System.Drawing.Point(623, 200);
             tableButtons[5].Size = new System.Drawing.Size(204, 55);
             tableButtons[5].TabIndex = 35;
-            tableButtons[5].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable6
-            // 
+
             tableButtons[6].Location = new System.Drawing.Point(623, 113);
             tableButtons[6].Size = new System.Drawing.Size(204, 55);
             tableButtons[6].TabIndex = 36;
-            tableButtons[6].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable7
-            // 
-            this.tableButtons[7].Location = new System.Drawing.Point(482, 134);
-            this.tableButtons[7].Size = new System.Drawing.Size(90, 90);
-            this.tableButtons[7].TabIndex = 38;
-            this.tableButtons[7].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable8
-            // 
-            this.tableButtons[8].Location = new System.Drawing.Point(482, 258);
-            this.tableButtons[8].Size = new System.Drawing.Size(90, 90);
-            this.tableButtons[8].TabIndex = 40;
-            this.tableButtons[8].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable9
-            // 
-            this.tableButtons[9].Location = new System.Drawing.Point(529, 417);
-            this.tableButtons[9].Size = new System.Drawing.Size(103, 90);
-            this.tableButtons[9].TabIndex = 34;
-            this.tableButtons[9].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable10
-            // 
-            this.tableButtons[10].Location = new System.Drawing.Point(529, 531);
-            this.tableButtons[10].Size = new System.Drawing.Size(103, 90);
-            this.tableButtons[10].TabIndex = 62;
-            this.tableButtons[10].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable11
-            // 
-            this.tableButtons[11].Location = new System.Drawing.Point(263, 497);
-            this.tableButtons[11].Size = new System.Drawing.Size(90, 75);
-            this.tableButtons[11].TabIndex = 47;
-            this.tableButtons[11].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable12
-            // 
-            this.tableButtons[12].Location = new System.Drawing.Point(266, 377);
-            this.tableButtons[12].Size = new System.Drawing.Size(90, 76);
-            this.tableButtons[12].TabIndex = 46;
-            this.tableButtons[12].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable13
-            // 
-            this.tableButtons[13].Location = new System.Drawing.Point(263, 258);
-            this.tableButtons[13].Size = new System.Drawing.Size(87, 65);
-            this.tableButtons[13].TabIndex = 41;
-            this.tableButtons[13].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable14
-            // 
-            this.tableButtons[14].Location = new System.Drawing.Point(266, 147);
-            this.tableButtons[14].Size = new System.Drawing.Size(87, 65);
-            this.tableButtons[14].TabIndex = 42;
-            this.tableButtons[14].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable15
-            // 
-            this.tableButtons[15].Location = new System.Drawing.Point(111, 185);
-            this.tableButtons[15].Size = new System.Drawing.Size(51, 84);
-            this.tableButtons[15].TabIndex = 56;
-            this.tableButtons[15].TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tableButtons[15].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable16
-            // 
-            this.tableButtons[16].Location = new System.Drawing.Point(111, 89);
-            this.tableButtons[16].Size = new System.Drawing.Size(51, 84);
-            this.tableButtons[16].TabIndex = 57;
-            this.tableButtons[16].TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tableButtons[16].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable17
-            // 
-            this.tableButtons[17].Location = new System.Drawing.Point(168, 16);
-            this.tableButtons[17].Size = new System.Drawing.Size(142, 42);
-            this.tableButtons[17].TabIndex = 51;
-            this.tableButtons[17].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable18
-            // 
-            this.tableButtons[18].Location = new System.Drawing.Point(357, 16);
-            this.tableButtons[18].Size = new System.Drawing.Size(142, 42);
-            this.tableButtons[18].TabIndex = 50;
-            this.tableButtons[18].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable19
-            // 
-            this.tableButtons[19].Location = new System.Drawing.Point(601, 16);
-            this.tableButtons[19].Size = new System.Drawing.Size(142, 42);
-            this.tableButtons[19].TabIndex = 49;
-            this.tableButtons[19].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable20
-            // 
-            this.tableButtons[20].Location = new System.Drawing.Point(787, 20);
-            this.tableButtons[20].Size = new System.Drawing.Size(142, 42);
-            this.tableButtons[20].TabIndex = 48;
-            this.tableButtons[20].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable21
-            // 
-            this.tableButtons[21].Location = new System.Drawing.Point(876, 96);
-            this.tableButtons[21].Size = new System.Drawing.Size(53, 89);
-            this.tableButtons[21].TabIndex = 58;
-            this.tableButtons[21].TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tableButtons[21].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable22
-            // 
-            this.tableButtons[22].Location = new System.Drawing.Point(876, 200);
-            this.tableButtons[22].Size = new System.Drawing.Size(53, 84);
-            this.tableButtons[22].TabIndex = 59;
-            this.tableButtons[22].TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tableButtons[22].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable23
-            // 
-            this.tableButtons[23].ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tableButtons[23].Location = new System.Drawing.Point(3, 447);
-            this.tableButtons[23].Size = new System.Drawing.Size(73, 164);
-            this.tableButtons[23].TabIndex = 33;
-            this.tableButtons[23].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable24
-            // 
-            this.tableButtons[24].Location = new System.Drawing.Point(-2, 617);
-            this.tableButtons[24].Size = new System.Drawing.Size(78, 75);
-            this.tableButtons[24].TabIndex = 43;
-            this.tableButtons[24].Click += new System.EventHandler(this.btnTable_Click_1);
-            // 
-            // btnTable25
-            // 
-            this.tableButtons[25].Location = new System.Drawing.Point(-2, 706);
-            this.tableButtons[25].Size = new System.Drawing.Size(78, 68);
-            this.tableButtons[25].TabIndex = 44;
-            this.tableButtons[25].Click += new System.EventHandler(this.btnTable_Click_1);
+
+            tableButtons[7].Location = new System.Drawing.Point(482, 134);
+            tableButtons[7].Size = new System.Drawing.Size(90, 90);
+            tableButtons[7].TabIndex = 38;
+
+            tableButtons[8].Location = new System.Drawing.Point(482, 258);
+            tableButtons[8].Size = new System.Drawing.Size(90, 90);
+            tableButtons[8].TabIndex = 40;
+
+            tableButtons[9].Location = new System.Drawing.Point(529, 417);
+            tableButtons[9].Size = new System.Drawing.Size(103, 90);
+            tableButtons[9].TabIndex = 34;
+
+            tableButtons[10].Location = new System.Drawing.Point(529, 531);
+            tableButtons[10].Size = new System.Drawing.Size(103, 90);
+            tableButtons[10].TabIndex = 62;
+            
+            tableButtons[11].Location = new System.Drawing.Point(263, 497);
+            tableButtons[11].Size = new System.Drawing.Size(90, 75);
+            tableButtons[11].TabIndex = 47;
+
+            tableButtons[12].Location = new System.Drawing.Point(266, 377);
+            tableButtons[12].Size = new System.Drawing.Size(90, 76);
+            tableButtons[12].TabIndex = 46;
+
+            tableButtons[13].Location = new System.Drawing.Point(263, 258);
+            tableButtons[13].Size = new System.Drawing.Size(87, 65);
+            tableButtons[13].TabIndex = 41;
+
+            tableButtons[14].Location = new System.Drawing.Point(266, 147);
+            tableButtons[14].Size = new System.Drawing.Size(87, 65);
+            tableButtons[14].TabIndex = 42;
+
+            tableButtons[15].Location = new System.Drawing.Point(111, 185);
+            tableButtons[15].Size = new System.Drawing.Size(51, 84);
+            tableButtons[15].TabIndex = 56;
+            tableButtons[15].TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+
+            tableButtons[16].Location = new System.Drawing.Point(111, 89);
+            tableButtons[16].Size = new System.Drawing.Size(51, 84);
+            tableButtons[16].TabIndex = 57;
+            tableButtons[16].TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+
+            tableButtons[17].Location = new System.Drawing.Point(168, 16);
+            tableButtons[17].Size = new System.Drawing.Size(142, 42);
+            tableButtons[17].TabIndex = 51;
+            
+            tableButtons[18].Location = new System.Drawing.Point(357, 16);
+            tableButtons[18].Size = new System.Drawing.Size(142, 42);
+            tableButtons[18].TabIndex = 50;
+            
+            tableButtons[19].Location = new System.Drawing.Point(601, 16);
+            tableButtons[19].Size = new System.Drawing.Size(142, 42);
+            tableButtons[19].TabIndex = 49;
+
+            tableButtons[20].Location = new System.Drawing.Point(787, 20);
+            tableButtons[20].Size = new System.Drawing.Size(142, 42);
+            tableButtons[20].TabIndex = 48;
+            
+            tableButtons[21].Location = new System.Drawing.Point(876, 96);
+            tableButtons[21].Size = new System.Drawing.Size(53, 89);
+            tableButtons[21].TabIndex = 58;
+            tableButtons[21].TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            
+            tableButtons[22].Location = new System.Drawing.Point(876, 200);
+            tableButtons[22].Size = new System.Drawing.Size(53, 84);
+            tableButtons[22].TabIndex = 59;
+            tableButtons[22].TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            
+            tableButtons[23].ForeColor = System.Drawing.SystemColors.ControlText;
+            tableButtons[23].Location = new System.Drawing.Point(3, 447);
+            tableButtons[23].Size = new System.Drawing.Size(73, 164);
+            tableButtons[23].TabIndex = 33;
+
+            tableButtons[24].Location = new System.Drawing.Point(-2, 617);
+            tableButtons[24].Size = new System.Drawing.Size(78, 75);
+            tableButtons[24].TabIndex = 43;
+
+            tableButtons[25].Location = new System.Drawing.Point(-2, 706);
+            tableButtons[25].Size = new System.Drawing.Size(78, 68);
+            tableButtons[25].TabIndex = 44;
         }
     }
 }

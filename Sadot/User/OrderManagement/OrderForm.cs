@@ -663,16 +663,13 @@ namespace Sadot
                                 order.TableID = int.Parse(cbTablesList.Text);
                                 db.UpdateOrderTable(order);
                                 db.UpdateTableParams(order.TableID, "תפוס", table.OrderState, table.TimeOfOrder);
+                                MessageBox.Show("החלפת השולחן בוצע בהצלחה");
+                                this.Close();
                             }
                             else
-                            {  //else the change to occupid table
-                                db.UpdateTableStatus(order.TableID, "פנוי");
-                                order.TableID += 200;
-                                db.InsertTable(order.TableID, "עבר ל " + cbTablesList.Text);
-                                db.UpdateOrderTable(order);
+                            {
+                                MessageBox.Show("לא ניתן להחליף לשולחן תפוס!");
                             }
-                            MessageBox.Show("החלפת השולחן בוצע בהצלחה");
-                            this.Close();
                         }
                         else
                             MessageBox.Show("בחר שולחן מהרשימה!");

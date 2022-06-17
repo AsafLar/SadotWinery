@@ -20,7 +20,7 @@ namespace Sadot
 
         }
 
-        public MyBtn(int id)
+        public MyBtn(int id, System.EventHandler onClickEvent)
         {
             this.id = id;
             this.BackColor = System.Drawing.Color.White;
@@ -29,6 +29,7 @@ namespace Sadot
             this.Name = "btnTable" + id;
             this.Text = id.ToString();
             this.UseVisualStyleBackColor = false;
+            this.Click += onClickEvent;
         }
 
         /// <summary>
