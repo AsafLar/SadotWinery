@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserHomePage));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgvTableList = new System.Windows.Forms.DataGridView();
+            this.TablesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderState = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +54,7 @@
             this.RightPanel = new System.Windows.Forms.Panel();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTableList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablesDataGridView)).BeginInit();
             this.TitlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -83,44 +83,44 @@
             this.pictureBox1.TabIndex = 52;
             this.pictureBox1.TabStop = false;
             // 
-            // dgvTableList
+            // TablesDataGridView
             // 
-            this.dgvTableList.AllowUserToAddRows = false;
-            this.dgvTableList.AllowUserToDeleteRows = false;
-            this.dgvTableList.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvTableList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTableList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvTableList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTableList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TablesDataGridView.AllowUserToAddRows = false;
+            this.TablesDataGridView.AllowUserToDeleteRows = false;
+            this.TablesDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.TablesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TablesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.TablesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.orderState,
             this.waitingTimer});
-            this.dgvTableList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTableList.Location = new System.Drawing.Point(0, 11);
-            this.dgvTableList.Name = "dgvTableList";
-            this.dgvTableList.ReadOnly = true;
-            this.dgvTableList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.dgvTableList.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvTableList.RowTemplate.Height = 24;
-            this.dgvTableList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTableList.Size = new System.Drawing.Size(652, 706);
-            this.dgvTableList.TabIndex = 0;
-            this.dgvTableList.Click += new System.EventHandler(this.dgvTableList_Click);
+            this.TablesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TablesDataGridView.Location = new System.Drawing.Point(0, 11);
+            this.TablesDataGridView.Name = "TablesDataGridView";
+            this.TablesDataGridView.ReadOnly = true;
+            this.TablesDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.TablesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.TablesDataGridView.RowTemplate.Height = 24;
+            this.TablesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TablesDataGridView.Size = new System.Drawing.Size(652, 706);
+            this.TablesDataGridView.TabIndex = 0;
+            this.TablesDataGridView.Click += new System.EventHandler(this.dgvTableList_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn1.HeaderText = "מ.שולחן";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -130,8 +130,8 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn2.HeaderText = "פנוי/תפוס";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -140,8 +140,8 @@
             // orderState
             // 
             this.orderState.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.orderState.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.orderState.DefaultCellStyle = dataGridViewCellStyle4;
             this.orderState.HeaderText = "סטטוס הזמנה";
             this.orderState.Name = "orderState";
             this.orderState.ReadOnly = true;
@@ -150,8 +150,8 @@
             // waitingTimer
             // 
             this.waitingTimer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.waitingTimer.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.waitingTimer.DefaultCellStyle = dataGridViewCellStyle5;
             this.waitingTimer.HeaderText = "זמן המתנה";
             this.waitingTimer.Name = "waitingTimer";
             this.waitingTimer.ReadOnly = true;
@@ -242,7 +242,7 @@
             this.RightPanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.RightPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RightPanel.BackgroundImage")));
             this.RightPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RightPanel.Controls.Add(this.dgvTableList);
+            this.RightPanel.Controls.Add(this.TablesDataGridView);
             this.RightPanel.Controls.Add(this.panel2);
             this.RightPanel.Controls.Add(this.panel1);
             this.RightPanel.Dock = System.Windows.Forms.DockStyle.Right;
@@ -267,7 +267,7 @@
             this.Load += new System.EventHandler(this.UserHomePage_Load);
             this.MainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTableList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablesDataGridView)).EndInit();
             this.TitlePanel.ResumeLayout(false);
             this.TitlePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -279,7 +279,7 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvTableList;
+        private System.Windows.Forms.DataGridView TablesDataGridView;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel TitlePanel;
         private System.Windows.Forms.PictureBox pictureBox3;

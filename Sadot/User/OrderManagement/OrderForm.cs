@@ -88,7 +88,7 @@ namespace Sadot
                 if (billOrUpdate.DialogResult == System.Windows.Forms.DialogResult.No)
                     InBill();
             }
-
+            btnMarkOrderAsReceived.Enabled = (table.OrderState == "הזמנה בהכנה");
         }
 
         /// <summary>
@@ -113,7 +113,9 @@ namespace Sadot
             lblEmployee.Text = " שם המלצר : " + selectWaiter.selctedWaiter.FirstName;
             order.EmployeeID = selectWaiter.selctedWaiter.ID;
             btnOTH.Enabled = false;
-            db.UpdateTableOrderState(table.TableID, "בתהליך");
+            table.OrderState = "בתהליך";
+            //db.UpdateTableOrderState(table.TableID, "בתהליך");
+            db.UpdateTableParams(ref table);
         }
 
         /// <summary>
@@ -188,10 +190,6 @@ namespace Sadot
             FillOrderListWithExistsProducts();
             FillListWithCancels();
             btnOTH.Enabled = true;
-            if (table.OrderState == "הזמנה בהכנה")
-                btnMarkOrderAsReceived.Enabled = true;
-            else
-                btnMarkOrderAsReceived.Enabled = false;
         }
 
         /// <summary>
@@ -651,37 +649,50 @@ namespace Sadot
         {
             if (isExistOrder)//check if this is exist order
             {
-                if (order.TableID < 200)
-                {
-                    if (linesInOrders.Count == 0)//check if there is products that is not part of the exist order
-                    {
-                        if (cbTablesList.Text != "בחר שולחן")
-                        {
-                            if (CheckIfTableIsAvailable(int.Parse(cbTablesList.Text)))
-                            {  //if the change is to empty table
-                                db.UpdateTableParams(order.TableID, "פנוי", "NA", DateTime.MinValue);
-                                order.TableID = int.Parse(cbTablesList.Text);
-                                db.UpdateOrderTable(order);
-                                db.UpdateTableParams(order.TableID, "תפוס", table.OrderState, table.TimeOfOrder);
-                                MessageBox.Show("החלפת השולחן בוצע בהצלחה");
-                                this.Close();
-                            }
-                            else
-                            {
-                                MessageBox.Show("לא ניתן להחליף לשולחן תפוס!");
-                            }
-                        }
-                        else
-                            MessageBox.Show("בחר שולחן מהרשימה!");
-                    }
-                    else
-                        MessageBox.Show("ישנם מוצרים שטרם הוזמנו, מחק אותם או בצע הזמנה ולאחר מכן החלף שולחן");
-                }
-                else
-                    MessageBox.Show("לא ניתן להחליף שולחן זמני!");
+                 if (linesInOrders.Count == 0)//check if there is products that is not part of the exist order
+                 {
+                     if (cbTablesList.Text != "בחר שולחן")
+                     {
+                         if (CheckIfTableIsAvailable(int.Parse(cbTablesList.Text)))
+                         {  //if the change is to empty table
+                            SetOldTableAsClear(); 
+                            order.TableID = int.Parse(cbTablesList.Text);
+                            db.UpdateOrderTable(order);
+                            SetNewTableAsOccupied();
+                            MessageBox.Show("החלפת השולחן בוצע בהצלחה");
+                            this.Close();
+                         }
+                         else
+                         {
+                             MessageBox.Show("לא ניתן להחליף לשולחן תפוס!");
+                         }
+                     }
+                     else
+                         MessageBox.Show("בחר שולחן מהרשימה!");
+                 }
+                 else
+                     MessageBox.Show("ישנם מוצרים שטרם הוזמנו, מחק אותם או בצע הזמנה ולאחר מכן החלף שולחן");
             }
             else
                 MessageBox.Show("לא ניתן להחליף שולחן, בצע הזמנה קודם");
+        }
+
+        /// <summary>
+        /// method wich updates old table in the data base as clear
+        /// </summary>
+        public void SetOldTableAsClear()
+        {
+            Table tempTable = new Table(order.TableID, "פנוי", "לא קיימת הזמנה", DateTime.MinValue);
+            db.UpdateTableParams(ref tempTable);
+        }
+
+        /// <summary>
+        /// method wich updates new table in the data base as occupied
+        /// </summary>
+        public void SetNewTableAsOccupied()
+        {
+            Table tempTable = new Table(order.TableID, "תפוס", table.OrderState, table.TimeOfOrder);
+            db.UpdateTableParams(ref tempTable);
         }
 
         /// <summary>
@@ -1260,14 +1271,12 @@ namespace Sadot
         /// </summary>
         private void btnMarkOrderAsReceived_Click(object sender, EventArgs e)
         {
-            if (table.OrderState == "הזמנה בהכנה")
-            {
-                table.TimeOfOrder = DateTime.Now - table.TimeOfOrder.TimeOfDay;
-                table.OrderState = "הזמנה התקבלה";
-                db.UpdateTableOrderState(table.TableID, table.OrderState);
-                db.UpdateTableTimeOfOrder(table.TableID, table.TimeOfOrder);
-                btnMarkOrderAsReceived.Enabled = false;
-            }
+            table.TimeOfOrder = DateTime.Now - table.TimeOfOrder.TimeOfDay;
+            table.OrderState = "הזמנה התקבלה";
+            //db.UpdateTableOrderState(table.TableID, table.OrderState);
+            //db.UpdateTableTimeOfOrder(table.TableID, table.TimeOfOrder);
+            db.UpdateTableParams(ref table);
+            btnMarkOrderAsReceived.Enabled = (table.OrderState == "הזמנה בהכנה");
         }
     }
 }

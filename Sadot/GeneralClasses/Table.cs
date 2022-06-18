@@ -15,19 +15,19 @@ namespace Sadot
     {
         private int tableID;
         private string tableStatus;
-        private string m_orderState;
-        private DateTime m_timeOfOrder;
+        private string orderState;
+        private DateTime timeOfOrder;
 
         /// <summary>
         /// Constractor function
         /// </summary>
-        public Table(int id , string status, string orderState, DateTime timeOfOrder)
+        public Table(int id, string status, string orderState, DateTime timeOfOrder)
         {
             tableID = id;
             tableStatus = status;
-            m_orderState = orderState;
-            m_timeOfOrder = timeOfOrder;
-    }
+            OrderState = orderState;
+            TimeOfOrder = timeOfOrder;
+        }
 
         /// <summary>
         /// Constractor function
@@ -57,15 +57,41 @@ namespace Sadot
 
         public string OrderState
         {
-            get { return m_orderState; }
-            set { m_orderState = value; }
+            get { return orderState; }
+            set { orderState = value; }
         }
 
         public DateTime TimeOfOrder
         {
-            get { return m_timeOfOrder; }
-            set { m_timeOfOrder = value; }
+            get { return timeOfOrder; }
+            set { timeOfOrder = value; }
         }
 
+        public bool OrderInProcess()
+        {
+            return (OrderState == "הזמנה בהכנה") ? true : false;
+        }
+
+        public bool OrderStateNotExists()
+        {
+            return (OrderState == "לא קיימת הזמנה") ? true : false;
+        }
+
+        public bool IsTableAvailable()
+        {
+            return (TableStatus == "פנוי") ? true : false;
+        }
+
+        public DateTime GetTimeOfOrderCalculation()
+        {
+            DateTime result = TimeOfOrder;
+
+            if (OrderInProcess())
+            {
+                result = DateTime.Now - TimeOfOrder.TimeOfDay;
+            }
+
+            return result;
+        }
     }
 }

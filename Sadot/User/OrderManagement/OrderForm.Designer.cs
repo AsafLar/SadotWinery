@@ -83,10 +83,10 @@
             this.lblTableOrder = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.cbTablesList = new System.Windows.Forms.ComboBox();
-            this.btnDiscount = new Sadot.MyBtn();
             this.nudSumToPay = new System.Windows.Forms.NumericUpDown();
-            this.btnPayPartOfBill = new Sadot.MyBtn();
             this.btnMarkOrderAsReceived = new System.Windows.Forms.Button();
+            this.btnPayPartOfBill = new Sadot.MyBtn();
+            this.btnDiscount = new Sadot.MyBtn();
             this.tcOrder.SuspendLayout();
             this.TotalPricePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDown)).BeginInit();
@@ -168,7 +168,7 @@
             this.tpDish.Location = new System.Drawing.Point(4, 5);
             this.tpDish.Name = "tpDish";
             this.tpDish.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDish.Size = new System.Drawing.Size(403, 848);
+            this.tpDish.Size = new System.Drawing.Size(403, 798);
             this.tpDish.TabIndex = 1;
             // 
             // tpSoftDrinksAndAlcohol
@@ -179,7 +179,7 @@
             this.tpSoftDrinksAndAlcohol.Location = new System.Drawing.Point(4, 5);
             this.tpSoftDrinksAndAlcohol.Name = "tpSoftDrinksAndAlcohol";
             this.tpSoftDrinksAndAlcohol.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSoftDrinksAndAlcohol.Size = new System.Drawing.Size(403, 848);
+            this.tpSoftDrinksAndAlcohol.Size = new System.Drawing.Size(403, 798);
             this.tpSoftDrinksAndAlcohol.TabIndex = 2;
             // 
             // tpHotDrinksAndCoffee
@@ -190,7 +190,7 @@
             this.tpHotDrinksAndCoffee.Location = new System.Drawing.Point(4, 5);
             this.tpHotDrinksAndCoffee.Name = "tpHotDrinksAndCoffee";
             this.tpHotDrinksAndCoffee.Padding = new System.Windows.Forms.Padding(3);
-            this.tpHotDrinksAndCoffee.Size = new System.Drawing.Size(403, 848);
+            this.tpHotDrinksAndCoffee.Size = new System.Drawing.Size(403, 798);
             this.tpHotDrinksAndCoffee.TabIndex = 3;
             // 
             // tpDessert
@@ -201,7 +201,7 @@
             this.tpDessert.Location = new System.Drawing.Point(4, 5);
             this.tpDessert.Name = "tpDessert";
             this.tpDessert.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDessert.Size = new System.Drawing.Size(403, 848);
+            this.tpDessert.Size = new System.Drawing.Size(403, 798);
             this.tpDessert.TabIndex = 4;
             // 
             // tpGeneralProduct
@@ -212,7 +212,7 @@
             this.tpGeneralProduct.Location = new System.Drawing.Point(4, 5);
             this.tpGeneralProduct.Name = "tpGeneralProduct";
             this.tpGeneralProduct.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGeneralProduct.Size = new System.Drawing.Size(403, 848);
+            this.tpGeneralProduct.Size = new System.Drawing.Size(403, 798);
             this.tpGeneralProduct.TabIndex = 5;
             // 
             // btnDessert
@@ -669,7 +669,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.35595F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.64405F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 369F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 374F));
             this.tableLayoutPanel1.Controls.Add(this.lblOrderTime, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblEmployee, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblTableOrder, 0, 0);
@@ -688,7 +688,7 @@
             this.lblOrderTime.BackColor = System.Drawing.Color.Transparent;
             this.lblOrderTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblOrderTime.ForeColor = System.Drawing.Color.White;
-            this.lblOrderTime.Location = new System.Drawing.Point(401, 0);
+            this.lblOrderTime.Location = new System.Drawing.Point(406, 0);
             this.lblOrderTime.Name = "lblOrderTime";
             this.lblOrderTime.Size = new System.Drawing.Size(183, 32);
             this.lblOrderTime.TabIndex = 2;
@@ -701,7 +701,7 @@
             this.lblEmployee.BackColor = System.Drawing.Color.Transparent;
             this.lblEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblEmployee.ForeColor = System.Drawing.Color.Transparent;
-            this.lblEmployee.Location = new System.Drawing.Point(862, 0);
+            this.lblEmployee.Location = new System.Drawing.Point(865, 0);
             this.lblEmployee.Name = "lblEmployee";
             this.lblEmployee.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblEmployee.Size = new System.Drawing.Size(20, 29);
@@ -728,7 +728,7 @@
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(104, 0);
+            this.lblTime.Location = new System.Drawing.Point(109, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblTime.Size = new System.Drawing.Size(263, 32);
@@ -750,21 +750,6 @@
             this.cbTablesList.TabIndex = 41;
             this.cbTablesList.Text = "בחר שולחן";
             // 
-            // btnDiscount
-            // 
-            this.btnDiscount.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnDiscount.ForeColor = System.Drawing.Color.Black;
-            this.btnDiscount.ID = 66;
-            this.btnDiscount.Location = new System.Drawing.Point(319, 748);
-            this.btnDiscount.Name = "btnDiscount";
-            this.btnDiscount.Size = new System.Drawing.Size(139, 85);
-            this.btnDiscount.TabIndex = 39;
-            this.btnDiscount.Text = "הנחה";
-            this.btnDiscount.UseVisualStyleBackColor = false;
-            this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
-            // 
             // nudSumToPay
             // 
             this.nudSumToPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
@@ -778,6 +763,20 @@
             this.nudSumToPay.Name = "nudSumToPay";
             this.nudSumToPay.Size = new System.Drawing.Size(139, 34);
             this.nudSumToPay.TabIndex = 43;
+            // 
+            // btnMarkOrderAsReceived
+            // 
+            this.btnMarkOrderAsReceived.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnMarkOrderAsReceived.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMarkOrderAsReceived.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnMarkOrderAsReceived.ForeColor = System.Drawing.Color.Black;
+            this.btnMarkOrderAsReceived.Location = new System.Drawing.Point(319, 875);
+            this.btnMarkOrderAsReceived.Name = "btnMarkOrderAsReceived";
+            this.btnMarkOrderAsReceived.Size = new System.Drawing.Size(452, 45);
+            this.btnMarkOrderAsReceived.TabIndex = 45;
+            this.btnMarkOrderAsReceived.Text = "עדכן קבלת הזמנה לשולחן";
+            this.btnMarkOrderAsReceived.UseVisualStyleBackColor = false;
+            this.btnMarkOrderAsReceived.Click += new System.EventHandler(this.btnMarkOrderAsReceived_Click);
             // 
             // btnPayPartOfBill
             // 
@@ -794,19 +793,20 @@
             this.btnPayPartOfBill.UseVisualStyleBackColor = false;
             this.btnPayPartOfBill.Click += new System.EventHandler(this.btnPayPartOfBill_Click_1);
             // 
-            // btnMarkOrderAsReceived
+            // btnDiscount
             // 
-            this.btnMarkOrderAsReceived.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnMarkOrderAsReceived.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMarkOrderAsReceived.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnMarkOrderAsReceived.ForeColor = System.Drawing.Color.Black;
-            this.btnMarkOrderAsReceived.Location = new System.Drawing.Point(319, 875);
-            this.btnMarkOrderAsReceived.Name = "btnMarkOrderAsReceived";
-            this.btnMarkOrderAsReceived.Size = new System.Drawing.Size(452, 45);
-            this.btnMarkOrderAsReceived.TabIndex = 45;
-            this.btnMarkOrderAsReceived.Text = "עדכן קבלת הזמנה לשולחן";
-            this.btnMarkOrderAsReceived.UseVisualStyleBackColor = false;
-            this.btnMarkOrderAsReceived.Click += new System.EventHandler(this.btnMarkOrderAsReceived_Click);
+            this.btnDiscount.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnDiscount.ForeColor = System.Drawing.Color.Black;
+            this.btnDiscount.ID = 66;
+            this.btnDiscount.Location = new System.Drawing.Point(319, 748);
+            this.btnDiscount.Name = "btnDiscount";
+            this.btnDiscount.Size = new System.Drawing.Size(139, 85);
+            this.btnDiscount.TabIndex = 39;
+            this.btnDiscount.Text = "הנחה";
+            this.btnDiscount.UseVisualStyleBackColor = false;
+            this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
             // 
             // OrderForm
             // 

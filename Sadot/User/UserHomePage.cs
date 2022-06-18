@@ -14,46 +14,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sadot
-{
-    enum ETableIDs
-    {
-        TABLE_ID_0 = 0,
-        TABLE_ID_1 = 1,
-        TABLE_ID_2 = 2,
-        TABLE_ID_3 = 3,
-        TABLE_ID_4 = 4,
-        TABLE_ID_5 = 5,
-        TABLE_ID_6 = 6,
-        TABLE_ID_7 = 7,
-        TABLE_ID_8 = 8,
-        TABLE_ID_9 = 9,
-        TABLE_ID_10 = 10,
-        TABLE_ID_11 = 11,
-        TABLE_ID_12 = 12,
-        TABLE_ID_13 = 13,
-        TABLE_ID_14 = 14,
-        TABLE_ID_15 = 15,
-        TABLE_ID_16 = 16,
-        TABLE_ID_17 = 17,
-        TABLE_ID_18 = 18,
-        TABLE_ID_19 = 19,
-        TABLE_ID_20 = 20,
-        TABLE_ID_21 = 21,
-        TABLE_ID_22 = 22,
-        TABLE_ID_23 = 23,
-        TABLE_ID_24 = 24,
-        TABLE_ID_25 = 25,
-
-        MAX_TABLES //Must to be last !
-    }
-
+{ 
     public partial class UserHomePage : Form
     {
+        const UInt16 TABLE_ID_0 = 0;
+        const UInt16 MAX_TABLES = 26;
         private LoginPage login;
         DBSQL db = new DBSQL();
         Table[] tables;
         Timer updateTableListTimer = new Timer();
-        MyBtn[] tableButtons = new MyBtn[(int)ETableIDs.MAX_TABLES];
+        MyBtn[] tableButtons = new MyBtn[MAX_TABLES];
+        const Int16 ONE_SEC_TIMER_VALUE = 1000; //in mili seconds
 
         /// <summary>
         /// UserHomePage form constractor
@@ -70,11 +41,11 @@ namespace Sadot
         /// </summary>
         private void UserHomePage_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
             FillTableList();
 
-            updateTableListTimer.Interval = 1000;
+            updateTableListTimer.Interval = ONE_SEC_TIMER_VALUE;
             updateTableListTimer.Tick += new EventHandler(updateTableListTimer_Tick);
             updateTableListTimer.Start();
         }
@@ -84,52 +55,36 @@ namespace Sadot
         /// </summary>
         private void FillTableList()
         {
-            dgvTableList.Rows.Clear();
             tables = db.GetTablesData();
+            TablesDataGridView.Rows.Clear();
             for (int i = 0; i < tables.Length; i++)
-            {
-                if (tables[i].OrderState == "הזמנה בהכנה")
-                {
-                    DateTime waitingTime = DateTime.Now - tables[i].TimeOfOrder.TimeOfDay;
-                    dgvTableList.Rows.Add(tables[i].TableID, tables[i].TableStatus, tables[i].OrderState, waitingTime.ToString("mm:ss"));
-                }
-                else
-                    dgvTableList.Rows.Add(tables[i].TableID, tables[i].TableStatus, tables[i].OrderState, tables[i].TimeOfOrder.ToString("mm:ss"));
+            {         
+                Color rowAndTableBottonColor = Color.White;
 
-                dgvTableList.Rows[i].Selected = false;
+                //At order in process case we calculate the time of waiting inside GetTimeOfOrderCalculation()
+                TablesDataGridView.Rows.Add(tables[i].TableID, tables[i].TableStatus, tables[i].OrderState, tables[i].GetTimeOfOrderCalculation().ToString("mm:ss"));
+                TablesDataGridView.Rows[i].Selected = false;
 
-                if (tables[i].TableStatus == "פנוי")
+                switch (tables[i].TableStatus)
                 {
-                    if (tables[i].OrderState == "NA")
-                    {
-                        FiilRowColor(Color.White, i);
-                        tableButtons[tables[i].TableID].BackColor = System.Drawing.Color.White;
-                    }
-                    else
-                    {
-                        FiilRowColor(Color.Yellow, i);
-                        tableButtons[tables[i].TableID].BackColor = System.Drawing.Color.Yellow;
-                    }
-                    
+                    case "פנוי":
+                        rowAndTableBottonColor = (tables[i].OrderStateNotExists()) ? Color.White : Color.Yellow;
+                        break;
+
+                    case "תפוס":
+                        rowAndTableBottonColor = (tables[i].OrderInProcess()) ? Color.Red : Color.Green;          
+                        break;
+
+                    case "בחשבון":
+                        rowAndTableBottonColor = Color.SkyBlue;
+                        break;
+
+                    default:
+                        break;
                 }
-                else if (tables[i].TableStatus == "תפוס")
-                {
-                    if(tables[i].OrderState == "הזמנה בהכנה")
-                    {
-                        FiilRowColor(Color.Red, i);
-                        tableButtons[tables[i].TableID].BackColor = System.Drawing.Color.Red;
-                    }
-                    else
-                    {
-                        FiilRowColor(Color.Green, i);
-                        tableButtons[tables[i].TableID].BackColor = System.Drawing.Color.Green;
-                    }
-                }             
-                else if (tables[i].TableStatus == "בחשבון")
-                {
-                    FiilRowColor(Color.SkyBlue, i);
-                    tableButtons[tables[i].TableID].BackColor = System.Drawing.Color.SkyBlue;
-                }      
+
+                FiilRowColor(rowAndTableBottonColor, i);
+                tableButtons[tables[i].TableID].BackColor = rowAndTableBottonColor;
             }
         }
 
@@ -140,7 +95,7 @@ namespace Sadot
         /// <param name="index">the index of the row to fill it color</param>
         private void FiilRowColor(Color color, int index)
         {
-            dgvTableList.Rows[index].DefaultCellStyle.BackColor = color;
+            TablesDataGridView.Rows[index].DefaultCellStyle.BackColor = color;
         }
 
         /// <summary>
@@ -180,7 +135,7 @@ namespace Sadot
         /// </summary>
         private void dgvTableList_Click(object sender, EventArgs e)
         {
-            Table tmpTable = GetTableById(int.Parse(dgvTableList.CurrentRow.Cells[0].Value.ToString()));
+            Table tmpTable = GetTableById(int.Parse(TablesDataGridView.CurrentRow.Cells[0].Value.ToString()));
             OpenOrderForm(tmpTable);
         }
 
@@ -192,23 +147,38 @@ namespace Sadot
         {
             OrderForm orderForm = new OrderForm(tmpTable);
             orderForm.ShowDialog();
+            bool updateTable = true;
 
-            if (orderForm.DialogResult == System.Windows.Forms.DialogResult.OK)
+            switch (orderForm.DialogResult)
             {
-                db.UpdateTableParams(tmpTable.TableID, "תפוס", "הזמנה בהכנה", DateTime.Now);
-            }
-            if (orderForm.DialogResult == System.Windows.Forms.DialogResult.Yes)
-            {
-                db.UpdateTableParams(tmpTable.TableID, "פנוי", "NA", DateTime.MinValue);
-            }
-            if (orderForm.DialogResult == System.Windows.Forms.DialogResult.Abort)
-            {
-                if(tmpTable.TableStatus == "פנוי")
-                {
-                    db.UpdateTableOrderState(tmpTable.TableID, "NA");
-                }       
+                //User pressd on "ביצוע הזמנה" button
+                case DialogResult.OK: 
+                    tmpTable.TableStatus = "תפוס";
+                    tmpTable.OrderState = "הזמנה בהכנה";
+                    tmpTable.TimeOfOrder = DateTime.Now;
+                    break;
+
+                //User pressd on "שולם" button
+                case DialogResult.Yes:
+                    tmpTable.TableStatus = "פנוי";
+                    tmpTable.OrderState = "לא קיימת הזמנה";
+                    tmpTable.TimeOfOrder = DateTime.MinValue;
+                    break;
+
+                //User pressd on "יציאה" button
+                case DialogResult.Abort:
+                    tmpTable.OrderState = (tmpTable.IsTableAvailable()) ? "לא קיימת הזמנה" : tmpTable.OrderState;
+                    break;
+
+                //User pressd on "החלף שולחן" button
+                case DialogResult.Ignore:
+                default:
+                    updateTable = false;
+                    break;
             }
 
+            if(updateTable)
+                db.UpdateTableParams(ref tmpTable);
 
             FillTableList();
         }
@@ -242,10 +212,7 @@ namespace Sadot
                 {
                     tableInBillCounter++;
                     UpdateStockAndOrderStatus(tables[i].TableID);
-                    if (tables[i].TableID >= 200)
-                        db.DeleteTable(tables[i].TableID);
-                    else
-                        db.UpdateTableStatus(tables[i].TableID, "פנוי");
+                    db.UpdateTableStatus(tables[i].TableID, "פנוי");
                 }
             }
             if(tableInBillCounter > 0)
@@ -299,14 +266,14 @@ namespace Sadot
         /// </summary>
         public void CreateTableButtons()
         {
-            for (int i = (int)ETableIDs.TABLE_ID_0; i < (int)ETableIDs.MAX_TABLES; i++)
+            for (int i = TABLE_ID_0; i < MAX_TABLES; i++)
             {
                 tableButtons[i] = new MyBtn(i, new System.EventHandler(this.btnTableClickEvent));
             }
                 
             InitilazeTableButtonsDefaultsAttributes();
 
-            for (int i = (int)ETableIDs.TABLE_ID_0; i < (int)ETableIDs.MAX_TABLES; i++)
+            for (int i = TABLE_ID_0; i < MAX_TABLES; i++)
             {
                 MainPanel.Controls.Add(tableButtons[i]);
             }
