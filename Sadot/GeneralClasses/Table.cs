@@ -82,6 +82,11 @@ namespace Sadot
             return (TableStatus == "פנוי") ? true : false;
         }
 
+        public bool IsTableInBill()
+        {
+            return (TableStatus == "בחשבון") ? true : false;
+        }
+
         public DateTime GetTimeOfOrderCalculation()
         {
             DateTime result = TimeOfOrder;

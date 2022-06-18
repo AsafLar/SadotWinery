@@ -208,11 +208,14 @@ namespace Sadot
             int tableInBillCounter = 0;
             for (int i = 0; i < tables.Length; i++)
             {
-                if (tables[i].TableStatus == "בחשבון")
+                if (tables[i].IsTableInBill())
                 {
                     tableInBillCounter++;
                     UpdateStockAndOrderStatus(tables[i].TableID);
-                    db.UpdateTableStatus(tables[i].TableID, "פנוי");
+                    tables[i].TableStatus = "פנוי";
+                    tables[i].OrderState = "לא קיימת הזמנה";
+                    tables[i].TimeOfOrder = DateTime.MinValue;
+                    db.UpdateTableParams(ref tables[i]);
                 }
             }
             if(tableInBillCounter > 0)
