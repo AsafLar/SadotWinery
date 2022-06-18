@@ -15,6 +15,20 @@ namespace Sadot
     {
         private int id;
 
+        public MyBtn() {}
+
+        public MyBtn(int id, System.EventHandler onClickEvent)
+        {
+            ID = id;
+            BackColor = System.Drawing.Color.White;
+            FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            Name = "btnTable" + id;
+            Text = id.ToString();
+            UseVisualStyleBackColor = false;
+            Click += onClickEvent;
+        }
+
         /// <summary>
         /// ID property (get , set)
         /// </summary>

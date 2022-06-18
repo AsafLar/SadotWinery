@@ -12,7 +12,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Threading.Tasks;
 using System.Net.Http;
 
 
@@ -25,6 +24,7 @@ namespace Sadot
         //private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_test;UID=u691360607_asaf;PASSWORD=sadottest;SslMode=none;"; //test data base for development
         //private static string connectionString = "SERVER = 185.224.137.225 ;PORT=3306;DATABASE=u691360607_sadot_new;UID=u691360607_admin2;PASSWORD=admin1234;SslMode=none;";//new data base
         MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+        const int CMD_TIMEOUT = 60;
 
         #region DataBase Functions **Login** ( CheckLogin )
 
@@ -67,7 +67,7 @@ namespace Sadot
         {
             string query = "INSERT INTO `users` (userName,password,permission) VALUES (@userName , @password , @permission)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@userName", newUser.UserName);
             cmd.Parameters.AddWithValue("@password", newUser.Password);
             cmd.Parameters.AddWithValue("@permission", newUser.Permission);
@@ -115,7 +115,7 @@ namespace Sadot
         {
             string query = "UPDATE `users` SET `password`=@password WHERE `user_id` = @userId";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@password", userToUpdate.Password);
             cmd.Parameters.AddWithValue("@userId", userToUpdate.UserID);
             try
@@ -137,7 +137,7 @@ namespace Sadot
         {
             string query = "UPDATE `users` SET `password`=@password, `permission` =@permission WHERE `user_id` = @userId";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@password", userToUpdate.Password);
             cmd.Parameters.AddWithValue("@permission", userToUpdate.Permission);
             cmd.Parameters.AddWithValue("@userId", userToUpdate.UserID);
@@ -217,7 +217,7 @@ namespace Sadot
             string query = "INSERT INTO employees(`e_id`, `firstName`, `lastName`, `status`) VALUES (@employeeId , @fname , @lname, @status)";
 
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@employeeId", null);
             cmd.Parameters.AddWithValue("@fname", newEmployee.FirstName);
             cmd.Parameters.AddWithValue("@lname", newEmployee.LastName);
@@ -240,7 +240,7 @@ namespace Sadot
         {
             string query = "UPDATE `employees` SET `firstName` = @fname, `lastName` = @lname, `status` = @status WHERE `e_id` = @employeeId";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@fname", employeeToUpdate.FirstName);
             cmd.Parameters.AddWithValue("@lname", employeeToUpdate.LastName);
             cmd.Parameters.AddWithValue("@status", employeeToUpdate.Status);
@@ -363,7 +363,7 @@ namespace Sadot
         {
             string query = "INSERT INTO dish_ingredients(`di_id`, `di_name`, `di_quantity`) VALUES (@id , @name , @quantity)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@id", null);//null for auto increment
             cmd.Parameters.AddWithValue("@name", newIngredientName);
             cmd.Parameters.AddWithValue("@quantity", 0);
@@ -502,7 +502,7 @@ namespace Sadot
         {
             string query = "INSERT INTO `tables` (`tableID`, `tableStatus`) VALUES(@tableId, @tablestatus) ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@tableId", id);
             cmd.Parameters.AddWithValue("@tablestatus", status);
             try
@@ -514,7 +514,6 @@ namespace Sadot
             catch (Exception e) { MessageBox.Show(e.Message); }
         }
 
-
         /// <summary>
         /// Method to update tables status in to the database
         /// </summary>
@@ -522,7 +521,7 @@ namespace Sadot
         {
             string query = "UPDATE `tables` SET `tableStatus`=@status WHERE `tableID` = @id";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@status", status);
             cmd.Parameters.AddWithValue("@id", id);
             try
@@ -531,7 +530,34 @@ namespace Sadot
                 cmd.ExecuteNonQuery();
                 databaseConnection.Close();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Method to update all parameters of specific table
+        /// </summary>
+        public void UpdateTableParams(ref Table tableToUpdate)
+        {
+            string query = "UPDATE `tables` SET `tableStatus`= @status , `orderState`= @orderState , `timeOfOrder`= @timeOfOrder  WHERE `tableID` = @id";
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
+            cmd.CommandTimeout = CMD_TIMEOUT;
+            cmd.Parameters.AddWithValue("@status", tableToUpdate.TableStatus);
+            cmd.Parameters.AddWithValue("@orderState", tableToUpdate.OrderState);
+            cmd.Parameters.AddWithValue("@timeOfOrder", tableToUpdate.TimeOfOrder);
+            cmd.Parameters.AddWithValue("@id", tableToUpdate.TableID);
+            try
+            {
+                databaseConnection.Open();
+                cmd.ExecuteNonQuery();
+                databaseConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         /// <summary>
@@ -550,6 +576,8 @@ namespace Sadot
                     Table table = new Table();
                     table.TableID = int.Parse(reader["tableID"].ToString());
                     table.TableStatus = reader["tableStatus"].ToString();
+                    table.OrderState = reader["orderState"].ToString();
+                    table.TimeOfOrder = DateTime.Parse(reader["timeOfOrder"].ToString());
                     tables.Add(table);
                 }
                 databaseConnection.Close();
@@ -565,7 +593,7 @@ namespace Sadot
         {
             string query = "DELETE FROM `tables` WHERE `tableID` = @tableId";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@tableId", tableID);
             try
             {
@@ -573,7 +601,10 @@ namespace Sadot
                 cmd.ExecuteNonQuery();
                 databaseConnection.Close();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
@@ -596,8 +627,11 @@ namespace Sadot
                 res = cmd.ExecuteScalar().ToString();
                 databaseConnection.Close();
             }
-            catch { }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             return res;
         }
 
@@ -614,7 +648,7 @@ namespace Sadot
         {
             string query = "INSERT INTO wine(wineID , wineName , wineYear , winePriceBottle , winePriceGlass , wineStatus)  VALUES (@wineID , @wineName , @wineYear , @winePriceBottle , @winePriceGlass , @wineStatus)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@wineID", newWine.WineID);
             cmd.Parameters.AddWithValue("@wineName", newWine.Name);
             cmd.Parameters.AddWithValue("@wineYear", newWine.Year);
@@ -638,7 +672,7 @@ namespace Sadot
         {
             string query = "UPDATE `wine` SET `wineName`= @wineName , `wineYear`= @wineYear, `winePriceBottle`= @winePriceBottle , `winePriceGlass`= @winePriceGlass , `wineStatus`= @wineStatus WHERE `wineID` = @wineID ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@wineName", wineToUpdate.Name);
             cmd.Parameters.AddWithValue("@wineYear", wineToUpdate.Year);
             cmd.Parameters.AddWithValue("@winePriceBottle", wineToUpdate.PriceBottle);
@@ -773,7 +807,7 @@ namespace Sadot
         {
             string query = "INSERT INTO product(id,name,price,type,department,status)  VALUES (@id , @name , @price , @type , @department , @status)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@id", null);//null for auto increment
             cmd.Parameters.AddWithValue("@name", newProduct.Name);
             cmd.Parameters.AddWithValue("@price", newProduct.Price);
@@ -797,7 +831,7 @@ namespace Sadot
         {
             string query = "UPDATE `product` SET `name`= @productName , `price`= @productPrice, `type`= @productType , `department`= @productDepartment , `status` = @status WHERE `id` = @productId ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@productName", productToUpdate.Name);
             cmd.Parameters.AddWithValue("@productPrice", productToUpdate.Price);
             cmd.Parameters.AddWithValue("@productType", productToUpdate.Type);
@@ -1063,7 +1097,7 @@ namespace Sadot
         {
             string query = "INSERT INTO dish(dishID,dishName,dishPrice,dishStatus)  VALUES (@dishID , @dishName , @dishPrice , @dishStatus)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@dishID", newDish.ID);//null for auto increment
             cmd.Parameters.AddWithValue("@dishName", newDish.Name);
             cmd.Parameters.AddWithValue("@dishPrice", newDish.Price);
@@ -1085,7 +1119,7 @@ namespace Sadot
         {
             string query = "INSERT INTO `dishingredients_in_dish` (`d_id`, `di_id`, `quantity`)  VALUES (@dishID , @ingredientID , @quantity)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@dishID", ingredientToInsert.DishID);
             cmd.Parameters.AddWithValue("@ingredientID", ingredientToInsert.IngredientID);
             cmd.Parameters.AddWithValue("@quantity", ingredientToInsert.Quantity);
@@ -1106,7 +1140,7 @@ namespace Sadot
         {
             string query = "DELETE FROM `dishingredients_in_dish` WHERE `d_id` = @dishID AND `di_id` = @ingredientID";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@dishID", ingredientToDelete.DishID);
             cmd.Parameters.AddWithValue("@ingredientID", ingredientToDelete.IngredientID);
             try
@@ -1126,7 +1160,7 @@ namespace Sadot
         {
             string query = "UPDATE `dishingredients_in_dish` SET `quantity`= @quantity  WHERE `d_id` = @dishID AND `di_id`= @ingredientID ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@dishID", ingredientToInsert.DishID);
             cmd.Parameters.AddWithValue("@ingredientID", ingredientToInsert.IngredientID);
             cmd.Parameters.AddWithValue("@quantity", ingredientToInsert.Quantity);
@@ -1149,7 +1183,7 @@ namespace Sadot
             string query = "UPDATE `dish` , `product` SET `dish`.`dishName` = @dishName , `dish`.`dishPrice` = @dishPrice  , `dish`.`dishStatus` = @status , `product`.`name` = @dishName , `product`.`price` = @dishPrice" +
                 "  WHERE `dish`.`dishID` = @dishID AND `product`.`id` = @dishID";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@dishName", dishToUpdate.Name);
             cmd.Parameters.AddWithValue("@dishPrice", dishToUpdate.Price);
             cmd.Parameters.AddWithValue("@status", dishToUpdate.Status);
@@ -1302,7 +1336,7 @@ namespace Sadot
         {
             string query = "INSERT INTO `dishingredients_in_dish` (`d_id`, `di_id`, `quantity`)  VALUES (@dishID , @ingredientID , @quantity)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@dishID", ingredientToInsert.DishID);
             cmd.Parameters.AddWithValue("@ingredientID", ingredientToInsert.IngredientID);
             cmd.Parameters.AddWithValue("@quantity", ingredientToInsert.Quantity);
@@ -1357,7 +1391,7 @@ namespace Sadot
         {
             string query = "INSERT INTO customers(`cID`, `firstName`, `lastName`, `email`, `phoneNumber`, `birthday`, `anniversary`, `status`)  VALUES (@customerId , @fname , @lname, @email, @phone, @bday, @anniversary, @status)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@customerId", null);
             cmd.Parameters.AddWithValue("@fname", newCustomer.FirstName);
             cmd.Parameters.AddWithValue("@lname", newCustomer.LastName);
@@ -1412,7 +1446,7 @@ namespace Sadot
         {
             string query = "UPDATE `customers` SET `firstName`= @fname , `lastName`= @lname, `email`= @email , `phoneNumber`= @phone , `birthday` = @bday  , `anniversary` = @anniversary , `status` = @status   WHERE `cID` = @customerId ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@customerId", customerToUpdate.CustomerId);
             cmd.Parameters.AddWithValue("@fname", customerToUpdate.FirstName);
             cmd.Parameters.AddWithValue("@lname", customerToUpdate.LastName);
@@ -1520,7 +1554,7 @@ namespace Sadot
             string query = "INSERT INTO orders(`orderID`,`tableID`, `customerID`, `orderDate`,  `isPaid`, `totalPrice` , `discount` , `employeeID`, `cancels`)  " +
                                       "VALUES (@orderID , @tableID, @customerID , @date, @isPaid, @totalPrice , @discount , @employeeID, @cancels)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@orderID", newOrder.OrderID);
             cmd.Parameters.AddWithValue("@tableID", newOrder.TableID);
             cmd.Parameters.AddWithValue("@customerID", newOrder.CustomerId);
@@ -1547,7 +1581,7 @@ namespace Sadot
         {
             string query = "INSERT INTO lines_in_orders(`orderID`,`productID`, `productName`, `amount`, `totalPrice` , `notes`)  VALUES (@orderID , @productID , @productName, @amount, @totalPrice , @notes)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@orderID", newLine.OrderID);
             cmd.Parameters.AddWithValue("@productID", newLine.ProductID);
             cmd.Parameters.AddWithValue("@productName", newLine.ProductName);
@@ -1571,7 +1605,7 @@ namespace Sadot
         {
             string query = "UPDATE `lines_in_orders` SET `productName`= @name , `amount`= @amount ,`totalPrice`= @totalPrice , `notes` = @notes WHERE `orderID` = @orderID AND `productID`= @productID ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@name", newLine.ProductName);
             cmd.Parameters.AddWithValue("@amount", newLine.Amount);
             cmd.Parameters.AddWithValue("@totalPrice", newLine.TotalPrice);
@@ -1596,7 +1630,7 @@ namespace Sadot
         {
             string query = "UPDATE `orders` SET `customerID` = @customerID , `isPaid`= @isPaid ,`totalPrice`= @totalPrice , `discount` = @discount, `cancels` = @cancels WHERE `orderID`= @orderID AND `tableID`= @tableID ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@customerID", orderToUpdate.CustomerId);
             cmd.Parameters.AddWithValue("@isPaid", orderToUpdate.IsPaid);
             cmd.Parameters.AddWithValue("@totalPrice", orderToUpdate.TotalPrice);
@@ -1622,7 +1656,7 @@ namespace Sadot
             // string query = "UPDATE `orders` SET `amount`= @amount ,`totalPrice`= @totalPrice WHERE `orderID` = @orderID AND `productID`= @productID ";
             string query = "UPDATE `orders` SET `tableID`= @tableID  , `customerID` = @customerID , `isPaid`= @isPaid ,`totalPrice`= @totalPrice WHERE `orderID`= @orderID";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@tableID", orderToUpdate.TableID);
             cmd.Parameters.AddWithValue("@customerID", orderToUpdate.CustomerId);
             cmd.Parameters.AddWithValue("@isPaid", orderToUpdate.IsPaid);
@@ -1798,7 +1832,7 @@ namespace Sadot
         {
             string query = "INSERT INTO stock(`productID`,`productName`, `quantity`, `department`)  VALUES (@productID , @productName, @quantity , @department)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@productID", newProduct.ProductID);
             cmd.Parameters.AddWithValue("@productName", newProduct.Name);
             cmd.Parameters.AddWithValue("@quantity", i);
@@ -1822,7 +1856,7 @@ namespace Sadot
             string query = "INSERT INTO `stockByDate`(`productID`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`, `21`, `22`, `23`, `24`, `25`, `26`, `27`, `28`, `29`, `30`, `31`) VALUES " +
                 "(@pid, @1 , @2 , @3 , @4, @5 , @6, @7 , @8, @9 , @10, @11 , @12, @13 , @14, @15 , @16, @17 , @18, @19 , @20, @21 , @22, @23 , @24, @25 , @26, @27 , @28, @29 , @30, @31 )";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@pid", id);
             cmd.Parameters.AddWithValue("@1", amount);
             cmd.Parameters.AddWithValue("@2", amount);
@@ -1876,7 +1910,7 @@ namespace Sadot
             string query = "INSERT INTO `stockByYear`(`productID`, `currentMonth` , `currentYear` , `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`) VALUES " +
                 "(@pid,@month,@year, @1 , @2 , @3 , @4, @5 , @6, @7 , @8, @9 , @10, @11 , @12)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@pid", id);
             cmd.Parameters.AddWithValue("@month", month);
             cmd.Parameters.AddWithValue("@year", year);
@@ -1908,7 +1942,7 @@ namespace Sadot
         {
             string query = "UPDATE `stockByDate` SET  `1`= @1,`2` = @2,`3` = @3,`4` = @4,`5` = @5,`6` = @6,`7` = @7,`8` = @8,`9` = @9,`10` = @10,`11` = @11,`12` = @12,`13` = @13,`14` = @14,`15` = @15,`16` = @16,`17` = @17,`18` = @18,`19` = @19,`20` = @20,`21` = @21,`22` = @22,`23` = @23,`24` = @24,`25` = @25,`26` = @26,`27` = @27,`28` = @28,`29` = @29,`30` = @30,`31` = @31  WHERE `productID` > 1";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@1", 0);
             cmd.Parameters.AddWithValue("@2", 0);
             cmd.Parameters.AddWithValue("@3", 0);
@@ -1959,7 +1993,7 @@ namespace Sadot
         {
             string query = "UPDATE `stockByDate` SET `" + numberOfDay + "` = `" + numberOfDay + "` + @amount  WHERE `productID`= @productID ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@amount", amount);
             cmd.Parameters.AddWithValue("@productID", productID);
             try
@@ -2069,7 +2103,7 @@ namespace Sadot
         {
             string query = "UPDATE `stockByYear` SET `currentMonth` = @currentMonth , `currentYear` = @currentYear ,`1`= @1,`2` = @2,`3` = @3,`4` = @4,`5` = @5,`6` = @6,`7` = @7,`8` = @8,`9` = @9,`10` = @10,`11` = @11,`12` = @12 WHERE `productID` > 1";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@currentMonth", 1);
             cmd.Parameters.AddWithValue("@currentYear", year);
             cmd.Parameters.AddWithValue("@1", 0);
@@ -2104,7 +2138,7 @@ namespace Sadot
         {
             string query = "UPDATE `stockByYear` SET  `currentMonth` = @currentMonth , `" + num + "` = `" + num + "` + @amount  WHERE `productID`= @productID ";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@currentMonth", currentMonth);
             cmd.Parameters.AddWithValue("@amount", amount);
             cmd.Parameters.AddWithValue("@productID", productID);
@@ -2150,7 +2184,7 @@ namespace Sadot
             string query = "INSERT INTO events(`eventID`, `type`, `date`, `time`, `numOfParticipants`,  `ownerFname`, `ownerLname`, `ownerPhone`, `ownerMail`, `notes`)  " +
                 "VALUES (@eventID, @type , @date, @time , @numOfParticipants, @ownerFname, @ownerLname, @ownerPhone, @ownerMail, @notes)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@eventID", null);
             cmd.Parameters.AddWithValue("@type", newEvent.EventType);
             cmd.Parameters.AddWithValue("@date", newEvent.EventDate);
@@ -2179,7 +2213,7 @@ namespace Sadot
         {
             string query = "UPDATE `events` SET `type`= @type,`date`= @date,`time`= @time,`numOfParticipants`= @numOfParticipants,`ownerFname`= @ownerFname,`ownerLname`= @ownerLname,`ownerPhone`= @ownerPhone,`ownerMail`= @ownerMail,`notes`= @notes WHERE `eventID`= @eventID";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@eventID", newEvent.EventId);
             cmd.Parameters.AddWithValue("@type", newEvent.EventType);
             cmd.Parameters.AddWithValue("@date", newEvent.EventDate);
@@ -2264,7 +2298,7 @@ namespace Sadot
         {
             string query = "INSERT INTO cancellationsInOrders(`cancleID`,`orderID`, `productID`, `productName`, `priceToSub`)  VALUES (@cancleID , @orderID , @productID, @productName, @priceToSub)";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection);
-            cmd.CommandTimeout = 60;
+            cmd.CommandTimeout = CMD_TIMEOUT;
             cmd.Parameters.AddWithValue("@cancleID", null);//null for auto increment
             cmd.Parameters.AddWithValue("@orderID", newCancle.OrderId);
             cmd.Parameters.AddWithValue("@productID", newCancle.ProductId);

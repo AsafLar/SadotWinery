@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSelectCustomer = new System.Windows.Forms.Button();
             this.btnSwitchTable = new System.Windows.Forms.Button();
             this.tcOrder = new System.Windows.Forms.TabControl();
@@ -83,9 +83,10 @@
             this.lblTableOrder = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.cbTablesList = new System.Windows.Forms.ComboBox();
-            this.btnDiscount = new Sadot.MyBtn();
             this.nudSumToPay = new System.Windows.Forms.NumericUpDown();
+            this.btnMarkOrderAsReceived = new System.Windows.Forms.Button();
             this.btnPayPartOfBill = new Sadot.MyBtn();
+            this.btnDiscount = new Sadot.MyBtn();
             this.tcOrder.SuspendLayout();
             this.TotalPricePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDown)).BeginInit();
@@ -104,10 +105,9 @@
             this.btnSelectCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSelectCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnSelectCustomer.ForeColor = System.Drawing.Color.Black;
-            this.btnSelectCustomer.Location = new System.Drawing.Point(188, 1046);
-            this.btnSelectCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSelectCustomer.Location = new System.Drawing.Point(167, 837);
             this.btnSelectCustomer.Name = "btnSelectCustomer";
-            this.btnSelectCustomer.Size = new System.Drawing.Size(156, 104);
+            this.btnSelectCustomer.Size = new System.Drawing.Size(139, 83);
             this.btnSelectCustomer.TabIndex = 20;
             this.btnSelectCustomer.Text = "בחירת לקוח";
             this.btnSelectCustomer.UseVisualStyleBackColor = false;
@@ -119,10 +119,9 @@
             this.btnSwitchTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSwitchTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnSwitchTable.ForeColor = System.Drawing.Color.Black;
-            this.btnSwitchTable.Location = new System.Drawing.Point(533, 935);
-            this.btnSwitchTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSwitchTable.Location = new System.Drawing.Point(474, 748);
             this.btnSwitchTable.Name = "btnSwitchTable";
-            this.btnSwitchTable.Size = new System.Drawing.Size(156, 106);
+            this.btnSwitchTable.Size = new System.Drawing.Size(139, 85);
             this.btnSwitchTable.TabIndex = 19;
             this.btnSwitchTable.Text = "החלפת שולחן";
             this.btnSwitchTable.UseVisualStyleBackColor = false;
@@ -141,12 +140,11 @@
             this.tcOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.tcOrder.ItemSize = new System.Drawing.Size(0, 1);
             this.tcOrder.Location = new System.Drawing.Point(0, 0);
-            this.tcOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tcOrder.Name = "tcOrder";
             this.tcOrder.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tcOrder.RightToLeftLayout = true;
             this.tcOrder.SelectedIndex = 0;
-            this.tcOrder.Size = new System.Drawing.Size(462, 983);
+            this.tcOrder.Size = new System.Drawing.Size(411, 807);
             this.tcOrder.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tcOrder.TabIndex = 5;
             this.tcOrder.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tcOrder_Selecting);
@@ -157,10 +155,9 @@
             this.tpWine.BackColor = System.Drawing.Color.White;
             this.tpWine.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tpWine.Location = new System.Drawing.Point(4, 5);
-            this.tpWine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpWine.Name = "tpWine";
-            this.tpWine.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpWine.Size = new System.Drawing.Size(454, 974);
+            this.tpWine.Padding = new System.Windows.Forms.Padding(3);
+            this.tpWine.Size = new System.Drawing.Size(403, 798);
             this.tpWine.TabIndex = 0;
             // 
             // tpDish
@@ -169,10 +166,9 @@
             this.tpDish.BackColor = System.Drawing.Color.White;
             this.tpDish.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tpDish.Location = new System.Drawing.Point(4, 5);
-            this.tpDish.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpDish.Name = "tpDish";
-            this.tpDish.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpDish.Size = new System.Drawing.Size(454, 973);
+            this.tpDish.Padding = new System.Windows.Forms.Padding(3);
+            this.tpDish.Size = new System.Drawing.Size(403, 798);
             this.tpDish.TabIndex = 1;
             // 
             // tpSoftDrinksAndAlcohol
@@ -181,10 +177,9 @@
             this.tpSoftDrinksAndAlcohol.BackColor = System.Drawing.Color.White;
             this.tpSoftDrinksAndAlcohol.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tpSoftDrinksAndAlcohol.Location = new System.Drawing.Point(4, 5);
-            this.tpSoftDrinksAndAlcohol.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpSoftDrinksAndAlcohol.Name = "tpSoftDrinksAndAlcohol";
-            this.tpSoftDrinksAndAlcohol.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpSoftDrinksAndAlcohol.Size = new System.Drawing.Size(454, 973);
+            this.tpSoftDrinksAndAlcohol.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSoftDrinksAndAlcohol.Size = new System.Drawing.Size(403, 798);
             this.tpSoftDrinksAndAlcohol.TabIndex = 2;
             // 
             // tpHotDrinksAndCoffee
@@ -193,10 +188,9 @@
             this.tpHotDrinksAndCoffee.BackColor = System.Drawing.Color.White;
             this.tpHotDrinksAndCoffee.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tpHotDrinksAndCoffee.Location = new System.Drawing.Point(4, 5);
-            this.tpHotDrinksAndCoffee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpHotDrinksAndCoffee.Name = "tpHotDrinksAndCoffee";
-            this.tpHotDrinksAndCoffee.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpHotDrinksAndCoffee.Size = new System.Drawing.Size(454, 973);
+            this.tpHotDrinksAndCoffee.Padding = new System.Windows.Forms.Padding(3);
+            this.tpHotDrinksAndCoffee.Size = new System.Drawing.Size(403, 798);
             this.tpHotDrinksAndCoffee.TabIndex = 3;
             // 
             // tpDessert
@@ -205,10 +199,9 @@
             this.tpDessert.BackColor = System.Drawing.Color.White;
             this.tpDessert.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tpDessert.Location = new System.Drawing.Point(4, 5);
-            this.tpDessert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpDessert.Name = "tpDessert";
-            this.tpDessert.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpDessert.Size = new System.Drawing.Size(454, 973);
+            this.tpDessert.Padding = new System.Windows.Forms.Padding(3);
+            this.tpDessert.Size = new System.Drawing.Size(403, 798);
             this.tpDessert.TabIndex = 4;
             // 
             // tpGeneralProduct
@@ -217,10 +210,9 @@
             this.tpGeneralProduct.BackColor = System.Drawing.Color.White;
             this.tpGeneralProduct.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tpGeneralProduct.Location = new System.Drawing.Point(4, 5);
-            this.tpGeneralProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tpGeneralProduct.Name = "tpGeneralProduct";
-            this.tpGeneralProduct.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tpGeneralProduct.Size = new System.Drawing.Size(454, 973);
+            this.tpGeneralProduct.Padding = new System.Windows.Forms.Padding(3);
+            this.tpGeneralProduct.Size = new System.Drawing.Size(403, 798);
             this.tpGeneralProduct.TabIndex = 5;
             // 
             // btnDessert
@@ -229,10 +221,9 @@
             this.btnDessert.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDessert.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnDessert.ForeColor = System.Drawing.Color.Black;
-            this.btnDessert.Location = new System.Drawing.Point(465, 634);
-            this.btnDessert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDessert.Location = new System.Drawing.Point(413, 507);
             this.btnDessert.Name = "btnDessert";
-            this.btnDessert.Size = new System.Drawing.Size(189, 102);
+            this.btnDessert.Size = new System.Drawing.Size(168, 82);
             this.btnDessert.TabIndex = 6;
             this.btnDessert.Text = "קינוחים";
             this.btnDessert.UseVisualStyleBackColor = false;
@@ -244,10 +235,9 @@
             this.btnHotDrinksAndCoffee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHotDrinksAndCoffee.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnHotDrinksAndCoffee.ForeColor = System.Drawing.Color.Black;
-            this.btnHotDrinksAndCoffee.Location = new System.Drawing.Point(465, 501);
-            this.btnHotDrinksAndCoffee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnHotDrinksAndCoffee.Location = new System.Drawing.Point(413, 401);
             this.btnHotDrinksAndCoffee.Name = "btnHotDrinksAndCoffee";
-            this.btnHotDrinksAndCoffee.Size = new System.Drawing.Size(189, 102);
+            this.btnHotDrinksAndCoffee.Size = new System.Drawing.Size(168, 82);
             this.btnHotDrinksAndCoffee.TabIndex = 14;
             this.btnHotDrinksAndCoffee.Text = "שתייה חמה / קפה";
             this.btnHotDrinksAndCoffee.UseVisualStyleBackColor = false;
@@ -259,10 +249,9 @@
             this.btnDish.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDish.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnDish.ForeColor = System.Drawing.Color.Black;
-            this.btnDish.Location = new System.Drawing.Point(465, 221);
-            this.btnDish.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDish.Location = new System.Drawing.Point(413, 177);
             this.btnDish.Name = "btnDish";
-            this.btnDish.Size = new System.Drawing.Size(189, 102);
+            this.btnDish.Size = new System.Drawing.Size(168, 82);
             this.btnDish.TabIndex = 16;
             this.btnDish.Text = "אוכל";
             this.btnDish.UseVisualStyleBackColor = false;
@@ -274,10 +263,9 @@
             this.btnSoftDrinksAndAlcohol.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSoftDrinksAndAlcohol.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnSoftDrinksAndAlcohol.ForeColor = System.Drawing.Color.Black;
-            this.btnSoftDrinksAndAlcohol.Location = new System.Drawing.Point(465, 364);
-            this.btnSoftDrinksAndAlcohol.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSoftDrinksAndAlcohol.Location = new System.Drawing.Point(413, 291);
             this.btnSoftDrinksAndAlcohol.Name = "btnSoftDrinksAndAlcohol";
-            this.btnSoftDrinksAndAlcohol.Size = new System.Drawing.Size(189, 102);
+            this.btnSoftDrinksAndAlcohol.Size = new System.Drawing.Size(168, 82);
             this.btnSoftDrinksAndAlcohol.TabIndex = 15;
             this.btnSoftDrinksAndAlcohol.Text = "שתייה קלה / אלכוהול";
             this.btnSoftDrinksAndAlcohol.UseVisualStyleBackColor = false;
@@ -289,10 +277,9 @@
             this.btnWine.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnWine.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnWine.ForeColor = System.Drawing.Color.Black;
-            this.btnWine.Location = new System.Drawing.Point(465, 92);
-            this.btnWine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnWine.Location = new System.Drawing.Point(413, 74);
             this.btnWine.Name = "btnWine";
-            this.btnWine.Size = new System.Drawing.Size(189, 102);
+            this.btnWine.Size = new System.Drawing.Size(168, 82);
             this.btnWine.TabIndex = 17;
             this.btnWine.Text = "יין";
             this.btnWine.UseVisualStyleBackColor = false;
@@ -302,9 +289,9 @@
             // 
             this.lblMenu.AutoSize = true;
             this.lblMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblMenu.Location = new System.Drawing.Point(500, 30);
+            this.lblMenu.Location = new System.Drawing.Point(444, 24);
             this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(120, 46);
+            this.lblMenu.Size = new System.Drawing.Size(108, 38);
             this.lblMenu.TabIndex = 20;
             this.lblMenu.Text = "תפריט";
             // 
@@ -314,10 +301,9 @@
             this.btnGeneralProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGeneralProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnGeneralProduct.ForeColor = System.Drawing.Color.Black;
-            this.btnGeneralProduct.Location = new System.Drawing.Point(465, 769);
-            this.btnGeneralProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnGeneralProduct.Location = new System.Drawing.Point(413, 615);
             this.btnGeneralProduct.Name = "btnGeneralProduct";
-            this.btnGeneralProduct.Size = new System.Drawing.Size(189, 102);
+            this.btnGeneralProduct.Size = new System.Drawing.Size(168, 82);
             this.btnGeneralProduct.TabIndex = 19;
             this.btnGeneralProduct.Text = "מוצר כללי";
             this.btnGeneralProduct.UseVisualStyleBackColor = false;
@@ -330,10 +316,9 @@
             this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnPay.ForeColor = System.Drawing.Color.Black;
-            this.btnPay.Location = new System.Drawing.Point(15, 1045);
-            this.btnPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPay.Location = new System.Drawing.Point(13, 836);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(156, 104);
+            this.btnPay.Size = new System.Drawing.Size(139, 83);
             this.btnPay.TabIndex = 21;
             this.btnPay.Text = "שולם / סגירת שולחן";
             this.btnPay.UseVisualStyleBackColor = false;
@@ -346,10 +331,9 @@
             this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnBill.ForeColor = System.Drawing.Color.Black;
-            this.btnBill.Location = new System.Drawing.Point(187, 935);
-            this.btnBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBill.Location = new System.Drawing.Point(166, 748);
             this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(156, 104);
+            this.btnBill.Size = new System.Drawing.Size(139, 83);
             this.btnBill.TabIndex = 19;
             this.btnBill.Text = "הדפסת חשבון";
             this.btnBill.UseVisualStyleBackColor = false;
@@ -358,13 +342,13 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Abort;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(15, 935);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExit.Location = new System.Drawing.Point(13, 748);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(156, 104);
+            this.btnExit.Size = new System.Drawing.Size(139, 83);
             this.btnExit.TabIndex = 19;
             this.btnExit.Text = "יציאה";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -401,10 +385,9 @@
             "30",
             "40",
             "50"});
-            this.cbDiscount.Location = new System.Drawing.Point(359, 1045);
-            this.cbDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbDiscount.Location = new System.Drawing.Point(319, 836);
             this.cbDiscount.Name = "cbDiscount";
-            this.cbDiscount.Size = new System.Drawing.Size(156, 37);
+            this.cbDiscount.Size = new System.Drawing.Size(139, 33);
             this.cbDiscount.TabIndex = 22;
             this.cbDiscount.Text = "5";
             // 
@@ -418,19 +401,18 @@
             this.TotalPricePanel.Controls.Add(this.lblPrice);
             this.TotalPricePanel.Controls.Add(this.lblTotalPrice);
             this.TotalPricePanel.Controls.Add(this.picUp);
-            this.TotalPricePanel.Location = new System.Drawing.Point(14, 774);
-            this.TotalPricePanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TotalPricePanel.Location = new System.Drawing.Point(12, 619);
             this.TotalPricePanel.Name = "TotalPricePanel";
-            this.TotalPricePanel.Size = new System.Drawing.Size(676, 133);
+            this.TotalPricePanel.Size = new System.Drawing.Size(601, 107);
             this.TotalPricePanel.TabIndex = 32;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.Location = new System.Drawing.Point(361, 86);
+            this.label2.Location = new System.Drawing.Point(321, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 32);
+            this.label2.Size = new System.Drawing.Size(151, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "שורות בהזמנה:";
             // 
@@ -438,9 +420,9 @@
             // 
             this.lblTotalProduct.AutoSize = true;
             this.lblTotalProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblTotalProduct.Location = new System.Drawing.Point(231, 86);
+            this.lblTotalProduct.Location = new System.Drawing.Point(205, 69);
             this.lblTotalProduct.Name = "lblTotalProduct";
-            this.lblTotalProduct.Size = new System.Drawing.Size(31, 32);
+            this.lblTotalProduct.Size = new System.Drawing.Size(26, 29);
             this.lblTotalProduct.TabIndex = 2;
             this.lblTotalProduct.Text = "0";
             this.lblTotalProduct.TextChanged += new System.EventHandler(this.lblTotalProduct_TextChanged);
@@ -451,9 +433,8 @@
             this.picDown.Dock = System.Windows.Forms.DockStyle.Left;
             this.picDown.Image = ((System.Drawing.Image)(resources.GetObject("picDown.Image")));
             this.picDown.Location = new System.Drawing.Point(0, 0);
-            this.picDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picDown.Name = "picDown";
-            this.picDown.Size = new System.Drawing.Size(112, 131);
+            this.picDown.Size = new System.Drawing.Size(100, 105);
             this.picDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picDown.TabIndex = 37;
             this.picDown.TabStop = false;
@@ -464,9 +445,9 @@
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblPrice.Location = new System.Drawing.Point(210, 21);
+            this.lblPrice.Location = new System.Drawing.Point(187, 17);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(80, 37);
+            this.lblPrice.Size = new System.Drawing.Size(67, 31);
             this.lblPrice.TabIndex = 1;
             this.lblPrice.Text = "0.00";
             // 
@@ -474,9 +455,9 @@
             // 
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(436, 21);
+            this.lblTotalPrice.Location = new System.Drawing.Point(388, 17);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(93, 37);
+            this.lblTotalPrice.Size = new System.Drawing.Size(85, 31);
             this.lblTotalPrice.TabIndex = 0;
             this.lblTotalPrice.Text = "סה\"כ :";
             // 
@@ -485,10 +466,9 @@
             this.picUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picUp.Dock = System.Windows.Forms.DockStyle.Right;
             this.picUp.Image = ((System.Drawing.Image)(resources.GetObject("picUp.Image")));
-            this.picUp.Location = new System.Drawing.Point(562, 0);
-            this.picUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picUp.Location = new System.Drawing.Point(499, 0);
             this.picUp.Name = "picUp";
-            this.picUp.Size = new System.Drawing.Size(112, 131);
+            this.picUp.Size = new System.Drawing.Size(100, 105);
             this.picUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picUp.TabIndex = 36;
             this.picUp.TabStop = false;
@@ -502,46 +482,45 @@
             this.dgvOrderList.AllowUserToResizeRows = false;
             this.dgvOrderList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOrderList.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrderList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrderList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrderList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrderList.DefaultCellStyle = dataGridViewCellStyle23;
-            this.dgvOrderList.Location = new System.Drawing.Point(14, 98);
-            this.dgvOrderList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrderList.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvOrderList.Location = new System.Drawing.Point(12, 78);
             this.dgvOrderList.MultiSelect = false;
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
             this.dgvOrderList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrderList.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrderList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.dgvOrderList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvOrderList.RowTemplate.Height = 24;
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrderList.Size = new System.Drawing.Size(675, 680);
+            this.dgvOrderList.Size = new System.Drawing.Size(600, 544);
             this.dgvOrderList.TabIndex = 29;
             this.dgvOrderList.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvOrderList_RowsAdded);
             this.dgvOrderList.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvOrderList_RowsRemoved);
@@ -549,8 +528,8 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn1.HeaderText = "שם המוצר";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -563,7 +542,7 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 95;
+            this.dataGridViewTextBoxColumn2.Width = 83;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -572,17 +551,16 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn3.Width = 95;
+            this.dataGridViewTextBoxColumn3.Width = 82;
             // 
             // btnAddAmount
             // 
             this.btnAddAmount.BackColor = System.Drawing.Color.SkyBlue;
             this.btnAddAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnAddAmount.ForeColor = System.Drawing.Color.Black;
-            this.btnAddAmount.Location = new System.Drawing.Point(712, 240);
-            this.btnAddAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddAmount.Location = new System.Drawing.Point(633, 192);
             this.btnAddAmount.Name = "btnAddAmount";
-            this.btnAddAmount.Size = new System.Drawing.Size(162, 124);
+            this.btnAddAmount.Size = new System.Drawing.Size(144, 99);
             this.btnAddAmount.TabIndex = 35;
             this.btnAddAmount.Text = "הוספת כמות";
             this.btnAddAmount.UseVisualStyleBackColor = false;
@@ -593,10 +571,9 @@
             this.btnSubAmount.BackColor = System.Drawing.Color.SkyBlue;
             this.btnSubAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnSubAmount.ForeColor = System.Drawing.Color.Black;
-            this.btnSubAmount.Location = new System.Drawing.Point(712, 108);
-            this.btnSubAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSubAmount.Location = new System.Drawing.Point(633, 86);
             this.btnSubAmount.Name = "btnSubAmount";
-            this.btnSubAmount.Size = new System.Drawing.Size(162, 124);
+            this.btnSubAmount.Size = new System.Drawing.Size(144, 99);
             this.btnSubAmount.TabIndex = 34;
             this.btnSubAmount.Text = "הורדת כמות ";
             this.btnSubAmount.UseVisualStyleBackColor = false;
@@ -607,10 +584,9 @@
             this.btnCancelProductFromOrder.BackColor = System.Drawing.Color.SkyBlue;
             this.btnCancelProductFromOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnCancelProductFromOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelProductFromOrder.Location = new System.Drawing.Point(712, 504);
-            this.btnCancelProductFromOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancelProductFromOrder.Location = new System.Drawing.Point(633, 403);
             this.btnCancelProductFromOrder.Name = "btnCancelProductFromOrder";
-            this.btnCancelProductFromOrder.Size = new System.Drawing.Size(162, 124);
+            this.btnCancelProductFromOrder.Size = new System.Drawing.Size(144, 99);
             this.btnCancelProductFromOrder.TabIndex = 33;
             this.btnCancelProductFromOrder.Text = "ביטול מוצר בהזמנה";
             this.btnCancelProductFromOrder.UseVisualStyleBackColor = false;
@@ -621,10 +597,9 @@
             this.btnDeleteLine.BackColor = System.Drawing.Color.SkyBlue;
             this.btnDeleteLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnDeleteLine.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteLine.Location = new System.Drawing.Point(711, 372);
-            this.btnDeleteLine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDeleteLine.Location = new System.Drawing.Point(632, 298);
             this.btnDeleteLine.Name = "btnDeleteLine";
-            this.btnDeleteLine.Size = new System.Drawing.Size(162, 124);
+            this.btnDeleteLine.Size = new System.Drawing.Size(144, 99);
             this.btnDeleteLine.TabIndex = 30;
             this.btnDeleteLine.Text = "מחיקת שורה מהזמנה";
             this.btnDeleteLine.UseVisualStyleBackColor = false;
@@ -637,10 +612,9 @@
             this.btnAddOrder.Enabled = false;
             this.btnAddOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnAddOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnAddOrder.Location = new System.Drawing.Point(711, 768);
-            this.btnAddOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddOrder.Location = new System.Drawing.Point(632, 614);
             this.btnAddOrder.Name = "btnAddOrder";
-            this.btnAddOrder.Size = new System.Drawing.Size(162, 124);
+            this.btnAddOrder.Size = new System.Drawing.Size(144, 99);
             this.btnAddOrder.TabIndex = 31;
             this.btnAddOrder.Text = "ביצוע הזמנה";
             this.btnAddOrder.UseVisualStyleBackColor = false;
@@ -657,10 +631,9 @@
             this.panel1.Controls.Add(this.btnSoftDrinksAndAlcohol);
             this.panel1.Controls.Add(this.btnDessert);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(895, 67);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(796, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(657, 983);
+            this.panel1.Size = new System.Drawing.Size(584, 807);
             this.panel1.TabIndex = 38;
             // 
             // btnOTH
@@ -669,10 +642,9 @@
             this.btnOTH.Enabled = false;
             this.btnOTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnOTH.ForeColor = System.Drawing.Color.Black;
-            this.btnOTH.Location = new System.Drawing.Point(712, 636);
-            this.btnOTH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOTH.Location = new System.Drawing.Point(633, 509);
             this.btnOTH.Name = "btnOTH";
-            this.btnOTH.Size = new System.Drawing.Size(162, 124);
+            this.btnOTH.Size = new System.Drawing.Size(144, 99);
             this.btnOTH.TabIndex = 40;
             this.btnOTH.Text = "OTH";
             this.btnOTH.UseVisualStyleBackColor = false;
@@ -686,9 +658,8 @@
             this.TopPanel.Controls.Add(this.tableLayoutPanel1);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.TopPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1552, 67);
+            this.TopPanel.Size = new System.Drawing.Size(1380, 54);
             this.TopPanel.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -697,19 +668,18 @@
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.35595F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.64405F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 412F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 374F));
             this.tableLayoutPanel1.Controls.Add(this.lblOrderTime, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblEmployee, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblTableOrder, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblTime, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1550, 66);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1378, 53);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblOrderTime
@@ -718,9 +688,9 @@
             this.lblOrderTime.BackColor = System.Drawing.Color.Transparent;
             this.lblOrderTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblOrderTime.ForeColor = System.Drawing.Color.White;
-            this.lblOrderTime.Location = new System.Drawing.Point(440, 0);
+            this.lblOrderTime.Location = new System.Drawing.Point(406, 0);
             this.lblOrderTime.Name = "lblOrderTime";
-            this.lblOrderTime.Size = new System.Drawing.Size(214, 38);
+            this.lblOrderTime.Size = new System.Drawing.Size(183, 32);
             this.lblOrderTime.TabIndex = 2;
             this.lblOrderTime.Text = "תאריך ושעה :";
             this.lblOrderTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -731,10 +701,10 @@
             this.lblEmployee.BackColor = System.Drawing.Color.Transparent;
             this.lblEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblEmployee.ForeColor = System.Drawing.Color.Transparent;
-            this.lblEmployee.Location = new System.Drawing.Point(966, 0);
+            this.lblEmployee.Location = new System.Drawing.Point(865, 0);
             this.lblEmployee.Name = "lblEmployee";
             this.lblEmployee.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblEmployee.Size = new System.Drawing.Size(24, 32);
+            this.lblEmployee.Size = new System.Drawing.Size(20, 29);
             this.lblEmployee.TabIndex = 5;
             this.lblEmployee.Text = "!";
             this.lblEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -745,9 +715,9 @@
             this.lblTableOrder.BackColor = System.Drawing.Color.Transparent;
             this.lblTableOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblTableOrder.ForeColor = System.Drawing.Color.White;
-            this.lblTableOrder.Location = new System.Drawing.Point(1132, 0);
+            this.lblTableOrder.Location = new System.Drawing.Point(1002, 0);
             this.lblTableOrder.Name = "lblTableOrder";
-            this.lblTableOrder.Size = new System.Drawing.Size(415, 46);
+            this.lblTableOrder.Size = new System.Drawing.Size(373, 38);
             this.lblTableOrder.TabIndex = 0;
             this.lblTableOrder.Text = "הזמנה עבור שולחן מספר";
             this.lblTableOrder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -758,10 +728,10 @@
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(115, 0);
+            this.lblTime.Location = new System.Drawing.Point(109, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTime.Size = new System.Drawing.Size(295, 38);
+            this.lblTime.Size = new System.Drawing.Size(263, 32);
             this.lblTime.TabIndex = 4;
             this.lblTime.Text = "01.09.18 10:04:00";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -774,41 +744,39 @@
             this.cbTablesList.FormattingEnabled = true;
             this.cbTablesList.Items.AddRange(new object[] {
             "בחר שולחן"});
-            this.cbTablesList.Location = new System.Drawing.Point(534, 1045);
-            this.cbTablesList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbTablesList.Location = new System.Drawing.Point(475, 836);
             this.cbTablesList.Name = "cbTablesList";
-            this.cbTablesList.Size = new System.Drawing.Size(156, 37);
+            this.cbTablesList.Size = new System.Drawing.Size(139, 33);
             this.cbTablesList.TabIndex = 41;
             this.cbTablesList.Text = "בחר שולחן";
-            // 
-            // btnDiscount
-            // 
-            this.btnDiscount.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnDiscount.ForeColor = System.Drawing.Color.Black;
-            this.btnDiscount.ID = 66;
-            this.btnDiscount.Location = new System.Drawing.Point(359, 935);
-            this.btnDiscount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDiscount.Name = "btnDiscount";
-            this.btnDiscount.Size = new System.Drawing.Size(156, 106);
-            this.btnDiscount.TabIndex = 39;
-            this.btnDiscount.Text = "הנחה";
-            this.btnDiscount.UseVisualStyleBackColor = false;
-            this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
             // 
             // nudSumToPay
             // 
             this.nudSumToPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.nudSumToPay.Location = new System.Drawing.Point(711, 1043);
+            this.nudSumToPay.Location = new System.Drawing.Point(632, 834);
+            this.nudSumToPay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudSumToPay.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.nudSumToPay.Name = "nudSumToPay";
-            this.nudSumToPay.Size = new System.Drawing.Size(156, 39);
+            this.nudSumToPay.Size = new System.Drawing.Size(139, 34);
             this.nudSumToPay.TabIndex = 43;
+            // 
+            // btnMarkOrderAsReceived
+            // 
+            this.btnMarkOrderAsReceived.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnMarkOrderAsReceived.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMarkOrderAsReceived.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnMarkOrderAsReceived.ForeColor = System.Drawing.Color.Black;
+            this.btnMarkOrderAsReceived.Location = new System.Drawing.Point(319, 875);
+            this.btnMarkOrderAsReceived.Name = "btnMarkOrderAsReceived";
+            this.btnMarkOrderAsReceived.Size = new System.Drawing.Size(452, 45);
+            this.btnMarkOrderAsReceived.TabIndex = 45;
+            this.btnMarkOrderAsReceived.Text = "עדכן קבלת הזמנה לשולחן";
+            this.btnMarkOrderAsReceived.UseVisualStyleBackColor = false;
+            this.btnMarkOrderAsReceived.Click += new System.EventHandler(this.btnMarkOrderAsReceived_Click);
             // 
             // btnPayPartOfBill
             // 
@@ -817,21 +785,36 @@
             this.btnPayPartOfBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnPayPartOfBill.ForeColor = System.Drawing.Color.Black;
             this.btnPayPartOfBill.ID = 117;
-            this.btnPayPartOfBill.Location = new System.Drawing.Point(712, 900);
-            this.btnPayPartOfBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPayPartOfBill.Location = new System.Drawing.Point(633, 720);
             this.btnPayPartOfBill.Name = "btnPayPartOfBill";
-            this.btnPayPartOfBill.Size = new System.Drawing.Size(156, 141);
+            this.btnPayPartOfBill.Size = new System.Drawing.Size(139, 113);
             this.btnPayPartOfBill.TabIndex = 44;
             this.btnPayPartOfBill.Text = "תשלום חשבון חלקי";
             this.btnPayPartOfBill.UseVisualStyleBackColor = false;
             this.btnPayPartOfBill.Click += new System.EventHandler(this.btnPayPartOfBill_Click_1);
             // 
+            // btnDiscount
+            // 
+            this.btnDiscount.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnDiscount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnDiscount.ForeColor = System.Drawing.Color.Black;
+            this.btnDiscount.ID = 66;
+            this.btnDiscount.Location = new System.Drawing.Point(319, 748);
+            this.btnDiscount.Name = "btnDiscount";
+            this.btnDiscount.Size = new System.Drawing.Size(139, 85);
+            this.btnDiscount.TabIndex = 39;
+            this.btnDiscount.Text = "הנחה";
+            this.btnDiscount.UseVisualStyleBackColor = false;
+            this.btnDiscount.Click += new System.EventHandler(this.btnDiscount_Click);
+            // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1552, 1050);
+            this.ClientSize = new System.Drawing.Size(1380, 861);
+            this.Controls.Add(this.btnMarkOrderAsReceived);
             this.Controls.Add(this.btnPayPartOfBill);
             this.Controls.Add(this.nudSumToPay);
             this.Controls.Add(this.cbTablesList);
@@ -852,7 +835,6 @@
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnBill);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OrderForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -926,5 +908,6 @@
         private System.Windows.Forms.ComboBox cbTablesList;
         private System.Windows.Forms.NumericUpDown nudSumToPay;
         private MyBtn btnPayPartOfBill;
+        private System.Windows.Forms.Button btnMarkOrderAsReceived;
     }
 }
