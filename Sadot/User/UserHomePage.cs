@@ -59,7 +59,7 @@ namespace Sadot
             TablesDataGridView.Rows.Clear();
             for (int i = 0; i < tables.Length; i++)
             {         
-                Color rowAndTableBottonColor = Color.White;
+                Color rowAndTableButtonColor = Color.White;
 
                 //At order in process case we calculate the time of waiting inside GetTimeOfOrderCalculation()
                 TablesDataGridView.Rows.Add(tables[i].TableID, tables[i].TableStatus, tables[i].OrderState, tables[i].GetTimeOfOrderCalculation().ToString("mm:ss"));
@@ -68,23 +68,23 @@ namespace Sadot
                 switch (tables[i].TableStatus)
                 {
                     case "פנוי":
-                        rowAndTableBottonColor = (tables[i].OrderStateNotExists()) ? Color.White : Color.Yellow;
+                        rowAndTableButtonColor = (tables[i].OrderStateNotExists()) ? Color.White : Color.Yellow;
                         break;
 
                     case "תפוס":
-                        rowAndTableBottonColor = (tables[i].OrderInProcess()) ? Color.Red : Color.Green;          
+                        rowAndTableButtonColor = (tables[i].OrderInProcess()) ? Color.Red : Color.Green;          
                         break;
 
                     case "בחשבון":
-                        rowAndTableBottonColor = Color.SkyBlue;
+                        rowAndTableButtonColor = Color.SkyBlue;
                         break;
 
                     default:
                         break;
                 }
 
-                FiilRowColor(rowAndTableBottonColor, i);
-                tableButtons[tables[i].TableID].BackColor = rowAndTableBottonColor;
+                FiilRowColor(rowAndTableButtonColor, i);
+                tableButtons[tables[i].TableID].BackColor = rowAndTableButtonColor;
             }
         }
 
