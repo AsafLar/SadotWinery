@@ -69,22 +69,22 @@ namespace Sadot
 
         public bool OrderInProcess()
         {
-            return (OrderState == "הזמנה בהכנה") ? true : false;
+            return (OrderState == "הזמנה בהכנה");
         }
 
         public bool OrderStateNotExists()
         {
-            return (OrderState == "לא קיימת הזמנה") ? true : false;
+            return (OrderState == "לא קיימת הזמנה");
         }
 
         public bool IsTableAvailable()
         {
-            return (TableStatus == "פנוי") ? true : false;
+            return (TableStatus == "פנוי");
         }
 
         public bool IsTableInBill()
         {
-            return (TableStatus == "בחשבון") ? true : false;
+            return (TableStatus == "בחשבון");
         }
 
         public DateTime GetTimeOfOrderCalculation()

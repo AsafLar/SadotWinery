@@ -56,35 +56,38 @@ namespace Sadot
         private void FillTableList()
         {
             tables = db.GetTablesData();
-            TablesDataGridView.Rows.Clear();
-            for (int i = 0; i < tables.Length; i++)
-            {         
-                Color rowAndTableButtonColor = Color.White;
-
-                //At order in process case we calculate the time of waiting inside GetTimeOfOrderCalculation()
-                TablesDataGridView.Rows.Add(tables[i].TableID, tables[i].TableStatus, tables[i].OrderState, tables[i].GetTimeOfOrderCalculation().ToString("mm:ss"));
-                TablesDataGridView.Rows[i].Selected = false;
-
-                switch (tables[i].TableStatus)
+            if(tables != null)
+            {
+                TablesDataGridView.Rows.Clear();
+                for (int i = 0; i < tables.Length; i++)
                 {
-                    case "פנוי":
-                        rowAndTableButtonColor = (tables[i].OrderStateNotExists()) ? Color.White : Color.Yellow;
-                        break;
+                    Color rowAndTableButtonColor = Color.White;
 
-                    case "תפוס":
-                        rowAndTableButtonColor = (tables[i].OrderInProcess()) ? Color.Red : Color.Green;          
-                        break;
+                    //At order in process case we calculate the time of waiting inside GetTimeOfOrderCalculation()
+                    TablesDataGridView.Rows.Add(tables[i].TableID, tables[i].TableStatus, tables[i].OrderState, tables[i].GetTimeOfOrderCalculation().ToString("mm:ss"));
+                    TablesDataGridView.Rows[i].Selected = false;
 
-                    case "בחשבון":
-                        rowAndTableButtonColor = Color.SkyBlue;
-                        break;
+                    switch (tables[i].TableStatus)
+                    {
+                        case "פנוי":
+                            rowAndTableButtonColor = (tables[i].OrderStateNotExists()) ? Color.White : Color.Yellow;
+                            break;
 
-                    default:
-                        break;
+                        case "תפוס":
+                            rowAndTableButtonColor = (tables[i].OrderInProcess()) ? Color.Red : Color.Green;
+                            break;
+
+                        case "בחשבון":
+                            rowAndTableButtonColor = Color.SkyBlue;
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                    FiilRowColor(rowAndTableButtonColor, i);
+                    tableButtons[tables[i].TableID].BackColor = rowAndTableButtonColor;
                 }
-
-                FiilRowColor(rowAndTableButtonColor, i);
-                tableButtons[tables[i].TableID].BackColor = rowAndTableButtonColor;
             }
         }
 

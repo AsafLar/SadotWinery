@@ -29,7 +29,6 @@ namespace Sadot
         int orderIndex;
         private Document doc;
         private int ordersTotalPrice;
-        private int orderTotalPrice;
         Order selectedOrderDetails;
         Employee selectedOrderEmployeeDetails;
         Customer selectedOrderCustomerDetails;
