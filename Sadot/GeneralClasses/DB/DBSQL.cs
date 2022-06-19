@@ -2310,7 +2310,10 @@ namespace Sadot
                 cmd.ExecuteNonQuery();
                 databaseConnection.Close();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         /// <summary>

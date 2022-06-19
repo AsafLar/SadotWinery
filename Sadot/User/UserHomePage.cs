@@ -155,10 +155,13 @@ namespace Sadot
             switch (orderForm.DialogResult)
             {
                 //User pressd on "ביצוע הזמנה" button
-                case DialogResult.OK: 
-                    tmpTable.TableStatus = "תפוס";
-                    tmpTable.OrderState = "הזמנה בהכנה";
-                    tmpTable.TimeOfOrder = DateTime.Now;
+                case DialogResult.OK:
+                    if (!tmpTable.OrderInProcess())
+                    { 
+                        tmpTable.TableStatus = "תפוס";
+                        tmpTable.OrderState = "הזמנה בהכנה";
+                        tmpTable.TimeOfOrder = DateTime.Now;
+                    } 
                     break;
 
                 //User pressd on "שולם" button
